@@ -1,0 +1,135 @@
+@extends('frontend.company.layout')
+
+@section('content')
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <div>
+        <h1 class="page-title">User Management</h1>
+        <p class="page-description">Users added to the company can access all configurations.</p>
+    </div>
+    <button class="btn btn-primary" id="manageAccessBtn">
+        <i class="fas fa-user-plus mr-2"></i> Manage Access
+    </button>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Company Access</h3>
+    </div>
+    <div class="card-body">
+        <div class="user-item" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee;">
+            <div style="display: flex; align-items: center;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background-color: #1da1f2; color: white; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: 600;">
+                    {{ substr(auth()->user()->email, 0, 1) }}
+                </div>
+                <span>{{ auth()->user()->email }}</span>
+            </div>
+            <div>
+                <span class="company-badge admin">Admin</span>
+                <button class="btn btn-secondary" style="width: 36px; height: 36px; padding: 0; display: flex; align-items: center; justify-content: center; margin-left: 10px;">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </div>
+        </div>
+        
+        @if(isset($users) && count($users) > 0)
+            @foreach($users as $user)
+                @if($user->id != auth()->id())
+                <div class="user-item" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee;">
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 36px; height: 36px; border-radius: 50%; background-color: #1da1f2; color: white; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: 600;">
+                            {{ substr($user->email, 0, 1) }}
+                        </div>
+                        <span>{{ $user->email }}</span>
+                    </div>
+                    <div>
+                        <span class="company-badge admin">{{ $user->pivot ? ucfirst($user->pivot->role) : 'User' }}</span>
+                        <button class="btn btn-secondary" style="width: 36px; height: 36px; padding: 0; display: flex; align-items: center; justify-content: center; margin-left: 10px;">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                </div>
+                @endif
+            @endforeach
+        @endif
+    </div>
+</div>
+
+<!-- Manage Access Modal -->
+<div id="manageAccessModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Manage Company Access</h3>
+            <span class="close" id="closeAccessModal">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p>Add and manage users to grant access to all configurations within your company.</p>
+            
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="form-column">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-column">
+                        <label class="form-label">Permission</label>
+                        <select class="form-control">
+                            <option value="write">Write</option>
+                            <option value="read">Read</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <div style="display: flex; align-items: flex-end; padding-bottom: 12px; margin-left: 10px;">
+                        <button class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: center; margin-top: 10px;">
+                    <input type="checkbox" id="notifyUser" style="margin-right: 10px;">
+                    <label for="notifyUser">Notify user via email</label>
+                </div>
+                
+                <div style="margin-top: 10px;">
+                    <a href="#" style="color: #1da1f2; text-decoration: none;">See permission details <i class="fas fa-chevron-down"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" id="cancelAccessBtn">Cancel</button>
+            <button class="btn btn-primary">Save Changes</button>
+        </div>
+    </div>
+</div>
+@endsection
+
+@section('scripts')
+<script>
+    // Modal functionality
+    const accessModal = document.getElementById('manageAccessModal');
+    const manageAccessBtn = document.getElementById('manageAccessBtn');
+    const closeAccessModal = document.getElementById('closeAccessModal');
+    const cancelAccessBtn = document.getElementById('cancelAccessBtn');
+    
+    manageAccessBtn.addEventListener('click', function() {
+        accessModal.style.display = 'block';
+        setTimeout(() => {
+            accessModal.classList.add('show');
+        }, 10);
+    });
+    
+    function closeModal() {
+        accessModal.classList.remove('show');
+        setTimeout(() => {
+            accessModal.style.display = 'none';
+        }, 300);
+    }
+    
+    closeAccessModal.addEventListener('click', closeModal);
+    cancelAccessBtn.addEventListener('click', closeModal);
+    
+    window.addEventListener('click', function(event) {
+        if (event.target == accessModal) {
+            closeModal();
+        }
+    });
+</script>
+@endsection

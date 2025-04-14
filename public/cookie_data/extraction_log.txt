@@ -1,0 +1,695 @@
+Improved Cookie Database Extraction started: 2025-04-13 04:41:34
+
+[2025-04-13 04:41:34] Getting service types...
+[2025-04-13 04:41:34] Making GET request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/servicetypes/en
+[2025-04-13 04:41:34] Retrieved 54 service types.
+[2025-04-13 04:41:34] Getting cookie purposes...
+[2025-04-13 04:41:34] Making GET request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/cookiepurposes/en
+[2025-04-13 04:41:35] Retrieved 5 cookie purposes.
+[2025-04-13 04:41:35] Fetching COMPLETE list of services...
+[2025-04-13 04:41:35] Trying to get all services with query: '%'
+[2025-04-13 04:41:35] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:35] Found 1 services with query: '%'
+[2025-04-13 04:41:35] Added service: %
+[2025-04-13 04:41:36] Trying to get all services with query: '*'
+[2025-04-13 04:41:36] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:37] Found 1 services with query: '*'
+[2025-04-13 04:41:37] Added service: *
+[2025-04-13 04:41:38] Trying to get all services with query: 'a*'
+[2025-04-13 04:41:38] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:38] Found 1 services with query: 'a*'
+[2025-04-13 04:41:38] Added service: a*
+[2025-04-13 04:41:39] Trying to get all services with query: 'b*'
+[2025-04-13 04:41:39] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:39] Found 1 services with query: 'b*'
+[2025-04-13 04:41:39] Added service: b*
+[2025-04-13 04:41:40] Trying to get all services with query: 'c*'
+[2025-04-13 04:41:40] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:41] Found 1 services with query: 'c*'
+[2025-04-13 04:41:41] Added service: c*
+[2025-04-13 04:41:42] Trying to get all services with query: 'd*'
+[2025-04-13 04:41:42] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:42] Found 1 services with query: 'd*'
+[2025-04-13 04:41:42] Added service: d*
+[2025-04-13 04:41:43] Trying to get all services with query: 'e*'
+[2025-04-13 04:41:43] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:44] Found 1 services with query: 'e*'
+[2025-04-13 04:41:44] Added service: e*
+[2025-04-13 04:41:45] Trying to get all services with query: 'f*'
+[2025-04-13 04:41:45] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:45] Found 1 services with query: 'f*'
+[2025-04-13 04:41:45] Added service: f*
+[2025-04-13 04:41:46] Trying to get all services with query: 'g*'
+[2025-04-13 04:41:46] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:47] Found 1 services with query: 'g*'
+[2025-04-13 04:41:47] Added service: g*
+[2025-04-13 04:41:48] Trying to get all services with query: 'h*'
+[2025-04-13 04:41:48] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:48] Found 1 services with query: 'h*'
+[2025-04-13 04:41:48] Added service: h*
+[2025-04-13 04:41:49] Trying to get all services with query: 'i*'
+[2025-04-13 04:41:49] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:50] Found 1 services with query: 'i*'
+[2025-04-13 04:41:50] Added service: i*
+[2025-04-13 04:41:51] Trying to get all services with query: 'j*'
+[2025-04-13 04:41:51] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:51] Found 1 services with query: 'j*'
+[2025-04-13 04:41:51] Added service: j*
+[2025-04-13 04:41:52] Trying to get all services with query: 'k*'
+[2025-04-13 04:41:52] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:53] Found 1 services with query: 'k*'
+[2025-04-13 04:41:53] Added service: k*
+[2025-04-13 04:41:54] Trying to get all services with query: 'l*'
+[2025-04-13 04:41:54] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:54] Found 1 services with query: 'l*'
+[2025-04-13 04:41:54] Added service: l*
+[2025-04-13 04:41:55] Trying to get all services with query: 'm*'
+[2025-04-13 04:41:55] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:55] Found 1 services with query: 'm*'
+[2025-04-13 04:41:55] Added service: m*
+[2025-04-13 04:41:56] Trying to get all services with query: 'n*'
+[2025-04-13 04:41:56] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:57] Found 1 services with query: 'n*'
+[2025-04-13 04:41:57] Added service: n*
+[2025-04-13 04:41:58] Trying to get all services with query: 'o*'
+[2025-04-13 04:41:58] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:41:58] Found 1 services with query: 'o*'
+[2025-04-13 04:41:58] Added service: o*
+[2025-04-13 04:41:59] Trying to get all services with query: 'p*'
+[2025-04-13 04:41:59] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:00] Found 1 services with query: 'p*'
+[2025-04-13 04:42:00] Added service: p*
+[2025-04-13 04:42:01] Trying to get all services with query: 'q*'
+[2025-04-13 04:42:01] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:01] Found 1 services with query: 'q*'
+[2025-04-13 04:42:01] Added service: q*
+[2025-04-13 04:42:02] Trying to get all services with query: 'r*'
+[2025-04-13 04:42:02] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:03] Found 1 services with query: 'r*'
+[2025-04-13 04:42:03] Added service: r*
+[2025-04-13 04:42:04] Trying to get all services with query: 's*'
+[2025-04-13 04:42:04] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:04] Found 1 services with query: 's*'
+[2025-04-13 04:42:04] Added service: s*
+[2025-04-13 04:42:05] Trying to get all services with query: 't*'
+[2025-04-13 04:42:05] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:06] Found 1 services with query: 't*'
+[2025-04-13 04:42:06] Added service: t*
+[2025-04-13 04:42:07] Trying to get all services with query: 'u*'
+[2025-04-13 04:42:07] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:07] Found 1 services with query: 'u*'
+[2025-04-13 04:42:07] Added service: u*
+[2025-04-13 04:42:08] Trying to get all services with query: 'v*'
+[2025-04-13 04:42:08] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:08] Found 1 services with query: 'v*'
+[2025-04-13 04:42:08] Added service: v*
+[2025-04-13 04:42:09] Trying to get all services with query: 'w*'
+[2025-04-13 04:42:09] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:10] Found 1 services with query: 'w*'
+[2025-04-13 04:42:10] Added service: w*
+[2025-04-13 04:42:11] Trying to get all services with query: 'x*'
+[2025-04-13 04:42:11] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:11] Found 1 services with query: 'x*'
+[2025-04-13 04:42:11] Added service: x*
+[2025-04-13 04:42:12] Trying to get all services with query: 'y*'
+[2025-04-13 04:42:12] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:13] Found 1 services with query: 'y*'
+[2025-04-13 04:42:13] Added service: y*
+[2025-04-13 04:42:14] Trying to get all services with query: 'z*'
+[2025-04-13 04:42:14] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:14] Found 1 services with query: 'z*'
+[2025-04-13 04:42:14] Added service: z*
+[2025-04-13 04:42:15] Not enough services found. Trying with specific service names...
+[2025-04-13 04:42:15] Searching for specific service: 'Google Analytics'
+[2025-04-13 04:42:15] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:16] Added service: Google Analytics
+[2025-04-13 04:42:17] Searching for specific service: 'Matomo'
+[2025-04-13 04:42:17] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:17] Added service: Matomo
+[2025-04-13 04:42:18] Searching for specific service: 'Hotjar'
+[2025-04-13 04:42:18] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:19] Added service: Hotjar
+[2025-04-13 04:42:20] Searching for specific service: 'Mixpanel'
+[2025-04-13 04:42:20] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:20] Added service: Mixpanel
+[2025-04-13 04:42:21] Searching for specific service: 'Amplitude'
+[2025-04-13 04:42:21] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:22] Added service: Amplitude
+[2025-04-13 04:42:23] Searching for specific service: 'Heap'
+[2025-04-13 04:42:23] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:23] Added service: Heap
+[2025-04-13 04:42:24] Searching for specific service: 'Piwik'
+[2025-04-13 04:42:24] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:25] Added service: Piwik
+[2025-04-13 04:42:26] Searching for specific service: 'Plausible'
+[2025-04-13 04:42:26] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:26] Added service: Plausible
+[2025-04-13 04:42:27] Searching for specific service: 'Countly'
+[2025-04-13 04:42:27] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:28] Added service: Countly
+[2025-04-13 04:42:29] Searching for specific service: 'Google Tag Manager'
+[2025-04-13 04:42:29] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:29] Added service: Google Tag Manager
+[2025-04-13 04:42:30] Searching for specific service: 'Segment'
+[2025-04-13 04:42:30] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:30] Added service: Segment
+[2025-04-13 04:42:31] Searching for specific service: 'Kissmetrics'
+[2025-04-13 04:42:31] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:32] Added service: Kissmetrics
+[2025-04-13 04:42:33] Searching for specific service: 'Adobe Analytics'
+[2025-04-13 04:42:33] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:33] Added service: Adobe Analytics
+[2025-04-13 04:42:34] Searching for specific service: 'Cloudflare Analytics'
+[2025-04-13 04:42:34] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:35] Added service: Cloudflare Analytics
+[2025-04-13 04:42:36] Searching for specific service: 'Comscore'
+[2025-04-13 04:42:36] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:36] Added service: Comscore
+[2025-04-13 04:42:37] Searching for specific service: 'Hubspot Analytics'
+[2025-04-13 04:42:37] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:38] Added service: Hubspot Analytics
+[2025-04-13 04:42:39] Searching for specific service: 'Yandex Metrica'
+[2025-04-13 04:42:39] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:39] Added service: Yandex Metrica
+[2025-04-13 04:42:40] Searching for specific service: 'Parse.ly'
+[2025-04-13 04:42:40] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:41] Added service: Parse.ly
+[2025-04-13 04:42:42] Searching for specific service: 'StatCounter'
+[2025-04-13 04:42:42] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:42] Added service: StatCounter
+[2025-04-13 04:42:43] Searching for specific service: 'Chartbeat'
+[2025-04-13 04:42:43] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:44] Added service: Chartbeat
+[2025-04-13 04:42:45] Searching for specific service: 'Google Ads'
+[2025-04-13 04:42:45] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:45] Added service: Google Ads
+[2025-04-13 04:42:46] Searching for specific service: 'Facebook Pixel'
+[2025-04-13 04:42:46] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:47] Added service: Facebook Pixel
+[2025-04-13 04:42:48] Searching for specific service: 'LinkedIn Insight'
+[2025-04-13 04:42:48] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:48] Added service: LinkedIn Insight
+[2025-04-13 04:42:49] Searching for specific service: 'Twitter Pixel'
+[2025-04-13 04:42:49] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:49] Added service: Twitter Pixel
+[2025-04-13 04:42:50] Searching for specific service: 'Pinterest Tag'
+[2025-04-13 04:42:50] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:51] Added service: Pinterest Tag
+[2025-04-13 04:42:52] Searching for specific service: 'AdRoll'
+[2025-04-13 04:42:52] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:52] Added service: AdRoll
+[2025-04-13 04:42:53] Searching for specific service: 'Criteo'
+[2025-04-13 04:42:53] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:54] Added service: Criteo
+[2025-04-13 04:42:55] Searching for specific service: 'Outbrain'
+[2025-04-13 04:42:55] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:55] Added service: Outbrain
+[2025-04-13 04:42:56] Searching for specific service: 'Taboola'
+[2025-04-13 04:42:56] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:57] Added service: Taboola
+[2025-04-13 04:42:58] Searching for specific service: 'Snapchat Pixel'
+[2025-04-13 04:42:58] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:42:58] Added service: Snapchat Pixel
+[2025-04-13 04:42:59] Searching for specific service: 'TikTok Pixel'
+[2025-04-13 04:42:59] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:00] Added service: TikTok Pixel
+[2025-04-13 04:43:01] Searching for specific service: 'Reddit Pixel'
+[2025-04-13 04:43:01] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:01] Added service: Reddit Pixel
+[2025-04-13 04:43:02] Searching for specific service: 'Microsoft Advertising'
+[2025-04-13 04:43:02] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:02] Added service: Microsoft Advertising
+[2025-04-13 04:43:03] Searching for specific service: 'Hubspot'
+[2025-04-13 04:43:03] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:04] Added service: Hubspot
+[2025-04-13 04:43:05] Searching for specific service: 'Marketo'
+[2025-04-13 04:43:05] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:05] Added service: Marketo
+[2025-04-13 04:43:06] Searching for specific service: 'Mailchimp'
+[2025-04-13 04:43:06] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:06] Added service: Mailchimp
+[2025-04-13 04:43:08] Searching for specific service: 'Pardot'
+[2025-04-13 04:43:08] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:08] Added service: Pardot
+[2025-04-13 04:43:09] Searching for specific service: 'ActiveCampaign'
+[2025-04-13 04:43:09] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:09] Added service: ActiveCampaign
+[2025-04-13 04:43:10] Searching for specific service: 'GetResponse'
+[2025-04-13 04:43:10] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:11] Added service: GetResponse
+[2025-04-13 04:43:12] Searching for specific service: 'Campaign Monitor'
+[2025-04-13 04:43:12] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:12] Added service: Campaign Monitor
+[2025-04-13 04:43:13] Searching for specific service: 'Constant Contact'
+[2025-04-13 04:43:13] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:13] Added service: Constant Contact
+[2025-04-13 04:43:14] Searching for specific service: 'Sendinblue'
+[2025-04-13 04:43:14] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:15] Added service: Sendinblue
+[2025-04-13 04:43:16] Searching for specific service: 'Omnisend'
+[2025-04-13 04:43:16] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:16] Added service: Omnisend
+[2025-04-13 04:43:17] Searching for specific service: 'Klaviyo'
+[2025-04-13 04:43:17] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:18] Added service: Klaviyo
+[2025-04-13 04:43:19] Searching for specific service: 'SendGrid'
+[2025-04-13 04:43:19] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:19] Added service: SendGrid
+[2025-04-13 04:43:20] Searching for specific service: 'Amazon SES'
+[2025-04-13 04:43:20] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:21] Added service: Amazon SES
+[2025-04-13 04:43:22] Searching for specific service: 'Facebook'
+[2025-04-13 04:43:22] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:22] Added service: Facebook
+[2025-04-13 04:43:23] Searching for specific service: 'Twitter'
+[2025-04-13 04:43:23] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:24] Added service: Twitter
+[2025-04-13 04:43:25] Searching for specific service: 'LinkedIn'
+[2025-04-13 04:43:25] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:25] Added service: LinkedIn
+[2025-04-13 04:43:26] Searching for specific service: 'Pinterest'
+[2025-04-13 04:43:26] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:26] Added service: Pinterest
+[2025-04-13 04:43:27] Searching for specific service: 'Instagram'
+[2025-04-13 04:43:27] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:28] Added service: Instagram
+[2025-04-13 04:43:29] Searching for specific service: 'YouTube'
+[2025-04-13 04:43:29] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:29] Added service: YouTube
+[2025-04-13 04:43:30] Searching for specific service: 'TikTok'
+[2025-04-13 04:43:30] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:31] Added service: TikTok
+[2025-04-13 04:43:32] Searching for specific service: 'Snapchat'
+[2025-04-13 04:43:32] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:32] Added service: Snapchat
+[2025-04-13 04:43:33] Searching for specific service: 'Reddit'
+[2025-04-13 04:43:33] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:34] Added service: Reddit
+[2025-04-13 04:43:35] Searching for specific service: 'Tumblr'
+[2025-04-13 04:43:35] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:35] Added service: Tumblr
+[2025-04-13 04:43:36] Searching for specific service: 'Vimeo'
+[2025-04-13 04:43:36] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:36] Added service: Vimeo
+[2025-04-13 04:43:37] Searching for specific service: 'Flickr'
+[2025-04-13 04:43:37] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:38] Added service: Flickr
+[2025-04-13 04:43:39] Searching for specific service: 'Discord'
+[2025-04-13 04:43:39] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:39] Added service: Discord
+[2025-04-13 04:43:40] Searching for specific service: 'VK'
+[2025-04-13 04:43:40] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:41] Added service: VK
+[2025-04-13 04:43:42] Searching for specific service: 'WhatsApp'
+[2025-04-13 04:43:42] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:42] Added service: WhatsApp
+[2025-04-13 04:43:43] Searching for specific service: 'Telegram'
+[2025-04-13 04:43:43] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:44] Added service: Telegram
+[2025-04-13 04:43:45] Searching for specific service: 'Shopify'
+[2025-04-13 04:43:45] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:45] Added service: Shopify
+[2025-04-13 04:43:46] Searching for specific service: 'WooCommerce'
+[2025-04-13 04:43:46] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:46] Added service: WooCommerce
+[2025-04-13 04:43:47] Searching for specific service: 'Magento'
+[2025-04-13 04:43:47] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:48] Added service: Magento
+[2025-04-13 04:43:49] Searching for specific service: 'BigCommerce'
+[2025-04-13 04:43:49] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:49] Added service: BigCommerce
+[2025-04-13 04:43:50] Searching for specific service: 'PrestaShop'
+[2025-04-13 04:43:50] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:51] Added service: PrestaShop
+[2025-04-13 04:43:52] Searching for specific service: 'OpenCart'
+[2025-04-13 04:43:52] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:52] Added service: OpenCart
+[2025-04-13 04:43:53] Searching for specific service: 'Wix'
+[2025-04-13 04:43:53] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:54] Added service: Wix
+[2025-04-13 04:43:55] Searching for specific service: 'Squarespace'
+[2025-04-13 04:43:55] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:55] Added service: Squarespace
+[2025-04-13 04:43:56] Searching for specific service: 'WordPress'
+[2025-04-13 04:43:56] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:56] Added service: WordPress
+[2025-04-13 04:43:57] Searching for specific service: 'Joomla'
+[2025-04-13 04:43:57] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:58] Added service: Joomla
+[2025-04-13 04:43:59] Searching for specific service: 'Drupal'
+[2025-04-13 04:43:59] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:43:59] Added service: Drupal
+[2025-04-13 04:44:00] Searching for specific service: 'Webflow'
+[2025-04-13 04:44:00] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:01] Added service: Webflow
+[2025-04-13 04:44:02] Searching for specific service: 'Ghost'
+[2025-04-13 04:44:02] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:02] Added service: Ghost
+[2025-04-13 04:44:03] Searching for specific service: 'Cloudflare'
+[2025-04-13 04:44:03] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:04] Added service: Cloudflare
+[2025-04-13 04:44:05] Searching for specific service: 'Akamai'
+[2025-04-13 04:44:05] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:05] Added service: Akamai
+[2025-04-13 04:44:06] Searching for specific service: 'Fastly'
+[2025-04-13 04:44:06] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:07] Added service: Fastly
+[2025-04-13 04:44:08] Searching for specific service: 'AWS'
+[2025-04-13 04:44:08] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:08] Added service: AWS
+[2025-04-13 04:44:09] Searching for specific service: 'Azure'
+[2025-04-13 04:44:09] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:09] Added service: Azure
+[2025-04-13 04:44:10] Searching for specific service: 'GCP'
+[2025-04-13 04:44:10] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:11] Added service: GCP
+[2025-04-13 04:44:12] Searching for specific service: 'DigitalOcean'
+[2025-04-13 04:44:12] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:12] Added service: DigitalOcean
+[2025-04-13 04:44:13] Searching for specific service: 'Heroku'
+[2025-04-13 04:44:13] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:14] Added service: Heroku
+[2025-04-13 04:44:15] Searching for specific service: 'Netlify'
+[2025-04-13 04:44:15] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:15] Added service: Netlify
+[2025-04-13 04:44:16] Searching for specific service: 'Vercel'
+[2025-04-13 04:44:16] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:16] Added service: Vercel
+[2025-04-13 04:44:17] Searching for specific service: 'PayPal'
+[2025-04-13 04:44:17] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:18] Added service: PayPal
+[2025-04-13 04:44:19] Searching for specific service: 'Stripe'
+[2025-04-13 04:44:19] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:19] Added service: Stripe
+[2025-04-13 04:44:20] Searching for specific service: 'Square'
+[2025-04-13 04:44:20] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:21] Added service: Square
+[2025-04-13 04:44:22] Searching for specific service: 'Braintree'
+[2025-04-13 04:44:22] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:22] Added service: Braintree
+[2025-04-13 04:44:23] Searching for specific service: 'Adyen'
+[2025-04-13 04:44:23] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:24] Added service: Adyen
+[2025-04-13 04:44:25] Searching for specific service: 'Authorize.Net'
+[2025-04-13 04:44:25] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:25] Added service: Authorize.Net
+[2025-04-13 04:44:26] Searching for specific service: 'Klarna'
+[2025-04-13 04:44:26] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:26] Added service: Klarna
+[2025-04-13 04:44:27] Searching for specific service: 'Afterpay'
+[2025-04-13 04:44:27] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:28] Added service: Afterpay
+[2025-04-13 04:44:29] Searching for specific service: 'Affirm'
+[2025-04-13 04:44:29] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:29] Added service: Affirm
+[2025-04-13 04:44:30] Searching for specific service: 'Apple Pay'
+[2025-04-13 04:44:30] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:30] Added service: Apple Pay
+[2025-04-13 04:44:31] Searching for specific service: 'Google Pay'
+[2025-04-13 04:44:31] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:32] Added service: Google Pay
+[2025-04-13 04:44:33] Searching for specific service: 'Amazon Pay'
+[2025-04-13 04:44:33] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:33] Added service: Amazon Pay
+[2025-04-13 04:44:34] Searching for specific service: 'Alipay'
+[2025-04-13 04:44:34] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:34] Added service: Alipay
+[2025-04-13 04:44:35] Searching for specific service: 'Venmo'
+[2025-04-13 04:44:35] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:36] Added service: Venmo
+[2025-04-13 04:44:37] Searching for specific service: 'Wise'
+[2025-04-13 04:44:37] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:37] Added service: Wise
+[2025-04-13 04:44:38] Searching for specific service: 'TransferWise'
+[2025-04-13 04:44:38] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:39] Added service: TransferWise
+[2025-04-13 04:44:40] Searching for specific service: 'WordPress'
+[2025-04-13 04:44:40] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:41] Searching for specific service: 'Wix'
+[2025-04-13 04:44:41] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:43] Searching for specific service: 'Squarespace'
+[2025-04-13 04:44:43] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:44] Searching for specific service: 'Shopify'
+[2025-04-13 04:44:44] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:45] Searching for specific service: 'Webflow'
+[2025-04-13 04:44:45] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:47] Searching for specific service: 'Ghost'
+[2025-04-13 04:44:47] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:48] Searching for specific service: 'Drupal'
+[2025-04-13 04:44:48] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:49] Searching for specific service: 'Joomla'
+[2025-04-13 04:44:49] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:51] Searching for specific service: 'Magento'
+[2025-04-13 04:44:51] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:52] Searching for specific service: 'BigCommerce'
+[2025-04-13 04:44:52] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:54] Searching for specific service: 'PrestaShop'
+[2025-04-13 04:44:54] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:55] Searching for specific service: 'OpenCart'
+[2025-04-13 04:44:55] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:57] Searching for specific service: 'Contentful'
+[2025-04-13 04:44:57] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:57] Added service: Contentful
+[2025-04-13 04:44:58] Searching for specific service: 'Sanity'
+[2025-04-13 04:44:58] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:44:59] Added service: Sanity
+[2025-04-13 04:45:00] Searching for specific service: 'Strapi'
+[2025-04-13 04:45:00] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:00] Added service: Strapi
+[2025-04-13 04:45:01] Searching for specific service: 'Intercom'
+[2025-04-13 04:45:01] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:01] Added service: Intercom
+[2025-04-13 04:45:02] Searching for specific service: 'Zendesk'
+[2025-04-13 04:45:02] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:03] Added service: Zendesk
+[2025-04-13 04:45:04] Searching for specific service: 'Salesforce'
+[2025-04-13 04:45:04] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:04] Added service: Salesforce
+[2025-04-13 04:45:05] Searching for specific service: 'Drift'
+[2025-04-13 04:45:05] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:06] Added service: Drift
+[2025-04-13 04:45:07] Searching for specific service: 'Crisp'
+[2025-04-13 04:45:07] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:07] Added service: Crisp
+[2025-04-13 04:45:08] Searching for specific service: 'LiveChat'
+[2025-04-13 04:45:08] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:09] Added service: LiveChat
+[2025-04-13 04:45:10] Searching for specific service: 'Olark'
+[2025-04-13 04:45:10] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:10] Added service: Olark
+[2025-04-13 04:45:11] Searching for specific service: 'Help Scout'
+[2025-04-13 04:45:11] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:12] Added service: Help Scout
+[2025-04-13 04:45:13] Searching for specific service: 'Freshchat'
+[2025-04-13 04:45:13] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:13] Added service: Freshchat
+[2025-04-13 04:45:14] Searching for specific service: 'Tawk.to'
+[2025-04-13 04:45:14] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:15] Added service: Tawk.to
+[2025-04-13 04:45:16] Searching for specific service: 'Zoho Desk'
+[2025-04-13 04:45:16] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:16] Added service: Zoho Desk
+[2025-04-13 04:45:17] Searching for specific service: 'Front'
+[2025-04-13 04:45:17] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:17] Added service: Front
+[2025-04-13 04:45:18] Searching for specific service: 'Tidio'
+[2025-04-13 04:45:18] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:19] Added service: Tidio
+[2025-04-13 04:45:20] Searching for specific service: 'SnapEngage'
+[2025-04-13 04:45:20] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:20] Added service: SnapEngage
+[2025-04-13 04:45:21] Searching for specific service: 'Userlike'
+[2025-04-13 04:45:21] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:22] Added service: Userlike
+[2025-04-13 04:45:23] Searching for specific service: 'Optimizely'
+[2025-04-13 04:45:23] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:23] Added service: Optimizely
+[2025-04-13 04:45:24] Searching for specific service: 'VWO'
+[2025-04-13 04:45:24] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:25] Added service: VWO
+[2025-04-13 04:45:26] Searching for specific service: 'Google Optimize'
+[2025-04-13 04:45:26] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:26] Added service: Google Optimize
+[2025-04-13 04:45:27] Searching for specific service: 'AB Tasty'
+[2025-04-13 04:45:27] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:27] Added service: AB Tasty
+[2025-04-13 04:45:28] Searching for specific service: 'Convert'
+[2025-04-13 04:45:28] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:29] Added service: Convert
+[2025-04-13 04:45:30] Searching for specific service: 'Kameleoon'
+[2025-04-13 04:45:30] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:30] Added service: Kameleoon
+[2025-04-13 04:45:31] Searching for specific service: 'SiteSpect'
+[2025-04-13 04:45:31] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:32] Added service: SiteSpect
+[2025-04-13 04:45:33] Searching for specific service: 'Unbounce'
+[2025-04-13 04:45:33] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:33] Added service: Unbounce
+[2025-04-13 04:45:34] Searching for specific service: 'LaunchDarkly'
+[2025-04-13 04:45:34] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:35] Added service: LaunchDarkly
+[2025-04-13 04:45:36] Searching for specific service: 'Split.io'
+[2025-04-13 04:45:36] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:36] Added service: Split.io
+[2025-04-13 04:45:37] Searching for specific service: 'GrowthBook'
+[2025-04-13 04:45:37] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:38] Added service: GrowthBook
+[2025-04-13 04:45:39] Searching for specific service: 'Apptimize'
+[2025-04-13 04:45:39] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:39] Added service: Apptimize
+[2025-04-13 04:45:40] Searching for specific service: 'Cookiebot'
+[2025-04-13 04:45:40] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:41] Added service: Cookiebot
+[2025-04-13 04:45:42] Searching for specific service: 'OneTrust'
+[2025-04-13 04:45:42] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:42] Added service: OneTrust
+[2025-04-13 04:45:43] Searching for specific service: 'TrustArc'
+[2025-04-13 04:45:43] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:43] Added service: TrustArc
+[2025-04-13 04:45:44] Searching for specific service: 'Usercentrics'
+[2025-04-13 04:45:44] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:45] Added service: Usercentrics
+[2025-04-13 04:45:46] Searching for specific service: 'Osano'
+[2025-04-13 04:45:46] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:46] Added service: Osano
+[2025-04-13 04:45:47] Searching for specific service: 'CookiePro'
+[2025-04-13 04:45:47] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:48] Added service: CookiePro
+[2025-04-13 04:45:49] Searching for specific service: 'Termly'
+[2025-04-13 04:45:49] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:49] Added service: Termly
+[2025-04-13 04:45:50] Searching for specific service: 'Iubenda'
+[2025-04-13 04:45:50] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:50] Added service: Iubenda
+[2025-04-13 04:45:51] Searching for specific service: 'Securiti.ai'
+[2025-04-13 04:45:51] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:52] Added service: Securiti.ai
+[2025-04-13 04:45:53] Searching for specific service: 'Quantcast Choice'
+[2025-04-13 04:45:53] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:53] Added service: Quantcast Choice
+[2025-04-13 04:45:54] Searching for specific service: 'Civic Cookie Control'
+[2025-04-13 04:45:54] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:55] Added service: Civic Cookie Control
+[2025-04-13 04:45:56] Searching for specific service: 'Didomi'
+[2025-04-13 04:45:56] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:56] Added service: Didomi
+[2025-04-13 04:45:57] Searching for specific service: 'reCAPTCHA'
+[2025-04-13 04:45:57] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:58] Added service: reCAPTCHA
+[2025-04-13 04:45:59] Searching for specific service: 'hCaptcha'
+[2025-04-13 04:45:59] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:45:59] Added service: hCaptcha
+[2025-04-13 04:46:00] Searching for specific service: 'Cloudflare'
+[2025-04-13 04:46:00] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:01] Searching for specific service: 'Akamai'
+[2025-04-13 04:46:01] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:03] Searching for specific service: 'Imperva'
+[2025-04-13 04:46:03] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:03] Added service: Imperva
+[2025-04-13 04:46:04] Searching for specific service: 'Sift'
+[2025-04-13 04:46:04] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:05] Added service: Sift
+[2025-04-13 04:46:06] Searching for specific service: 'Forter'
+[2025-04-13 04:46:06] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:06] Added service: Forter
+[2025-04-13 04:46:07] Searching for specific service: 'Signifyd'
+[2025-04-13 04:46:07] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:07] Added service: Signifyd
+[2025-04-13 04:46:08] Searching for specific service: 'Shape Security'
+[2025-04-13 04:46:08] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:09] Added service: Shape Security
+[2025-04-13 04:46:10] Searching for specific service: 'Darktrace'
+[2025-04-13 04:46:10] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:10] Added service: Darktrace
+[2025-04-13 04:46:11] Searching for specific service: 'Crowdstrike'
+[2025-04-13 04:46:11] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:12] Added service: Crowdstrike
+[2025-04-13 04:46:13] Searching for specific service: 'Okta'
+[2025-04-13 04:46:13] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:13] Added service: Okta
+[2025-04-13 04:46:14] Searching for specific service: 'Auth0'
+[2025-04-13 04:46:14] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:15] Added service: Auth0
+[2025-04-13 04:46:16] Searching for specific service: 'AWS WAF'
+[2025-04-13 04:46:16] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:16] Added service: AWS WAF
+[2025-04-13 04:46:17] Searching for specific service: 'Salesforce'
+[2025-04-13 04:46:17] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:19] Searching for specific service: 'HubSpot'
+[2025-04-13 04:46:19] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:20] Searching for specific service: 'Zoho CRM'
+[2025-04-13 04:46:20] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:20] Added service: Zoho CRM
+[2025-04-13 04:46:21] Searching for specific service: 'Microsoft Dynamics'
+[2025-04-13 04:46:21] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:22] Added service: Microsoft Dynamics
+[2025-04-13 04:46:23] Searching for specific service: 'Pipedrive'
+[2025-04-13 04:46:23] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:23] Added service: Pipedrive
+[2025-04-13 04:46:24] Searching for specific service: 'Freshsales'
+[2025-04-13 04:46:24] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:25] Added service: Freshsales
+[2025-04-13 04:46:26] Searching for specific service: 'Agile CRM'
+[2025-04-13 04:46:26] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:26] Added service: Agile CRM
+[2025-04-13 04:46:27] Searching for specific service: 'Monday.com'
+[2025-04-13 04:46:27] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:27] Added service: Monday.com
+[2025-04-13 04:46:28] Searching for specific service: 'Close'
+[2025-04-13 04:46:28] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:29] Added service: Close
+[2025-04-13 04:46:30] Searching for specific service: 'Copper'
+[2025-04-13 04:46:30] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:30] Added service: Copper
+[2025-04-13 04:46:31] Searching for specific service: 'Nimble'
+[2025-04-13 04:46:31] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:32] Added service: Nimble
+[2025-04-13 04:46:33] Searching for specific service: 'SugarCRM'
+[2025-04-13 04:46:33] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:33] Added service: SugarCRM
+[2025-04-13 04:46:34] Searching for specific service: 'Bitrix24'
+[2025-04-13 04:46:34] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:35] Added service: Bitrix24
+[2025-04-13 04:46:36] Searching for specific service: 'Sentry'
+[2025-04-13 04:46:36] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:36] Added service: Sentry
+[2025-04-13 04:46:37] Searching for specific service: 'Bugsnag'
+[2025-04-13 04:46:37] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:37] Added service: Bugsnag
+[2025-04-13 04:46:38] Searching for specific service: 'Rollbar'
+[2025-04-13 04:46:38] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:39] Added service: Rollbar
+[2025-04-13 04:46:40] Searching for specific service: 'TrackJS'
+[2025-04-13 04:46:40] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:40] Added service: TrackJS
+[2025-04-13 04:46:41] Searching for specific service: 'LogRocket'
+[2025-04-13 04:46:41] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:41] Added service: LogRocket
+[2025-04-13 04:46:42] Searching for specific service: 'New Relic'
+[2025-04-13 04:46:42] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:43] Added service: New Relic
+[2025-04-13 04:46:44] Searching for specific service: 'Datadog'
+[2025-04-13 04:46:44] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:44] Added service: Datadog
+[2025-04-13 04:46:45] Searching for specific service: 'Honeybadger'
+[2025-04-13 04:46:45] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:46] Added service: Honeybadger
+[2025-04-13 04:46:47] Searching for specific service: 'Raygun'
+[2025-04-13 04:46:47] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:47] Added service: Raygun
+[2025-04-13 04:46:48] Searching for specific service: 'AppSignal'
+[2025-04-13 04:46:48] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:48] Added service: AppSignal
+[2025-04-13 04:46:49] Searching for specific service: 'Airbrake'
+[2025-04-13 04:46:49] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:50] Added service: Airbrake
+[2025-04-13 04:46:51] Searching for specific service: 'FullStory'
+[2025-04-13 04:46:51] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:51] Added service: FullStory
+[2025-04-13 04:46:52] Searching for specific service: 'Loggly'
+[2025-04-13 04:46:52] Making POST request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/services
+[2025-04-13 04:46:53] Added service: Loggly
+[2025-04-13 04:46:54] Extraction complete!
+[2025-04-13 04:46:54] Total services: 207
+[2025-04-13 04:46:54] Total CSV rows: 207
+[2025-04-13 04:46:54] CSV file saved to: cookie_data/cookie_database.csv

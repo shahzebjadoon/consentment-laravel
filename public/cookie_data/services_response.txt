@@ -1,0 +1,1 @@
+{"data":{"en":{"Google":{"service":{"ID":"Google","name":null,"domain":null,"serviceType":null,"serviceTypeID":null,"sharesData":null,"thirdParty":null,"secondParty":null,"privacyStatementURL":null,"language":"en","country":null,"slug":null,"sharedData":null}}}},"headers":{"Location":"https:\/\/cookiedatabase.org"},"status":200}

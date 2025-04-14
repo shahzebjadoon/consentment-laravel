@@ -1,0 +1,302 @@
+Debug Cookie Database Extraction started: 2025-04-13 04:30:55
+
+[2025-04-13 04:30:55] Making test request to API root...
+[2025-04-13 04:30:56] Test request HTTP status: 200
+[2025-04-13 04:30:56] Testing service types endpoint...
+[2025-04-13 04:30:56] Making GET request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/servicetypes/en
+[2025-04-13 04:30:57] HTTP Status Code: 200
+[2025-04-13 04:30:57] Content Type: application/json
+[2025-04-13 04:30:57] Verbose cURL output:
+*   Trying 104.21.80.1:443...
+* Connected to cookiedatabase.org (104.21.80.1) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+*  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: CN=cookiedatabase.org
+*  start date: Mar 22 03:51:43 2025 GMT
+*  expire date: Jun 20 03:51:42 2025 GMT
+*  subjectAltName: host "cookiedatabase.org" matched cert's "cookiedatabase.org"
+*  issuer: C=US; O=Let's Encrypt; CN=E6
+*  SSL certificate verify ok.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+* Using Stream ID: 1 (easy handle 0x240ff80)
+> GET /wp-json/cookiedatabase/v1/servicetypes/en HTTP/2
+Host: cookiedatabase.org
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+accept: */*
+
+* old SSL session ID is stale, removing
+< HTTP/2 200 
+< date: Sun, 13 Apr 2025 08:30:57 GMT
+< content-type: application/json
+< strict-transport-security: max-age=63072000; includeSubDomains;preload
+< x-xss-protection: 0
+< referrer-policy: strict-origin-when-cross-origin
+< permissions-policy: accelerometer=(self), autoplay=(self), camera=(self), encrypted-media=(self), fullscreen=(self), geolocation=(self), microphone=(self), midi=(self), payment=(self), display-capture=(self)
+< x-frame-options: SAMEORIGIN
+< cross-origin-opener-policy: same-origin-allow-popups
+< cross-origin-resource-policy: cross-origin
+< content-security-policy: frame-ancestors 'self' ; upgrade-insecure-requests;
+< x-robots-tag: noindex
+< link: <https://cookiedatabase.org/wp-json/>; rel="https://api.w.org/"
+< x-content-type-options: nosniff
+< access-control-expose-headers: X-WP-Total, X-WP-TotalPages, Link
+< access-control-allow-headers: Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type
+< cf-cache-status: DYNAMIC
+< report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=XoD7VqprGwu9HA4L7kqimuuOXiGWAggrEUm0kba%2FR3eY61vIVR3FzVcTyb%2BEyeVpkk3IgMmGEji%2BzT3v3T%2FfuTIqpPKZ8ROWzxOIBaShAZE5ssfgLVO5%2FeK58j3XrHI%2BDviPzYA%3D"}],"group":"cf-nel","max_age":604800}
+< nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+< server: cloudflare
+< cf-ray: 92f99ab4b93513cb-ORD
+< alt-svc: h3=":443"; ma=86400
+< server-timing: cfL4;desc="?proto=TCP&rtt=8303&min_rtt=8228&rtt_var=1850&sent=6&recv=10&lost=0&retrans=0&sent_bytes=2965&recv_bytes=933&delivery_rate=334568&cwnd=252&unsent_bytes=0&cid=613d7388b9aa1c6d&ts=448&x=0"
+< 
+* Connection #0 to host cookiedatabase.org left intact
+
+[2025-04-13 04:30:57] Raw response (first 1000 chars): {"data":{"6088":"accessibility","422":"advertising","402":"affiliate marketing","429":"audio streaming","418":"buttons creation","396":"call tracking","180":"chat support","425":"comments management","2443":"Contact Forms","400":"content creation","409":"content distribution network (CDN) services","408":"content management","67":"cookie consent management","1336":"creating online forums","412":"creating polls","399":"cross-channel advertising","413":"customer identity management","1157":"Customer Relations Management","405":"customer support management","426":"display of recent purchases","384":"display of recent social posts and\/or social share buttons","415":"display of webfonts","410":"heat maps and screen recordings","3410":"learning management and course builder","401":"locale management","387":"mailing list subscriptions","385":"maps display","395":"marketing automation (automated email marketing)","1335":"online appointments","407":"page caching","163":"page loading speed impr
+[2025-04-13 04:30:57] Response structure: stdClass Object
+(
+    [data] => stdClass Object
+        (
+            [6088] => accessibility
+            [422] => advertising
+            [402] => affiliate marketing
+            [429] => audio streaming
+            [418] => buttons creation
+            [396] => call tracking
+            [180] => chat support
+            [425] => comments management
+            [2443] => Contact Forms
+            [400] => content creation
+            [409] => content distribution network (CDN) services
+            [408] => content management
+            [67] => cookie consent management
+            [1336] => creating online forums
+            [412] => creating polls
+            [399] => cross-channel advertising
+            [413] => customer identity management
+            [1157] => Customer Relations Management
+            [405] => customer support management
+            [426] => display of recent purchases
+            [384] => display of recent social posts and/or social share buttons
+            [415] => display of webfonts
+            [410] => heat maps and screen recordings
+            [3410] => learning management and course builder
+            [401] => locale management
+            [387] => mailing list subscriptions
+            [385] => maps display
+            [395] => marketing automation (automated email marketing)
+            [1335] => online appointments
+            [407] => page caching
+            [163] => page loading speed improvement
+            [161] => payment processing
+            [419] => popup creation
+            [397] => providing social share buttons
+            [2016] => push notifications
+            [411] => remarketing
+            [423] => Search Engine Optimization
+            [404] => search functions
+            [416] => security and fraud prevention
+            [398] => showing advertisements
+            [386] => spam prevention
+            [388] => Statistics and optimization
+            [178] => video display
+            [406] => visitor tracking
+            [1131] => weather forecast
+            [427] => webforms
+            [420] => webshop management
+            [421] => website admin functions
+            [403] => website design
+            [424] => website development
+            [414] => website hosting
+            [417] => website menus
+            [164] => website performance optimization
+            [162] => website statistics
+        )
+
+    [headers] => stdClass Object
+        (
+            [Location] => https://cookiedatabase.org
+        )
+
+    [status] => 200
+)
+
+[2025-04-13 04:30:57] API responded but data structure is unexpected.
+[2025-04-13 04:30:57] Response status: 200
+[2025-04-13 04:30:57] Testing cookie purposes endpoint...
+[2025-04-13 04:30:57] Making GET request to: https://cookiedatabase.org/wp-json/cookiedatabase/v1/cookiepurposes/en
+[2025-04-13 04:30:57] HTTP Status Code: 200
+[2025-04-13 04:30:57] Content Type: application/json
+[2025-04-13 04:30:57] Verbose cURL output:
+*   Trying 104.21.96.1:443...
+* Connected to cookiedatabase.org (104.21.96.1) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+*  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: CN=cookiedatabase.org
+*  start date: Mar 22 03:51:43 2025 GMT
+*  expire date: Jun 20 03:51:42 2025 GMT
+*  subjectAltName: host "cookiedatabase.org" matched cert's "cookiedatabase.org"
+*  issuer: C=US; O=Let's Encrypt; CN=E6
+*  SSL certificate verify ok.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+* Using Stream ID: 1 (easy handle 0x2445ce0)
+> GET /wp-json/cookiedatabase/v1/cookiepurposes/en HTTP/2
+Host: cookiedatabase.org
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+accept: */*
+
+* old SSL session ID is stale, removing
+< HTTP/2 200 
+< date: Sun, 13 Apr 2025 08:30:57 GMT
+< content-type: application/json
+< strict-transport-security: max-age=63072000; includeSubDomains;preload
+< x-xss-protection: 0
+< referrer-policy: strict-origin-when-cross-origin
+< permissions-policy: accelerometer=(self), autoplay=(self), camera=(self), encrypted-media=(self), fullscreen=(self), geolocation=(self), microphone=(self), midi=(self), payment=(self), display-capture=(self)
+< x-frame-options: SAMEORIGIN
+< cross-origin-opener-policy: same-origin-allow-popups
+< cross-origin-resource-policy: cross-origin
+< content-security-policy: frame-ancestors 'self' ; upgrade-insecure-requests;
+< x-robots-tag: noindex
+< link: <https://cookiedatabase.org/wp-json/>; rel="https://api.w.org/"
+< x-content-type-options: nosniff
+< access-control-expose-headers: X-WP-Total, X-WP-TotalPages, Link
+< access-control-allow-headers: Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type
+< cf-cache-status: DYNAMIC
+< report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=%2BN7t0ap8fGD5XLiUZwhZ2KZP2zYG0LExX0c%2Bu2mQl9NoLkNznJj6h%2Fw%2Fu8O%2F8%2F1N%2BFVcRVLq3KBiNq4l9LwtoJlDVksHB5O3aVWDTkYfN71WhMUwFwersMQ%2FpkGj3s05B1gnhxU%3D"}],"group":"cf-nel","max_age":604800}
+< nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+< server: cloudflare
+< cf-ray: 92f99ab7c90861a7-ORD
+< alt-svc: h3=":443"; ma=86400
+< server-timing: cfL4;desc="?proto=TCP&rtt=7609&min_rtt=7561&rtt_var=2213&sent=6&recv=9&lost=0&retrans=0&sent_bytes=2964&recv_bytes=934&delivery_rate=370321&cwnd=252&unsent_bytes=0&cid=ba4d37e81a4c2256&ts=408&x=0"
+< 
+* Connection #0 to host cookiedatabase.org left intact
+
+[2025-04-13 04:30:57] Raw response (first 1000 chars): {"data":{"61":"Functional","64":"Marketing","1257":"Preferences","63":"Statistics","62":"Statistics (anonymous)"},"headers":{"Location":"https:\/\/cookiedatabase.org"},"status":200}
+[2025-04-13 04:30:57] Cookie purposes response structure: stdClass Object
+(
+    [data] => stdClass Object
+        (
+            [61] => Functional
+            [64] => Marketing
+            [1257] => Preferences
+            [63] => Statistics
+            [62] => Statistics (anonymous)
+        )
+
+    [headers] => stdClass Object
+        (
+            [Location] => https://cookiedatabase.org
+        )
+
+    [status] => 200
+)
+
+[2025-04-13 04:30:57] Testing services POST endpoint...
+[2025-04-13 04:30:57] POST data: {"en":["Google"]}
+[2025-04-13 04:30:58] Services POST request HTTP status: 200
+[2025-04-13 04:30:58] Verbose cURL output for POST:
+*   Trying 104.21.80.1:443...
+* Connected to cookiedatabase.org (104.21.80.1) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+*  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: CN=cookiedatabase.org
+*  start date: Mar 22 03:51:43 2025 GMT
+*  expire date: Jun 20 03:51:42 2025 GMT
+*  subjectAltName: host "cookiedatabase.org" matched cert's "cookiedatabase.org"
+*  issuer: C=US; O=Let's Encrypt; CN=E6
+*  SSL certificate verify ok.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+* Using Stream ID: 1 (easy handle 0x24ab4a0)
+> POST /wp-json/cookiedatabase/v1/services HTTP/2
+Host: cookiedatabase.org
+accept: */*
+content-type: application/json
+content-length: 17
+
+* We are completely uploaded and fine
+* old SSL session ID is stale, removing
+< HTTP/2 200 
+< date: Sun, 13 Apr 2025 08:30:58 GMT
+< content-type: application/json
+< strict-transport-security: max-age=63072000; includeSubDomains;preload
+< x-xss-protection: 0
+< referrer-policy: strict-origin-when-cross-origin
+< permissions-policy: accelerometer=(self), autoplay=(self), camera=(self), encrypted-media=(self), fullscreen=(self), geolocation=(self), microphone=(self), midi=(self), payment=(self), display-capture=(self)
+< x-frame-options: SAMEORIGIN
+< cross-origin-opener-policy: same-origin-allow-popups
+< cross-origin-resource-policy: cross-origin
+< content-security-policy: frame-ancestors 'self' ; upgrade-insecure-requests;
+< x-robots-tag: noindex
+< link: <https://cookiedatabase.org/wp-json/>; rel="https://api.w.org/"
+< x-content-type-options: nosniff
+< access-control-expose-headers: X-WP-Total, X-WP-TotalPages, Link
+< access-control-allow-headers: Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type
+< cf-cache-status: DYNAMIC
+< report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=vA2JDaDu8nzevo3VNhviNVrCZP7ylm8TVB8xM447NxQsYiECuzXX%2BboYtc1GFuqkWjJBj4XHk7C2Z6sK%2BqkfsAx1dLoe2%2FqW%2Bp5qnTQSXf16daJ%2FUrnJ5L7TCFsd2UyBuuGYNyA%3D"}],"group":"cf-nel","max_age":604800}
+< nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+< server: cloudflare
+< cf-ray: 92f99aba8f25eaef-ORD
+< alt-svc: h3=":443"; ma=86400
+< server-timing: cfL4;desc="?proto=TCP&rtt=8331&min_rtt=8294&rtt_var=1811&sent=8&recv=11&lost=0&retrans=0&sent_bytes=2987&recv_bytes=904&delivery_rate=335369&cwnd=235&unsent_bytes=0&cid=6e24d0fe25b7b18c&ts=405&x=0"
+< 
+* Connection #0 to host cookiedatabase.org left intact
+
+[2025-04-13 04:30:58] Services POST raw response (first 1000 chars): {"data":{"en":{"Google":{"service":{"ID":"Google","name":null,"domain":null,"serviceType":null,"serviceTypeID":null,"sharesData":null,"thirdParty":null,"secondParty":null,"privacyStatementURL":null,"language":"en","country":null,"slug":null,"sharedData":null}}}},"headers":{"Location":"https:\/\/cookiedatabase.org"},"status":200}
+[2025-04-13 04:30:58] Services response structure: stdClass Object
+(
+    [data] => stdClass Object
+        (
+            [en] => stdClass Object
+                (
+                    [Google] => stdClass Object
+                        (
+                            [service] => stdClass Object
+                                (
+                                    [ID] => Google
+                                    [name] => 
+                                    [domain] => 
+                                    [serviceType] => 
+                                    [serviceTypeID] => 
+                                    [sharesData] => 
+                                    [thirdParty] => 
+                                    [secondParty] => 
+                                    [privacyStatementURL] => 
+                                    [language] => en
+                                    [country] => 
+                                    [slug] => 
+                                    [sharedData] => 
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [headers] => stdClass Object
+        (
+            [Location] => https://cookiedatabase.org
+        )
+
+    [status] => 200
+)
+
+[2025-04-13 04:30:58] API diagnostics complete. Check cookie_data/debug_log.txt for details.
