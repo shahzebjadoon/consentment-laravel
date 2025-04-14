@@ -1,0 +1,64 @@
+{
+    "name": "darkghosthunter/laraguard",
+    "description": "Two-Factor authentication using TOTP the easy way!",
+    "keywords": [
+        "darkghosthunter",
+        "laraguard",
+        "laravel",
+        "authentication",
+        "2fa"
+    ],
+    "homepage": "https://github.com/darkghosthunter/laraguard",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Italo Israel Baeza Cabrera",
+            "email": "darkghosthunter@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4||^8.0",
+        "ext-json": "*",
+        "bacon/bacon-qr-code": "^2.0",
+        "paragonie/constant_time_encoding": "^2.4",
+        "illuminate/support": "^8.0",
+        "illuminate/http": "^8.20",
+        "illuminate/auth": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "orchestra/canvas": "^6.0",
+        "mockery/mockery":"^1.4",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "DarkGhostHunter\\Laraguard\\": "src",
+            "Database\\Factories\\DarkGhostHunter\\Laraguard\\Eloquent\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --coverage-clover build/logs/clover.xml",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DarkGhostHunter\\Laraguard\\LaraguardServiceProvider"
+            ]
+        }
+    }
+}
