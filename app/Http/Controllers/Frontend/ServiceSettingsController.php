@@ -116,30 +116,24 @@ class ServiceSettingsController extends Controller
      * Trigger a DPS scan for the domain
      */
     public function startScan(Request $request, $company_id, $config_id)
-    {
-        $configuration = Configuration::findOrFail($config_id);
-        
-        // Run the scanner
-        $scanner = new \App\Services\DpsScanner();
-        $result = $scanner->scanDomain($configuration);
-        
-        // Learn new services
-        $scanner->learnNewServices($config_id);
-        
-        // Automatically add all detected services to DPS
-        $this->autoAddServicesToDPS($company_id, $config_id);
-        
-        // Update the last scan date
-        \App\Models\ImplementationSettings::updateOrCreate(
-            ['configuration_id' => $config_id],
-            [
-                'company_id' => $company_id,
-                'last_scan_date' => now()
-            ]
-        );
-        
-        return response()->json(['success' => true]);
-    }
+{
+    $configuration = Configuration::findOrFail($config_id);
+    
+    // Run the scanner only
+    $scanner = new \App\Services\DpsScanner();
+    $result = $scanner->scanDomain($configuration);
+    
+    // Update the last scan date
+    \App\Models\ImplementationSettings::updateOrCreate(
+        ['configuration_id' => $config_id],
+        [
+            'company_id' => $company_id,
+            'last_scan_date' => now()
+        ]
+    );
+    
+    return response()->json(['success' => true]);
+}
 
     /**
      * Automatically add all detected services to DPS

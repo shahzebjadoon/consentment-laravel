@@ -199,7 +199,7 @@
                     @csrf
                     @method('PUT')
                     
-                    <h4 class="section-title">Legal Specifications <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h4>
+                    {{-- <h4 class="section-title">Legal Specifications <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h4> --}}
                     
                     <!-- General Data Protection Regulation (GDPR) Section -->
                     <div class="section-card" style="margin-bottom: 30px;">
@@ -294,8 +294,9 @@
                     @csrf
                     @method('PUT')
                     
-                    <h4 class="section-title">CMP Settings <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h4>
+                    {{-- <h4 class="section-title">CMP Settings <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h4> --}}
                     
+                    <br>
                     <!-- Premium Feature Banner -->
                     <div style="background-color: #fff8e1; border-radius: 5px; padding: 15px; margin-bottom: 30px; display: flex; align-items: center;">
                         <div style="background-color: #ffd600; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">

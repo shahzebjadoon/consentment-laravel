@@ -6,17 +6,18 @@
     <title>ConsentManager Integration Example</title>
     
     <!-- ConsentManager Integration (Single Script) -->
-    <script id="consentment-cmp" 
-            src="https://app.consentment.com/js/cmp/loader.js" 
-            data-settings-id="1" 
-            data-api-base="https://app.consentment.com/api"
-            async></script>
+  
+    <script id="consentment-cmp"
+src="http://127.0.0.1:8000/js/cmp/loader.js" 
+data-settings-id="6" 
+data-api-base="http://127.0.0.1:8000/api"
+async></script>
             
     <script>
     // Force load wall-ui.js after a short delay
     setTimeout(function() {
         const scriptEl = document.createElement('script');
-        scriptEl.src = "https://app.consentment.com/js/cmp/wall-ui.js";
+        scriptEl.src = "http://127.0.0.1:8000/js/cmp/wall-ui.js";
         scriptEl.onload = function() {
             console.log("MANUALLY LOADED WALL UI");
         };

@@ -52,13 +52,15 @@
                     <p class="section-description">
                         The First Layer is displayed to the user when the website / app is accessed without any preexisting consent information and contains all information that must be disclosed to the user to obtain a valid consent.
                     </p>
+                    {{$appearance->layout_type}}
+                
                     
                     <div class="layout-options">
                         <div class="layout-option-group">
                             <div class="layout-option-item {{ $appearance->layout_type == 'dialog' || !$appearance->layout_type ? 'active' : '' }}">
                                 <input type="radio" id="dialog" name="firstLayerLayout" value="dialog" {{ $appearance->layout_type == 'dialog' || !$appearance->layout_type ? 'checked' : '' }}>
                                 <label for="dialog" class="layout-label">
-                                    <div class="layout-icon dialog-icon"></div>
+                                    <div class="layout-icon " id="dialog-icon"></div>
                                     <span>Dialog</span>
                                 </label>
                             </div>
@@ -66,7 +68,7 @@
                             <div class="layout-option-item {{ $appearance->layout_type == 'bar' ? 'active' : '' }}">
                                 <input type="radio" id="bar" name="firstLayerLayout" value="bar" {{ $appearance->layout_type == 'bar' ? 'checked' : '' }}>
                                 <label for="bar" class="layout-label">
-                                    <div class="layout-icon bar-icon"></div>
+                                    <div class="layout-icon bar-icon" id="bar-icon"></div>
                                     <span>Bar</span>
                                 </label>
                             </div>
@@ -74,7 +76,7 @@
                             <div class="layout-option-item {{ $appearance->layout_type == 'wall' ? 'active' : '' }}">
                                 <input type="radio" id="wall" name="firstLayerLayout" value="wall" {{ $appearance->layout_type == 'wall' ? 'checked' : '' }}>
                                 <label for="wall" class="layout-label">
-                                    <div class="layout-icon wall-icon"></div>
+                                    <div   class="layout-icon  " id="wall-icon"></div>
                                     <span>Wall</span>
                                 </label>
                             </div>
@@ -82,14 +84,25 @@
                             <div class="layout-option-item {{ $appearance->layout_type == 'banner' ? 'active' : '' }}">
                                 <input type="radio" id="banner" name="firstLayerLayout" value="banner" {{ $appearance->layout_type == 'banner' ? 'checked' : '' }}>
                                 <label for="banner" class="layout-label">
-                                    <div class="layout-icon banner-icon"></div>
+                                    <div class="layout-icon banner-icon" id="banner-icon"></div>
                                     <span>Banner</span>
                                 </label>
                             </div>
                         </div>
                         
-                        <div class="layout-preview">
-                            <img src="{{ asset('img/layout-preview.png') }}" alt="Layout Preview" style="width: 100%;">
+                        <div class="layout-preview-container">
+                        
+                          
+                                <div class="page-wrapper">
+                                  <div class="layout-container">
+                                    <!-- Swap this class to try others like layout-box-dialog, etc. -->
+                                    <div id= 'preveiw'  class="layout-box-common layout-box-{{$appearance->layout_type}}">
+                                      {{$appearance->layout_type}} Layout
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                        
                         </div>
                     </div>
                     
@@ -151,20 +164,32 @@
                         The Second Layer contains detailed information about the integrated Data Processing Services and Categories. It enables the user to view current privacy settings and to adjust them to their preferences.
                     </p>
                     
-                    <div class="layout-options">
+                    <div class="layout-options ">
                         <div class="layout-option-group">
-                            <div class="layout-option-item active">
+                            <div class="layout-option-item ">
                                 <input type="radio" id="center" name="secondLayerLayout" checked>
-                                <label for="center" class="layout-label">
-                                    <div class="layout-icon center-icon"></div>
+                                <label for="center" class="layout-label ">
+                                    <div class="layout-icon center-icon active-icon"></div>
                                     <span>Center</span>
                                 </label>
                             </div>
                         </div>
                         
-                        <div class="layout-preview">
+                        {{-- <div class="layout-preview">
                             <img src="{{ asset('img/second-layer-preview.png') }}" alt="Second Layer Preview" style="width: 100%;">
+                        </div> --}}
+
+                        <div class="layout-preview-container">
+                        <div class="page-wrapper">
+                            <div class="layout-container">
+                              <!-- Swap this class to try others like layout-box-dialog, etc. -->
+                              <div id= 'preveiw'  class="layout-box-common layout-box-dialog">
+                                Center Layout
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                  
                     </div>
                     
                     <div class="settings-group">
@@ -379,6 +404,11 @@
     .dialog-icon {
         background-color: #0066cc;
     }
+
+    .active-icon {
+        background-color: #1da1f2;
+    }
+    
     
     .layout-preview {
         flex: 2;
@@ -499,8 +529,124 @@
         background-color: #45a049;
     }
 </style>
+<style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      background-color: #e9ecef;
+      font-family: Arial, sans-serif;
+    }
+
+    .layout-preview-container {
+      border: 1px solid #dee2e6;
+      border-radius: 6px;
+      background-color: #f8f9fa;
+      overflow: hidden;
+      width: 600px;
+      height: 320px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page-wrapper {
+      width: 100%;
+      height: 100%;
+      background-color: #ddd;
+      position: relative;
+    }
+
+    .layout-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .layout-box-common {
+      background-color: #1da1f2;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+    }
+
+    /* Layout Types */
+    .layout-box-banner {
+      width: 100%;
+      height: 100px;
+      bottom: 0;
+      left: 0;
+    }
+
+    .layout-box-dialog {
+      width: 300px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .layout-box-wall {
+      width: 150px;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .layout-box-bar {
+      width: 100%;
+      height: 60px;
+      top: 0;
+      left: 0;
+    }
+
+    .layout-box-block {
+      width: 100%;
+      height: 250px;
+      top: 0;
+      left: 0;
+    }
+  </style>
+
+
+
+<script src="{{ asset('js/jquery.js') }}"></script>
 
 <script>
+
+$(document).ready(function() {
+        // Apply 'active-icon' to initially selected radio button's icon
+        $('.layout-options input[type="radio"]:checked').each(function() {
+            var selectedRadio = $(this).attr('id'); // Get the id of the checked radio button
+            $('#' + selectedRadio + '-icon').addClass('active-icon'); // Add the class to the icon div
+        });
+        // $('#preveiw').removeClass('layout-box-dialog layout-box-bar layout-box-wall layout-box-banner layout-box-block');
+
+
+        $('.layout-options input[type="radio"]').on('change', function() {
+            // Remove 'active-icon' class from all icons
+            $('.layout-icon').removeClass('active-icon');
+            $('#preveiw').removeClass('layout-box-dialog layout-box-bar layout-box-wall layout-box-banner layout-box-block');
+            $('#preveiw').addClass('layout-box-' + $('#layoutTypeInput').val()); // Add the class based on the selected radio button value
+            $('#preveiw').text($(this).val() + ' Layout'); // Update the text inside the preview box
+          
+            // Add 'active-icon' class to the icon corresponding to the selected radio button
+            var selectedRadio = $(this).attr('id'); // Get the id of the selected radio button
+            $('#' + selectedRadio + '-icon').addClass('active-icon'); // Add the class to the icon div
+        });
+
+
+    });
+
+
+
+ 
     // Toggle active layout option and update hidden field
     document.querySelectorAll('.layout-option-item').forEach(function(item) {
         const radio = item.querySelector('input[type="radio"]');

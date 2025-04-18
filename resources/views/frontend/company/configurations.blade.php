@@ -30,7 +30,7 @@
         <tbody>
             @if(count($configurations) > 0)
                 @foreach($configurations as $config)
-                <tr>
+                <tr   style="cursor: pointer;" onclick="window.location='{{ route('frontend.configurations.edit', ['company_id' => $company->id, 'config_id' => $config->id]) }}'">
                     <td>
                         <div style="display: flex; align-items: center;">
                             <i class="fas fa-cog mr-2" style="margin-right: 10px;"></i>
@@ -44,12 +44,12 @@
                     </td>
                     <td>
                         <div class="table-actions">
-                                <a href="{{ route('frontend.configurations.edit', ['company_id' => $company->id, 'config_id' => $config->id]) }}" class="action-icon">
+                                {{-- <a href="{{ route('frontend.configurations.edit', ['company_id' => $company->id, 'config_id' => $config->id]) }}" class="action-icon">
                                     <i class="fas fa-pencil-alt"></i>
-                                </a>
-                                <span class="action-icon">
+                                </a> --}}
+                                {{-- <span class="action-icon">
                                     <i class="fas fa-ellipsis-v"></i>
-                                </span>
+                                </span> --}}
                             </div>
                     </td>
                 </tr>

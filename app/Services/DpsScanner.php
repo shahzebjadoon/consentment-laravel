@@ -138,6 +138,26 @@ class DpsScanner
         }
     }
     
+    
+    protected function isOwnDomainOrSubdomain($host, $domainToCheck)
+{
+    // Extract domain parts for comparison
+    $hostParts = explode('.', $host);
+    $domainParts = explode('.', $domainToCheck);
+    
+    // Get base domain (last two parts)
+    $hostBase = array_slice($hostParts, -2);
+    $domainBase = array_slice($domainParts, -2);
+    
+    // If base domains match, or one is a subdomain of the other
+    if (implode('.', $hostBase) === implode('.', $domainBase)) {
+        return true;
+    }
+    
+    // Check if one is fully contained in the other (subdomain check)
+    return (strpos($host, $domainToCheck) !== false) || (strpos($domainToCheck, $host) !== false);
+}
+    
     /**
      * Scan JavaScript files for additional services
      * 
@@ -161,9 +181,10 @@ class DpsScanner
             
             // Only scan JavaScript files on the same domain
             $parsedScriptUrl = parse_url($src);
-            $parsedDomainUrl = parse_url($domainUrl);
-            
-            if (isset($parsedScriptUrl['host']) && $parsedScriptUrl['host'] === $parsedDomainUrl['host']) {
+$parsedDomainUrl = parse_url($domainUrl);
+
+if (isset($parsedScriptUrl['host']) && 
+    $this->isOwnDomainOrSubdomain($parsedScriptUrl['host'], $parsedDomainUrl['host'])) {
                 try {
                     $jsResponse = $this->client->get($src);
                     $jsContent = (string) $jsResponse->getBody();
@@ -285,7 +306,9 @@ class DpsScanner
             $parsedUrl = parse_url($src);
             
             // Only process external resources
-            if (isset($parsedUrl['host']) && strtolower($parsedUrl['host']) !== strtolower($currentDomainHost)) {
+            if (isset($parsedUrl['host']) && 
+    !$this->isOwnDomainOrSubdomain(strtolower($parsedUrl['host']), strtolower($currentDomainHost)) &&
+    !$this->isOwnDomainOrSubdomain(strtolower($currentDomainHost), strtolower($parsedUrl['host']))) {
                 $serviceData = $this->identifyService($src);
                 
                 if ($serviceData) {
@@ -616,17 +639,25 @@ class DpsScanner
         }
         
         // Set a default name if none is provided
-        if (empty($serviceName) && !empty($domain)) {
-            // Try to extract a meaningful name from the domain
-            $domainParts = explode('.', $domain);
-            if (count($domainParts) >= 2) {
-                $serviceName = 'Unknown: ' . ucfirst($domainParts[count($domainParts) - 2]);
-            } else {
-                $serviceName = 'Unknown Service';
-            }
-        } else if (empty($serviceName)) {
-            $serviceName = 'Unknown Service';
-        }
+if (empty($serviceName) && !empty($domain)) {
+    // Check for jQuery domains
+    if (stripos($domain, 'jquery') !== false || 
+        (isset($serviceUrl) && stripos($serviceUrl, 'jquery') !== false)) {
+        // Skip this or mark as processed but don't add to actual results
+        return null;
+    }
+    
+    // Try to extract a meaningful name from the domain
+    $domainParts = explode('.', $domain);
+    if (count($domainParts) >= 2) {
+        // Just use the domain name without "Unknown:" prefix
+        $serviceName = ucfirst($domainParts[count($domainParts) - 2]);
+    } else {
+        $serviceName = 'External Service';
+    }
+} else if (empty($serviceName)) {
+    $serviceName = 'External Service';
+}
         
         // Check if this service already exists for this configuration
         $existingScan = DpsScan::where('configuration_id', $configuration->id)
@@ -687,28 +718,47 @@ class DpsScanner
         foreach ($pendingScans as $scan) {
             $serviceName = $scan->service_name ?? ('Unknown: ' . $scan->domain);
             
-            // Skip certain resource files we don't want to track
-            if (!empty($scan->service_url)) {
-                $parsedUrl = parse_url($scan->service_url);
-                if (!empty($parsedUrl['path'])) {
-                    $path = strtolower($parsedUrl['path']);
-                    $skipExtensions = ['.css', '.jpg', '.jpeg', '.png', '.gif', '.svg', '.woff', '.woff2', '.ttf', '.eot'];
-                    
-                    $skipResource = false;
-                    foreach ($skipExtensions as $ext) {
-                        if (substr($path, -strlen($ext)) === $ext) {
-                            $skipResource = true;
-                            break;
-                        }
-                    }
-                    
-                    if ($skipResource) {
-                        // Mark as processed but don't add to DPS
-                        DpsScan::where('id', $scan->id)->update(['status' => 'ignored']);
-                        continue;
-                    }
+            // Skip certain resource files and jQuery we don't want to track
+if (!empty($scan->service_url) || !empty($scan->domain)) {
+    // Check if it's jQuery - skip it
+    if ((stripos($scan->domain, 'jquery') !== false) || 
+        (!empty($scan->service_url) && stripos($scan->service_url, 'jquery') !== false)) {
+        // Mark as processed but don't add to DPS
+        DpsScan::where('id', $scan->id)->update(['status' => 'ignored']);
+        continue;
+    }
+    
+    // Skip resource files
+    if (!empty($scan->service_url)) {
+        $parsedUrl = parse_url($scan->service_url);
+        if (!empty($parsedUrl['path'])) {
+            $path = strtolower($parsedUrl['path']);
+            $skipExtensions = ['.css', '.jpg', '.jpeg', '.png', '.gif', '.svg', '.woff', '.woff2', '.ttf', '.eot'];
+            
+            $skipResource = false;
+            foreach ($skipExtensions as $ext) {
+                if (substr($path, -strlen($ext)) === $ext) {
+                    $skipResource = true;
+                    break;
                 }
             }
+            
+            if ($skipResource) {
+                // Mark as processed but don't add to DPS
+                DpsScan::where('id', $scan->id)->update(['status' => 'ignored']);
+                continue;
+            }
+        }
+    }
+    
+    // Skip own domain
+    $configDomain = parse_url(Configuration::find($configuration->id)->domain, PHP_URL_HOST);
+    if ($configDomain && $this->isOwnDomainOrSubdomain($scan->domain, $configDomain)) {
+        // Mark as processed but don't add to DPS
+        DpsScan::where('id', $scan->id)->update(['status' => 'ignored']);
+        continue;
+    }
+}
             
             // If we don't have this service yet or current scan has more info
             if (!isset($uniqueServices[$serviceName]) || 
@@ -878,27 +928,5 @@ class DpsScanner
         return $processed;
     }
     
-    /**
-     * Learn new services from scanning
-     * Modified to match services with library instead of creating new entries
-     * 
-     * @param int $configId
-     * @return array
-     */
-    public function learnNewServices($configId)
-    {
-        $added = [];
-        
-        // Get configuration info
-        $configInfo = Configuration::find($configId);
-        if (!$configInfo) return $added;
-        
-        // First, process any unidentified services
-        $this->processUnidentifiedServices($configId);
-        
-        // Then add all services to DPS
-        $added = $this->addDetectedServicesToDPS($configInfo);
-        
-        return $added;
-    }
+    
 }

@@ -31,8 +31,8 @@
             // Load configuration and then display UI
             this.loadConfig()
                 .then(() => {
-                    console.log('[ConsentMent-Main] Configuration loaded, loading wall UI');
-                    this.loadWallUI();
+                    console.log('[ConsentMent-Main] Configuration loaded, loading consent UI');
+                    this.loadConsentUI();
                 })
                 .catch(error => {
                     console.error('[ConsentMent-Main] Error loading configuration:', error);
@@ -61,21 +61,29 @@
         },
         
         /**
-         * Load the Wall UI
+         * Load the appropriate UI based on layout_type from configuration
          */
-        loadWallUI: function() {
+        loadConsentUI: function() {
             console.log('[ConsentMent-Main] Loading UI scripts');
             
-            // Load wall UI script
-            const wallScript = document.createElement('script');
-            wallScript.src = this.options.baseUrl + 'wall-ui.js';
-            wallScript.async = true;
+            // Determine which layout to use based on configuration
+            const layoutType = this.config.appearance && this.config.appearance.layout_type 
+                ? this.config.appearance.layout_type 
+                : 'dialog'; // Default to dialog if not specified
             
-            wallScript.onload = () => {
-                console.log('[ConsentMent-Main] Wall UI script loaded');
-                this.showWallUI();
+            console.log('[ConsentMent-Main] Using layout type:', layoutType);
+            
+            // Load the appropriate UI script based on layout type
+            const uiScriptName = layoutType + '-ui.js';
+            const uiScript = document.createElement('script');
+            uiScript.src = this.options.baseUrl + uiScriptName;
+            uiScript.async = true;
+            
+            uiScript.onload = () => {
+                console.log(`[ConsentMent-Main] ${layoutType} UI script loaded`);
+                this.showConsentUI(layoutType);
                 
-                // After wall UI is loaded, load detail UI script
+                // After UI is loaded, load detail UI script
                 const detailScript = document.createElement('script');
                 detailScript.src = this.options.baseUrl + 'detail-ui.js';
                 detailScript.async = true;
@@ -91,23 +99,62 @@
                 document.head.appendChild(detailScript);
             };
             
-            wallScript.onerror = () => {
-                console.error('[ConsentMent-Main] Failed to load wall UI script');
+            uiScript.onerror = () => {
+                console.error(`[ConsentMent-Main] Failed to load ${layoutType} UI script`);
+                // Fallback to dialog UI if the specified layout script fails to load
+                if (layoutType !== 'dialog') {
+                    console.log('[ConsentMent-Main] Falling back to dialog UI');
+                    this.loadFallbackUI('dialog');
+                }
             };
             
-            document.head.appendChild(wallScript);
+            document.head.appendChild(uiScript);
         },
         
         /**
-         * Show the Wall UI
+         * Load fallback UI in case the primary UI script fails to load
          */
-        showWallUI: function() {
-            if (typeof this.renderWallUI === 'function') {
-                console.log('[ConsentMent-Main] Rendering wall UI');
-                this.renderWallUI(this.config);
+        loadFallbackUI: function(fallbackType) {
+            const fallbackScript = document.createElement('script');
+            fallbackScript.src = this.options.baseUrl + fallbackType + '-ui.js';
+            fallbackScript.async = true;
+            
+            fallbackScript.onload = () => {
+                console.log(`[ConsentMent-Main] Fallback ${fallbackType} UI script loaded`);
+                this.showConsentUI(fallbackType);
+            };
+            
+            fallbackScript.onerror = () => {
+                console.error(`[ConsentMent-Main] Failed to load fallback ${fallbackType} UI script`);
+            };
+            
+            document.head.appendChild(fallbackScript);
+        },
+        
+        /**
+         * Show the appropriate UI based on layout type
+         */
+        showConsentUI: function(layoutType) {
+            const renderMethodName = 'render' + this.capitalizeFirstLetter(layoutType) + 'UI';
+            
+            if (typeof this[renderMethodName] === 'function') {
+                console.log(`[ConsentMent-Main] Rendering ${layoutType} UI`);
+                this[renderMethodName](this.config);
             } else {
-                console.error('[ConsentMent-Main] Wall UI renderer not available');
+                console.error(`[ConsentMent-Main] ${layoutType} UI renderer not available`);
+                
+                // If not the default layout and renderer not available, try to fall back
+                if (layoutType !== 'dialog') {
+                    this.loadFallbackUI('dialog');
+                }
             }
+        },
+        
+        /**
+         * Helper method to capitalize first letter for method name construction
+         */
+        capitalizeFirstLetter: function(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
         },
         
         /**
@@ -242,20 +289,33 @@
         },
         
         /**
-         * Toggle between wall and detail views
+         * Toggle between consent UI and detail views
          */
         toggleDetailView: function(show) {
-            const wallWrapper = document.querySelector('.cmp-wrapper.cmp.first');
+            // Find all possible UI wrappers
+            const layoutTypes = ['dialog', 'bar', 'wall', 'banner'];
+            
+            // Find the detail wrapper
             const detailWrapper = document.querySelector('.cmp-wrapper.cmp.detail');
             
             if (show) {
-                // Hide wall UI and show detail UI
-                if (wallWrapper) wallWrapper.style.display = 'none';
+                // Hide all layout UIs and show detail UI
+                layoutTypes.forEach(type => {
+                    const wrapper = document.querySelector(`.cmp-wrapper.cmp.${type}`);
+                    if (wrapper) wrapper.style.display = 'none';
+                });
+                
                 if (detailWrapper) detailWrapper.style.display = 'block';
             } else {
-                // Show wall UI and hide detail UI
-                if (wallWrapper) wallWrapper.style.display = 'block';
+                // Show the correct layout UI based on config and hide detail UI
                 if (detailWrapper) detailWrapper.style.display = 'none';
+                
+                const layoutType = this.config.appearance && this.config.appearance.layout_type 
+                    ? this.config.appearance.layout_type 
+                    : 'dialog';
+                
+                const activeWrapper = document.querySelector(`.cmp-wrapper.cmp.${layoutType}`);
+                if (activeWrapper) activeWrapper.style.display = 'block';
             }
         }
     };
