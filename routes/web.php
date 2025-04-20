@@ -24,7 +24,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 
 // Authentication routes
 Route::group(['namespace' => 'App\Http\Controllers\Frontend\Auth', 'as' => 'frontend.auth.'], function () {
-    Route::post('login', 'LoginController@login')->name('login');
+    Route::post('new/login', 'LoginController@login')->name('login');
     Route::get('logout', 'LoginController@logout')->name('logout');
     
     // Registration routes
@@ -134,6 +134,10 @@ Route::group(['prefix' => 'companies/{company_id}/configurations/{config_id}/imp
 Route::get('/preview/{config_id}', [App\Http\Controllers\Frontend\PreviewController::class, 'preview'])
     ->name('frontend.preview')
     ->middleware('auth');
+
+
+
+
     
     
 // Appearance save route

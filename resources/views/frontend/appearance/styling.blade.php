@@ -7,7 +7,7 @@
     </div>
     
     <!-- Step 4: Add Save Settings Button -->
-    <div class="card-header-actions" style="border-bottom: 1px solid #e6e8eb; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+    <div class="card-header-actions" style=" padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
         <div>
             <span>Last saved: {{ $appearance->updated_at ? $appearance->updated_at->diffForHumans() : 'Never' }}</span>
         </div>
@@ -156,17 +156,7 @@
                     </div>
                 </div>
                 
-                <!-- Premium Banner -->
-                <div class="premium-banner">
-                    <div class="premium-banner-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="premium-banner-text">
-                        <h4>This feature is available in higher plan</h4>
-                        <p>Upgrade your plan to unlock exclusive features and premium content.</p>
-                    </div>
-                    <button type="button" class="btn-upgrade">Upgrade</button>
-                </div>
+             
             </div>
             
             <!-- Logo Section -->
@@ -200,17 +190,7 @@
                     </div>
                 </div>
                 
-                <!-- Premium Banner -->
-                <div class="premium-banner">
-                    <div class="premium-banner-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="premium-banner-text">
-                        <h4>This feature is available in higher plan</h4>
-                        <p>Upgrade your plan to unlock exclusive features and premium content.</p>
-                    </div>
-                    <button type="button" class="btn-upgrade">Upgrade</button>
-                </div>
+              
             </div>
             
             <!-- Fonts Section -->
@@ -241,17 +221,7 @@
                     </div>
                 </div>
                 
-                <!-- Premium Banner -->
-                <div class="premium-banner">
-                    <div class="premium-banner-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="premium-banner-text">
-                        <h4>This feature is available in higher plan</h4>
-                        <p>Upgrade your plan to unlock exclusive features and premium content.</p>
-                    </div>
-                    <button type="button" class="btn-upgrade">Upgrade</button>
-                </div>
+             
             </div>
             
             <!-- Buttons Section -->
@@ -396,18 +366,7 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Premium Banner -->
-                <div class="premium-banner">
-                    <div class="premium-banner-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="premium-banner-text">
-                        <h4>This feature is available in higher plan</h4>
-                        <p>Upgrade your plan to unlock exclusive features and premium content.</p>
-                    </div>
-                    <button type="button" class="btn-upgrade">Upgrade</button>
-                </div>
+              
             </div>
             
             <!-- Custom CSS Section -->
@@ -435,17 +394,7 @@
                     </div>
                 </div>
                 
-                <!-- Premium Banner -->
-                <div class="premium-banner">
-                    <div class="premium-banner-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="premium-banner-text">
-                        <h4>This feature is available in higher plan</h4>
-                        <p>Upgrade your plan to unlock exclusive features and premium content.</p>
-                    </div>
-                    <button type="button" class="btn-upgrade">Upgrade</button>
-                </div>
+              
             </div>
             
             <!-- Privacy Button Section -->
@@ -534,17 +483,7 @@
                     </div>
                 </div>
                 
-                <!-- Premium Banner -->
-                <div class="premium-banner">
-                    <div class="premium-banner-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="premium-banner-text">
-                        <h4>This feature is available in higher plan</h4>
-                        <p>Upgrade your plan to unlock exclusive features and premium content.</p>
-                    </div>
-                    <button type="button" class="btn-upgrade">Upgrade</button>
-                </div>
+            
             </div>
         </div>
     </div>

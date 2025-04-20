@@ -11,12 +11,12 @@
             <a href="{{ route('frontend.service-settings.scanner', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'scanner' ? 'active' : '' }}" 
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'scanner' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
-                DPS Scanner
+               Data Processing Service Scanner
             </a>
             <a href="{{ route('frontend.service-settings.services', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'services' ? 'active' : '' }}" 
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'services' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
-                Data Processing Services
+                Data Processing Services Detected
             </a>
             <a href="{{ route('frontend.service-settings.categories', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'categories' ? 'active' : '' }}" 

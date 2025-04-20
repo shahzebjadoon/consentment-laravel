@@ -29,19 +29,10 @@
         <!-- Tab Content -->
         <div class="tab-content">
             <!-- Premium Feature Banner -->
-            <div style="background-color: #fff8e1; border-radius: 5px; padding: 15px; margin: 20px 0; display: flex; align-items: center;">
-                <div style="background-color: #ffd600; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                    <i class="fas fa-bolt" style="color: white;"></i>
-                </div>
-                <div>
-                    <h4 style="margin: 0; margin-bottom: 5px; font-size: 16px;">This feature is available in higher plan</h4>
-                    <p style="margin: 0; color: #666;">Upgrade your plan to unlock exclusive features and premium content.</p>
-                </div>
-                <button type="button" class="btn btn-primary" style="margin-left: auto;">Upgrade</button>
-            </div>
+          
             
             <!-- Filter Section -->
-            <div style="display: flex; margin-bottom: 20px;">
+            <div style="display: flex; margin-bottom: 20px;margin-top:10px;">
                 <div style="display: flex; align-items: center; margin-right: 20px;">
                     <span style="color: #666; margin-right: 10px;">Time range</span>
                     <input type="text" class="form-control" placeholder="03/04/25" style="width: 100px; margin-right: 5px;">

@@ -7,7 +7,7 @@
     </div>
     
     <!-- Add Save Settings Button in Header -->
-    <div class="card-header-actions" style="border-bottom: 1px solid #e6e8eb; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+    <div class="card-header-actions" style=" padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
         <div>
             <span>Last saved: {{ isset($contentSettings) && $contentSettings->updated_at ? $contentSettings->updated_at->diffForHumans() : 'Never' }}</span>
         </div>
@@ -41,33 +41,25 @@
             <a href="{{ route('frontend.content.first-layer', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'first-layer' ? 'active' : '' }}" 
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'first-layer' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
-                First Layer
+                First Popup
             </a>
             <a href="{{ route('frontend.content.second-layer', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'second-layer' ? 'active' : '' }}" 
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'second-layer' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
-                Second Layer
+                Detail Popup
             </a>
             <a href="{{ route('frontend.content.labels', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'labels' ? 'active' : '' }}" 
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'labels' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }}">
-                Labels
+                Text Labels
             </a>
         </div>
         <div style="border-top: 1px solid #dee2e6; margin-top: -1px;"></div>
 
         <!-- Labels Content -->
         <div class="tab-content">
-            <!-- Auto Translation Banner -->
-            <div class="premium-banner" style="margin: 20px 0;">
-                <div class="premium-banner-icon">
-                    <i class="fas fa-bolt"></i>
-                </div>
-                <div class="premium-banner-text">
-                    <h4>Auto Translation is a premium feature</h4>
-                </div>
-                <button type="button" class="btn-upgrade">Upgrade</button>
-            </div>
+            
+           
             
             <div class="content-section">
                 <h4>Labels</h4>
@@ -75,7 +67,7 @@
                 
                 <!-- First Layer Labels -->
                 <div class="form-group">
-                    <h5>First Layer Labels</h5>
+                    <h4>First Popup Labels</h4>
                     
                     <!-- Accept Button -->
                     <div class="form-group">
@@ -113,7 +105,7 @@
                 
                 <!-- Second Layer Labels -->
                 <div class="form-group">
-                    <h5>Second Layer Labels</h5>
+                    <h4  >Detail Popup Labels</h4>
                     
                     <!-- Service Provider Label -->
                     <div class="form-group">
@@ -162,7 +154,7 @@
                 
                 <!-- Button Labels -->
                 <div class="form-group">
-                    <h5>Button Labels</h5>
+                    <h4>Button Labels</h4>
                     
                     <!-- Save Settings Button -->
                     <div class="form-group">
@@ -189,7 +181,7 @@
                 
                 <!-- Category Labels -->
                 <div class="form-group">
-                    <h5>Category Labels</h5>
+                    <h4>Category Labels</h4>
                     
                     <!-- Essential Category -->
                     <div class="form-group">
@@ -238,7 +230,7 @@
                 
                 <!-- Status Labels -->
                 <div class="form-group">
-                    <h5>Status Labels</h5>
+                    <h4>Status Labels</h4>
                     
                     <!-- Active Status -->
                     <div class="form-group">

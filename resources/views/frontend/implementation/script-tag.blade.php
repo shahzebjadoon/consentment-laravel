@@ -13,7 +13,7 @@
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'script-tag' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
                 Script Tag
             </a>
-            <a href="{{ route('frontend.implementation.embeddings', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
+            {{-- <a href="{{ route('frontend.implementation.embeddings', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'embeddings' ? 'active' : '' }}" 
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'embeddings' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
                 Embeddings
@@ -27,7 +27,7 @@
                class="tab-link {{ $activeTab == 'ab-testing' ? 'active' : '' }}" 
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'ab-testing' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }}">
                 A/B Testing
-            </a>
+            </a> --}}
         </div>
         <div style="border-top: 1px solid #dee2e6; margin-top: -1px;"></div>
 
@@ -35,7 +35,7 @@
         <div class="tab-content">
             <!-- CMP Implementation Section -->
             <div class="implementation-section">
-                <h4>CMP Implementation</h4>
+                <h4 style="margin-top:5px;">Consent Banner  Implementation</h4>
                 <p class="section-description">
                     Integrate the script tag below to implement the Consent Management Platform on your website. If you use Google Tag Manager you can use our GTM template and follow our 
                     <a href="#" class="gtm-guide-link">GTM Implementation Guide</a>.
@@ -55,17 +55,7 @@
                     </p>
                     
                     @if($company->subscription_plan === 'free')
-                    <!-- Premium Banner -->
-                    <div class="premium-banner">
-                        <div class="premium-banner-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <div class="premium-banner-text">
-                            <h4>This feature is available in higher plan</h4>
-                            <p>Upgrade your plan to unlock exclusive features and premium content.</p>
-                        </div>
-                        <button type="button" class="btn-upgrade">Upgrade</button>
-                    </div>
+                   
                     @endif
                     
                     <!-- Blocking Options -->
@@ -114,7 +104,7 @@ async&gt;&lt;/script&gt;</code></pre>
                 </div>
                 
                 <!-- Draft Version Section -->
-                <div class="implementation-panel">
+                {{-- <div class="implementation-panel">
                     <div class="panel-header">
                         <h5>Draft Version</h5>
                     </div>
@@ -131,7 +121,7 @@ data-api-base="{{ url('/api') }}"
 async&gt;&lt;/script&gt;</code></pre>
     <button class="btn-copy-code"><i class="fas fa-copy"></i></button>
 </div>
-                </div>
+                </div> --}}
                 
                 <!-- Testing Section -->
                 <div class="implementation-panel">

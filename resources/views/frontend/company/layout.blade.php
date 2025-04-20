@@ -479,13 +479,13 @@
         .modal-content {
             background-color: #fff;
             margin: 5% auto;
+            margin-top: 0px;
             width: 100%;
-            max-width: 600px;
+            /* max-width: 600px; */
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transform: translateY(-20px);
-            transition: transform 0.3s;
+            transform: scale(0.8) !important;
         }
 
         .modal.show .modal-content {
@@ -554,7 +554,7 @@
     </style>
 </head>
 
-<body>
+<body >
     <div class="dashboard-container">
         <div class="sidebar">
             <div class="logo-container">
@@ -586,7 +586,7 @@
                     <a href="{{ route('frontend.configurations.edit', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}"
                         class="nav-link {{ request()->routeIs('frontend.configurations.*') ? 'active' : '' }}">
                         <span class="nav-link-icon"><i class="fas fa-cog"></i></span>
-                        Configuration
+                        Domain Setup
                     </a>
 
                 </div>
@@ -619,7 +619,7 @@
 
                 </div>
 
-                <div class="sidebar-item">
+                <div class="sidebar-item" style="display: none;">
                     <a href="#" class="nav-link">
                         <span class="nav-link-icon"><i class="fas fa-puzzle-piece"></i></span>
                         Integrations
@@ -634,6 +634,14 @@
                     </a>
 
                 </div>
+
+                <div class="sidebar-item" >
+                    <a href="{{ route('frontend.preview', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}"
+                        class="nav-link {{ request()->routeIs('frontend.preview.*') ? 'active' : '' }}">
+                        <span class="nav-link-icon"><i class="fas fa-list-alt"></i></span>
+                        Preveiw Implementation
+                    </a>
+                </div>
             @else
                 <!-- Default Company Sidebar -->
                 <a href="{{ route('frontend.dashboard') }}" class="nav-link">
@@ -644,7 +652,7 @@
                 <a href="{{ route('frontend.companies.configurations', $company->id) }}"
                     class="nav-link {{ $activeTab == 'configurations' ? 'active' : '' }}">
                     <span class="nav-link-icon"><i class="fas fa-cog"></i></span>
-                    Configurations
+                    Domain Settings
                 </a>
 
                 <a href="{{ route('frontend.companies.geolocation', $company->id) }}"

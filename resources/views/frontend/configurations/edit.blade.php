@@ -3,8 +3,38 @@
 @section('content')
 <div class="card" style="margin-bottom: 30px; width: 60%;">
     <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
-        <h3 class="page-title">Configuration <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
+        <h3 class="page-title">Domain Setup <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
     </div>
+
+        <!-- Step 4: Add Save Settings Button -->
+        <div class="card-header-actions" style=" padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <span>Last saved: {{ $configuration->updated_at ? $configuration->updated_at->diffForHumans() : 'Never' }}</span>
+            </div>
+            <form action="{{ route('frontend.appearance.save', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" method="POST" id="stylingForm">
+                @csrf
+                <!-- Hidden fields for the current tab's settings -->
+                <input type="hidden" name="background_color" value="{{ $appearance->background_color ?? '#FFFFFF' }}" id="backgroundColorInput">
+                <input type="hidden" name="text_color" value="{{ $appearance->text_color ?? '#000000' }}" id="textColorInput">
+                <input type="hidden" name="link_color" value="{{ $appearance->link_color ?? '#0066CC' }}" id="linkColorInput">
+                <input type="hidden" name="tab_color" value="{{ $appearance->tab_color ?? '#0026CB' }}" id="tabColorInput">
+                <input type="hidden" name="accent_color" value="{{ $appearance->accent_color ?? '#D9D9D9' }}" id="accentColorInput">
+                <input type="hidden" name="border_radius" value="{{ $appearance->border_radius ?? '8' }}" id="borderRadiusInput">
+                <input type="hidden" name="background_shadow" value="{{ $appearance->background_shadow ?? '0' }}" id="backgroundShadowInput">
+                <input type="hidden" name="background_overlay" value="{{ $appearance->background_overlay ?? '1' }}" id="backgroundOverlayInput">
+                <input type="hidden" name="overlay_color" value="{{ $appearance->overlay_color ?? '#000000' }}" id="overlayColorInput">
+                <input type="hidden" name="overlay_opacity" value="{{ $appearance->overlay_opacity ?? '70' }}" id="overlayOpacityInput">
+                <input type="hidden" name="deny_button_bg" value="{{ $appearance->deny_button_bg ?? '#CF7A7A' }}" id="denyButtonBgInput">
+                <input type="hidden" name="deny_button_text" value="{{ $appearance->deny_button_text ?? '#FFFFFF' }}" id="denyButtonTextInput">
+                <input type="hidden" name="save_button_bg" value="{{ $appearance->save_button_bg ?? '#CF7A7A' }}" id="saveButtonBgInput">
+                <input type="hidden" name="save_button_text" value="{{ $appearance->save_button_text ?? '#FFFFFF' }}" id="saveButtonTextInput">
+                <input type="hidden" name="button_corner_radius" value="{{ $appearance->button_corner_radius ?? '4' }}" id="buttonCornerRadiusInput">
+                
+                <button type="submit" class="btn-save-settings">Save Settings</button>
+            </form>
+        </div>
+
+
     <div class="card-body" style="padding-top: 0;">
         <!-- Tabs Navigation -->
         <div style="display: flex; margin-bottom: 20px;">
@@ -18,11 +48,7 @@
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'legal' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
                 Legal Specifications
             </a>
-            <a href="{{ route('frontend.configurations.edit', ['company_id' => $company->id, 'config_id' => $configuration->id, 'tab' => 'cmp']) }}" 
-               class="tab-link {{ $activeTab == 'cmp' ? 'active' : '' }}" 
-               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'cmp' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }}">
-                CMP Settings
-            </a>
+         
         </div>
         <div style="border-top: 1px solid #dee2e6; margin-top: -1px;"></div>
 
@@ -48,17 +74,17 @@
                             <input type="text" class="form-control" name="name" value="{{ $configuration->name }}">
                         </div>
                         
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label class="form-label">Data Controller</label>
                             <div class="form-info-icon">
                                 <i class="fas fa-info-circle" style="color: #ccc; cursor: help;" title="The organization responsible for determining the purposes and means of processing personal data"></i>
                             </div>
                             <input type="text" class="form-control" name="data_controller" value="{{ $configuration->data_controller }}">
-                        </div>
+                        </div> --}}
                     </div>
                     
                     <!-- Domain Management Section -->
-                    <div class="section-card" style="margin-bottom: 30px;">
+                    <div class="section-card" style="margin-bottom: 30px; max-width: 100%;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
                             <div>
                                 <h4 class="section-title" style="margin-bottom: 5px;">Domain Management</h4>
@@ -70,17 +96,7 @@
                         </div>
                         <p class="section-description">Add all domains that should be scanned and show the consent banner</p>
                         
-                        <!-- Warning Banner -->
-                        <div style="background-color: #fff8e1; border-radius: 5px; padding: 15px; margin-bottom: 20px; display: flex; align-items: center;">
-                            <div style="background-color: #ffd600; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                <i class="fas fa-bolt" style="color: white;"></i>
-                            </div>
-                            <div>
-                                <h4 style="margin: 0; margin-bottom: 5px; font-size: 16px;">Maximum number of domains reached</h4>
-                                <p style="margin: 0; color: #666;">You reached maximum number of 1 domain, unlock full access by upgrading your account.</p>
-                            </div>
-                            <button type="button" class="btn btn-primary" style="margin-left: auto;">Upgrade</button>
-                        </div>
+                      
                         
                         <!-- Domain Table -->
 <table class="table" style="margin-bottom: 0;">
@@ -114,8 +130,14 @@
         <td>{{ $configuration->created_at->format('d/m/Y') }}</td>
         <td>{{ auth()->user()->email }}</td>
         <td>
+            <button type="button" class="btn btn-link text-primary delete-domain" data-domain="{{ $domain }}">
+                <i class="fas fa-pencil"></i>
+
+            </button>
+            &nbsp; &nbsp;
             <button type="button" class="btn btn-link text-danger delete-domain" data-domain="{{ $domain }}">
                 <i class="fas fa-trash"></i>
+
             </button>
         </td>
     </tr>
@@ -140,7 +162,7 @@
                                     <i class="fas fa-info-circle" style="color: #ccc; cursor: help;" title="When enabled, an error message will be displayed if your configuration is used on domains not listed above"></i>
                                 </div>
                             </div>
-                            <div class="form-switch">
+                            <div class="form-switch" style="margin-top: 15px">
                                 <label class="switch">
                                     <input type="checkbox" name="show_error_cmp" {{ $configuration->show_error_cmp ?? false ? 'checked' : '' }}>
                                     <span class="slider round"></span>
@@ -148,6 +170,23 @@
                             </div>
                         </div>
                     </div>
+
+                          <!-- Google Consent Mode Section -->
+                    <div class="section-card" style="margin-bottom: 30px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="flex-grow: 1;">
+                                <h4 class="section-title">Google Consent Mode</h4>
+                                <p class="section-description">If enabled, the consent mode allows you to adjust how your Google tags behave based on the consent status of your users. Make sure to implement the consent mode script including the default states on your website. If you do not want to use a TCF configuration, we recommend you use a GDPR configuration template. For more details, visit the <a href="#" style="color: #1da1f2; text-decoration: none;">official documentation</a>.</p>
+                            </div>
+                            <div class="form-switch">
+                                <label class="switch">
+                                    <input type="checkbox" name="google_consent_mode">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
                     
                     <!-- Language Settings Section -->
                     <div class="section-card">
@@ -155,9 +194,9 @@
                             <div>
                                 <h4 class="section-title">Language Settings</h4>
                             </div>
-                            <button type="button" class="btn btn-primary" id="addLanguageBtn">
+                            {{-- <button type="button" class="btn btn-primary" id="addLanguageBtn">
                                 Add Language
-                            </button>
+                            </button> --}}
                         </div>
                         <p class="section-description">Please specify which languages you want to enable for your CMP. The user can switch between these languages.</p>
                         
@@ -287,130 +326,7 @@
             </div>
             @endif
 
-            <!-- CMP Settings Tab -->
-            @if($activeTab == 'cmp')
-            <div class="tab-pane active">
-                <form action="{{ route('frontend.configurations.update', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" method="POST">
-                    @csrf
-                    @method('PUT')
-                    
-                    {{-- <h4 class="section-title">CMP Settings <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h4> --}}
-                    
-                    <br>
-                    <!-- Premium Feature Banner -->
-                    <div style="background-color: #fff8e1; border-radius: 5px; padding: 15px; margin-bottom: 30px; display: flex; align-items: center;">
-                        <div style="background-color: #ffd600; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                            <i class="fas fa-bolt" style="color: white;"></i>
-                        </div>
-                        <div>
-                            <h4 style="margin: 0; margin-bottom: 5px; font-size: 16px;">This feature is available in higher plan</h4>
-                            <p style="margin: 0; color: #666;">Upgrade your plan to unlock exclusive features and premium content.</p>
-                        </div>
-                        <button type="button" class="btn btn-primary" style="margin-left: auto;">Upgrade</button>
-                    </div>
-                    
-                    <!-- Cross Domain Consent Sharing Section -->
-                    <div class="section-card" style="margin-bottom: 30px;">
-                        <h4 class="section-title">Cross Domain Consent Sharing</h4>
-                        <p class="section-description">This feature allows you to share your users consent preferences across all sub-domains within this Configuration(s). For more details, visit the <a href="#" style="color: #1da1f2; text-decoration: none;">official documentation</a>.</p>
-                    </div>
-                    
-                    <!-- Google Consent Mode Section -->
-                    <div class="section-card" style="margin-bottom: 30px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <div style="flex-grow: 1;">
-                                <h4 class="section-title">Google Consent Mode</h4>
-                                <p class="section-description">If enabled, the consent mode allows you to adjust how your Google tags behave based on the consent status of your users. Make sure to implement the consent mode script including the default states on your website. If you do not want to use a TCF configuration, we recommend you use a GDPR configuration template. For more details, visit the <a href="#" style="color: #1da1f2; text-decoration: none;">official documentation</a>.</p>
-                            </div>
-                            <div class="form-switch">
-                                <label class="switch">
-                                    <input type="checkbox" name="google_consent_mode">
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Resurface CMP Section -->
-                    <div class="section-card" style="margin-bottom: 30px;">
-                        <h4 class="section-title">Resurface CMP</h4>
-                        
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px;">
-                            <!-- Major -->
-                            <div style="border: 1px solid #e6e8eb; border-radius: 8px; padding: 15px;">
-                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                                    <input type="radio" name="resurface_type" id="major" value="major" style="margin-right: 10px;">
-                                    <label for="major" style="margin: 0; font-weight: 600;">Major</label>
-                                </div>
-                                <p style="color: #666; font-size: 13px; margin-bottom: 10px;">
-                                    Resurface after major version increases (from v1.0.0 to v2.0.0)
-                                </p>
-                                <a href="#" style="color: #1da1f2; text-decoration: none; font-size: 13px;">Show examples</a>
-                            </div>
-                            
-                            <!-- Minor -->
-                            <div style="border: 1px solid #e6e8eb; border-radius: 8px; padding: 15px;">
-                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                                    <input type="radio" name="resurface_type" id="minor" value="minor" style="margin-right: 10px;">
-                                    <label for="minor" style="margin: 0; font-weight: 600;">Minor</label>
-                                </div>
-                                <p style="color: #666; font-size: 13px; margin-bottom: 10px;">
-                                    Resurface after minor version increases (from v1.0.0 to v1.1.0)
-                                </p>
-                                <a href="#" style="color: #1da1f2; text-decoration: none; font-size: 13px;">Show examples</a>
-                            </div>
-                            
-                            <!-- Patch -->
-                            <div style="border: 1px solid #e6e8eb; border-radius: 8px; padding: 15px;">
-                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                                    <input type="radio" name="resurface_type" id="patch" value="patch" style="margin-right: 10px;">
-                                    <label for="patch" style="margin: 0; font-weight: 600;">Patch</label>
-                                </div>
-                                <p style="color: #666; font-size: 13px; margin-bottom: 10px;">
-                                    Resurface after patch version increases (from v1.0.0 to v1.0.1)
-                                </p>
-                                <a href="#" style="color: #1da1f2; text-decoration: none; font-size: 13px;">Show examples</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Manual Resurface Section -->
-                    <div class="section-card" style="margin-bottom: 30px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <div>
-                                <h4 class="section-title">Manual Resurface</h4>
-                                <p class="section-description">Trigger a manual resurface of your consent banner to all users.</p>
-                            </div>
-                            <button type="button" class="btn btn-primary">Resurface</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Bot Detection Section -->
-                    <div class="section-card" style="margin-bottom: 30px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <div style="flex-grow: 1;">
-                                <h4 class="section-title">Bot Detection</h4>
-                                <p class="section-description">This feature allows detecting any Google bots crawling your website. If enabled, the CMP won't be displayed to ensure the best possible performance results.</p>
-                            </div>
-                            <div class="form-switch">
-                                <label class="switch">
-                                    <input type="checkbox" name="bot_detection">
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div style="margin-top: 30px;">
-                        <p style="color: #666; font-size: 14px; font-style: italic;">Each change to your configuration results in an increased version number of your CMP. Define which kind of version increases result in your CMP to be shown again to all users.</p>
-                    </div>
-                    
-                    <div style="margin-top: 30px; text-align: right;">
-                        <button type="submit" class="btn btn-primary">Save Changes</button>
-                    </div>
-                </form>
-            </div>
-            @endif
+          
         </div>
     </div>
 </div>
@@ -488,6 +404,7 @@
         </div>
     </div>
 </div>
+
 <style>
 .section-card {
     background: white;
@@ -597,6 +514,8 @@ input:checked + .slider:before {
 .table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
+ 
 }
 
 .table th {
@@ -612,6 +531,7 @@ input:checked + .slider:before {
     padding: 12px 15px;
     border-bottom: 1px solid #e6e8eb;
     vertical-align: middle;
+    word-break: break-word;
 }
 
 .btn-link {
@@ -624,6 +544,10 @@ input:checked + .slider:before {
 
 .text-danger {
     color: #dc3545 !important;
+}
+
+.text-primary {
+    color: #1da1f2 !important;
 }
 
 .modal {
@@ -695,6 +619,24 @@ input:checked + .slider:before {
     color: black;
     text-decoration: none;
 }
+
+
+ /* Save Settings Button */
+ .btn-save-settings {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    
+    .btn-save-settings:hover {
+        background-color: #45a049;
+    }
 </style>
 @endsection
 

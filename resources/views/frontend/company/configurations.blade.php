@@ -3,11 +3,11 @@
 @section('content')
 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
     <div>
-        <h1 class="page-title">Configurations</h1>
-        <p class="page-description">Below you will find an overview of all configurations which are assigned to this company.</p>
+        <h1 class="page-title">Domain Settings</h1>
+        <p class="page-description">Below you will find an overview of all domains which are assigned to this company.</p>
     </div>
     <button class="btn btn-primary" id="addConfigBtn">
-        <i class="fas fa-plus mr-2"></i> Add Configuration
+        <i class="fas fa-plus mr-2"></i> Add Domain 
     </button>
 </div>
 
@@ -20,7 +20,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Configuration Name [ID]</th>
+                <th>Compliance Name [ID]</th>
                 <th>Domain / App-ID</th>
                 <th>Data Controller</th>
                 <th>Framework</th>
@@ -30,7 +30,7 @@
         <tbody>
             @if(count($configurations) > 0)
                 @foreach($configurations as $config)
-                <tr   style="cursor: pointer;" onclick="window.location='{{ route('frontend.configurations.edit', ['company_id' => $company->id, 'config_id' => $config->id]) }}'">
+                <tr   style="cursor: pointer;" onclick="window.location='{{ route('frontend.analytics.index', ['company_id' => $company->id, 'config_id' => $config->id]) }}'">
                     <td>
                         <div style="display: flex; align-items: center;">
                             <i class="fas fa-cog mr-2" style="margin-right: 10px;"></i>
@@ -62,7 +62,7 @@
                                 <i class="fas fa-cog"></i>
                             </div>
                             <div class="empty-state-text">
-                                <p>No configurations found. Click "Add Configuration" to create your first configuration.</p>
+                                <p>No domain found. Click "Add Domain" to create your first configuration.</p>
                             </div>
                             <button class="btn btn-primary" id="emptyStateAddBtn">Add Configuration</button>
                         </div>
@@ -77,7 +77,7 @@
 <div id="configurationModal" class="modal">
     <div class="modal-content" style="max-width: 700px;">
         <div class="modal-header">
-            <h3>Create Configuration</h3>
+            <h3>Add New Domain</h3>
             <span class="close" id="closeModal">&times;</span>
         </div>
         <form id="configForm" action="{{ route('frontend.configurations.store', $company->id) }}" method="POST">
@@ -87,7 +87,7 @@
                 <div class="config-step" id="step1">
                     <!-- Warning Banner (only in step 1) -->
                     <div style="background-color: #fff8e1; border-radius: 5px; padding: 15px; margin-bottom: 20px; display: flex; align-items: center;">
-                        <div style="background-color: #ffd600; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                        <div style="background-color: #ffd600; width: 60px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
                             <i class="fas fa-bolt" style="color: white;"></i>
                         </div>
                         <div>
@@ -97,8 +97,8 @@
                         <button type="button" class="btn btn-primary" style="margin-left: auto;">Upgrade</button>
                     </div>
                     
-                    <h4 style="margin-top: 0; margin-bottom: 5px; font-size: 18px;">Framework Type</h4>
-                    <p style="color: #666; margin-bottom: 20px;">Select the legal framework your configuration should support. Depending on your choice, there will be a default setup prepared including all required features to be compliant with the selected framework.</p>
+                    <h4 style="margin-top: 0; margin-bottom: 5px; font-size: 18px;">Compliance  Type</h4>
+                    <p style="color: #666; margin-bottom: 20px;">Select the legal compliance your configuration should support. Depending on your choice, there will be a default setup prepared including all required features to be compliant with the selected framework.</p>
                     
                     <div class="framework-options">
                         <div class="framework-option" data-framework="GDPR" data-region="Europe">
@@ -125,9 +125,9 @@
                             </div>
                             <div style="display: flex; align-items: center;">
                                 <span style="margin-right: 10px; color: #1da1f2;">Europe</span>
-                                <div style="background-color: #ffd600; color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px; margin-right: 10px;">
-                                    <i class="fas fa-bolt" style="font-size: 10px;"></i>
-                                </div>
+                                {{-- <div style="color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px; margin-right: 10px;">
+                                    {{-- <i class="fas fa-bolt" style="font-size: 10px;"></i> 
+                                </div> --}}
                                 <div class="radio-button"></div>
                             </div>
                         </div>
@@ -154,7 +154,7 @@
                 <!-- Step 2: Add Domain -->
                 <div class="config-step" id="step2" style="display: none;">
                     <div class="form-group">
-                        <label class="form-label">Configuration Name</label>
+                        <label class="form-label">Compliance Name</label>
                         <input type="text" class="form-control" name="name" id="configuration_name" placeholder="Enter configuration name" required>
                     </div>
 

@@ -11,12 +11,12 @@
             <a href="{{ route('frontend.service-settings.scanner', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'scanner' ? 'active' : '' }}" 
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'scanner' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
-                DPS Scanner
+               Data Processing Service Scanner
             </a>
             <a href="{{ route('frontend.service-settings.services', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'services' ? 'active' : '' }}" 
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'services' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
-                Data Processing Services
+                Data Processing Services Detected
             </a>
             <a href="{{ route('frontend.service-settings.categories', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'categories' ? 'active' : '' }}" 
@@ -29,7 +29,7 @@
         <!-- DPS Scanner Content -->
         <div class="tab-content">
             <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h3 style="margin: 0;">DPS Scanner</h3>
+                <h3 style="margin: 0;">Data Processing Service Scanner</h3>
                 <div style="display: flex; gap: 10px;">
                     <button id="scanSettingsBtn" class="btn btn-secondary">Scan Settings</button>
                     <button id="startScanBtn" class="btn btn-primary">Start Scan</button>
@@ -114,103 +114,110 @@
                     </div>
                 </div>
                 
+              
+
+
                 <!-- Services Table -->
-                <div style="margin-bottom: 20px; border: 1px solid #dee2e6; border-radius: 4px; overflow: hidden;">
-                    <table class="table" style="margin-bottom: 0;">
-                        <thead style="background-color: #f8f9fa;">
-                            <tr>
-                                <th style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: 500; color: #333; width: 100px;">
-                                    Status
-                                    <i class="fas fa-sort" style="color: #ccc; font-size: 12px; margin-left: 5px;"></i>
-                                </th>
-                                <th style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: 500; color: #333; width: 150px;">
-                                    Service
-                                    <i class="fas fa-sort" style="color: #ccc; font-size: 12px; margin-left: 5px;"></i>
-                                </th>
-                                <th style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: 500; color: #333; width: 150px;">
-                                    Category
-                                    <i class="fas fa-info-circle" style="color: #ccc; font-size: 12px; margin-left: 5px;"></i>
-                                </th>
-                                <th style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: 500; color: #333; width: 200px;">Domain</th>
-                                <th style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: 500; color: #333; width: 200px;">Source</th>
-                                <th style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: 500; color: #333; width: 150px;">
-                                    Date
-                                    <i class="fas fa-sort" style="color: #ccc; font-size: 12px; margin-left: 5px;"></i>
-                                </th>
-                                <th style="padding: 12px 15px; border-bottom: 1px solid #dee2e6; font-weight: 500; color: #333; width: 150px;">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                                @forelse($scans as $scan)
-                                <tr data-scan-id="{{ $scan->id }}">
-                                <td style="padding: 12px 15px; border-bottom: 1px solid #dee2e6;">
-                                    <span style="background-color: {{ $scan->status == 'todo' ? '#f8d7da' : ($scan->status == 'added' ? '#d4edda' : '#fff3cd') }}; 
-                                              color: {{ $scan->status == 'todo' ? '#721c24' : ($scan->status == 'added' ? '#155724' : '#856404') }}; 
-                                              border-radius: 4px; padding: 5px 10px; font-size: 12px;">
-                                        {{ ucfirst($scan->status) }}
-                                    </span>
-                                </td>
-                                <td style="padding: 12px 15px; border-bottom: 1px solid #dee2e6;">
-                                    <span style="display: flex; align-items: center;">
-                                        {{ $scan->service_name ?? 'unknown' }}
-                                        <i class="fas fa-info-circle" style="color: #ccc; font-size: 14px; margin-left: 5px;"></i>
-                                    </span>
-                                </td>
-                                <td style="padding: 12px 15px; border-bottom: 1px solid #dee2e6;">
-                                    <div class="dropdown">
-                                        <button class="btn btn-sm btn-light dropdown-toggle" type="button" style="display: flex; align-items: center; border: 1px solid #dee2e6; padding: 5px 10px; font-size: 12px;">
-                                            <span style="margin-right: 5px;">{{ $scan->category ?? 'Category' }}</span>
-                                            <i class="fas fa-chevron-down" style="font-size: 10px;"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                                <td style="padding: 12px 15px; border-bottom: 1px solid #dee2e6;">
-                                    <a href="{{ $scan->service_url }}" style="color: #0066cc; text-decoration: none;">{{ $scan->service_url }}</a>
-                                </td>
-                                <td style="padding: 12px 15px; border-bottom: 1px solid #dee2e6;">
-                                    <a href="{{ $scan->source_domain }}" style="color: #0066cc; text-decoration: none;">{{ $scan->source_domain }}</a>
-                                </td>
-                                <td style="padding: 12px 15px; border-bottom: 1px solid #dee2e6;">
-                                    {{ $scan->scan_date ? \Carbon\Carbon::parse($scan->scan_date)->format('d.m.Y, H:i') : '-' }}
-                                </td>
-                                <td style="padding: 12px 15px; border-bottom: 1px solid #dee2e6;">
-                                    <div style="display: flex; gap: 10px;">
-                                        @if($scan->status == 'todo')
-                                        <div class="dropdown">
-                                            <button class="btn btn-sm btn-primary dropdown-toggle" type="button" style="display: flex; align-items: center; padding: 5px 10px; font-size: 12px;">
-                                                <span style="margin-right: 5px;">Add Service</span>
-                                                <i class="fas fa-chevron-down" style="font-size: 10px;"></i>
-                                            </button>
-                                        </div>
-                                        <div class="dropdown">
-                                            <button class="btn btn-sm btn-light dropdown-toggle" type="button" style="display: flex; align-items: center; border: 1px solid #dee2e6; padding: 5px 10px; font-size: 12px;">
-                                                <span style="margin-right: 5px;">Ignore</span>
-                                                <i class="fas fa-chevron-down" style="font-size: 10px;"></i>
-                                            </button>
-                                        </div>
-                                        @elseif($scan->status == 'added')
-                                        <button class="btn btn-sm btn-light" type="button" style="border: 1px solid #dee2e6; padding: 5px 10px; font-size: 12px;">
-                                            View Service
-                                        </button>
-                                        @else
-                                        <button class="btn btn-sm btn-light" type="button" style="border: 1px solid #dee2e6; padding: 5px 10px; font-size: 12px;">
-                                            Unignore
-                                        </button>
-                                        @endif
-                                    </div>
-                                </td>
-                            </tr>
-                            @empty
-                            <tr>
-                                <td colspan="7" style="padding: 20px; text-align: center; color: #666;">
-                                    No scan data available. Click "Start Scan" to begin scanning your domain.
-                                </td>
-                            </tr>
-                            @endforelse
-                        </tbody>
-                    </table>
-                </div>
-                
+
+   <div class="wrapper"> 
+    <table class="table">
+        <thead style="background-color: #f8f9fa;">
+            <tr>
+                <th style=" white-space: nowrap !important;">
+                    Status 
+                    <i class="fas fa-sort"></i>
+                </th>
+                <th>
+                    Service
+                    <i class="fas fa-sort"></i>
+                </th>
+                <th style=" white-space: nowrap !important;">
+                    Category
+                    <i class="fas fa-info-circle"></i>
+                </th>
+                <th>Domain</th>
+                <th>Source</th>
+                <th>
+                    Date
+                    <i class="fas fa-sort"></i>
+                </th>
+                <th style=" white-space: nowrap !important;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @forelse($scans as $scan)
+            <tr data-scan-id="{{ $scan->id }}">
+                <td>
+                    <span style= "background-color: {{ $scan->status == 'todo' ? '#f8d7da' : ($scan->status == 'added' ? '#d4edda' : '#fff3cd') }}; 
+                                              color: {{ $scan->status == 'todo' ? '#721c24' : ($scan->status == 'added' ? '#155724' : '#856404') }};">
+                        {{ ucfirst($scan->status) }}
+                    </span>
+                </td>
+                <td>
+                    <span>
+                        {{ $scan->service_name ?? 'unknown' }}
+                        <i class="fas fa-info-circle"></i>
+                    </span>
+                </td>
+                <td style=" white-space: nowrap !important;">
+                    <div class="dropdown">
+                        <button class="btn btn-sm btn-light dropdown-toggle" type="button">
+                            <span>{{ $scan->category ?? 'Category' }}</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <a href="{{ $scan->service_url }}">{{ $scan->service_url }}</a>
+                </td>
+                <td>
+                    <a href="{{ $scan->source_domain }}">{{ $scan->source_domain }}</a>
+                </td>
+                <td>
+                    {{ $scan->scan_date ? \Carbon\Carbon::parse($scan->scan_date)->format('d.m.Y, H:i') : '-' }}
+                </td>
+                <td style=" white-space: nowrap !important;">
+                    <div>
+                        @if($scan->status == 'todo')
+                        <div class="dropdown">
+                            <button class="btn btn-sm btn-primary dropdown-toggle" type="button">
+                                <span>Add Service</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-sm btn-light dropdown-toggle" type="button">
+                                <span>Ignore</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        @elseif($scan->status == 'added')
+                        <button class="btn btn-sm btn-light" type="button">
+                            View Service
+                        </button>
+                        @else
+                        <button class="btn btn-sm btn-light" type="button">
+                            Unignore
+                        </button>
+                        @endif
+                    </div>
+                </td>
+            </tr>
+            @empty
+            <tr>
+                <td colspan="7">
+                    No scan data available. Click "Start Scan" to begin scanning your domain.
+                </td>
+            </tr>
+            @endforelse
+        </tbody>
+    </table>
+</div>
+          
+
+
+
+
                 <!-- Pagination -->
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
                     <div>
@@ -441,6 +448,61 @@
     .slider.round:before {
         border-radius: 50%;
     }
+
+
+    .wrapper {
+      margin-bottom: 20px;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      max-width: 100%;
+      max-height: 80%; /* Added max-height to enable vertical scroll */
+      display: block;
+      overflow: auto; /* Changed from overflow-x to full scroll */
+
+
+    
+    }
+
+    .wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+      table-layout: auto;
+    }
+
+    .wrapper i {
+        color: #ccc; 
+        font-size: 12px; 
+        margin-left: 5px;
+    }
+
+    .wrapper th,
+    .wrapper td {
+      /* padding: 8px; */
+      text-align: left;
+    
+      border: 1px solid #dee2e6;
+      word-break: break-word; /* Added to allow word wrapping */
+
+      max-width: 700px; /* adjust as needed */
+    overflow-wrap: anywhere; /* breaks only long words */
+    white-space: normal;
+
+    /* padding: 12px 15px;  */
+    border-bottom: 1px solid #dee2e6;
+    }
+    .wrapper a {
+        color: #0066cc; 
+        text-decoration: none;
+    }
+    .wrapper button {
+        border: 1px solid #dee2e6; 
+        /* padding: 5px 10px;  */
+        font-size: 12px;
+    }
+
+
+
 </style>
 
 <script>

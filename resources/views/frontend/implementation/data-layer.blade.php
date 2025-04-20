@@ -13,7 +13,7 @@
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'script-tag' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
                 Script Tag
             </a>
-            <a href="{{ route('frontend.implementation.embeddings', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
+            {{-- <a href="{{ route('frontend.implementation.embeddings', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'embeddings' ? 'active' : '' }}" 
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'embeddings' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
                 Embeddings
@@ -27,7 +27,7 @@
                class="tab-link {{ $activeTab == 'ab-testing' ? 'active' : '' }}" 
                style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'ab-testing' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }}">
                 A/B Testing
-            </a>
+            </a> --}}
         </div>
         <div style="border-top: 1px solid #dee2e6; margin-top: -1px;"></div>
 

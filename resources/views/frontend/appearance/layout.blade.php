@@ -1,3 +1,4 @@
+
 @extends('frontend.company.layout')
 
 @section('content')
@@ -7,7 +8,7 @@
     </div>
     
     <!-- Step 4: Add Save Settings Button -->
-    <div class="card-header-actions" style="border-bottom: 1px solid #e6e8eb; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+    <div class="card-header-actions" style=" padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
         <div>
             <span>Last saved: {{ $appearance->updated_at ? $appearance->updated_at->diffForHumans() : 'Never' }}</span>
         </div>
@@ -139,7 +140,7 @@
                 </div>
                 
                 <!-- Premium Feature Banner -->
-                <div class="premium-banner">
+                {{-- <div class="premium-banner">
                     <div class="premium-banner-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
@@ -148,79 +149,10 @@
                         <p>Upgrade your plan to unlock exclusive features and premium content.</p>
                     </div>
                     <button type="button" class="btn-upgrade">Upgrade</button>
-                </div>
+                </div> --}}
             </div>
             
-            <!-- GDPR Second Layer Section -->
-            <div class="section-card">
-                <div class="section-header">
-                    <h3>GDPR Second Layer</h3>
-                    <span class="premium-feature-badge">
-                        <i class="fas fa-bolt"></i> Premium Feature
-                    </span>
-                </div>
-                <div class="section-content">
-                    <p class="section-description">
-                        The Second Layer contains detailed information about the integrated Data Processing Services and Categories. It enables the user to view current privacy settings and to adjust them to their preferences.
-                    </p>
-                    
-                    <div class="layout-options ">
-                        <div class="layout-option-group">
-                            <div class="layout-option-item ">
-                                <input type="radio" id="center" name="secondLayerLayout" checked>
-                                <label for="center" class="layout-label ">
-                                    <div class="layout-icon center-icon active-icon"></div>
-                                    <span>Center</span>
-                                </label>
-                            </div>
-                        </div>
-                        
-                        {{-- <div class="layout-preview">
-                            <img src="{{ asset('img/second-layer-preview.png') }}" alt="Second Layer Preview" style="width: 100%;">
-                        </div> --}}
-
-                        <div class="layout-preview-container">
-                        <div class="page-wrapper">
-                            <div class="layout-container">
-                              <!-- Swap this class to try others like layout-box-dialog, etc. -->
-                              <div id= 'preveiw'  class="layout-box-common layout-box-dialog">
-                                Center Layout
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                  
-                    </div>
-                    
-                    <div class="settings-group">
-                        <h4>Settings</h4>
-                        
-                        <div class="setting-item">
-                            <div class="radio-container">
-                                <input type="radio" id="tabCategories" name="defaultTab" checked>
-                                <label for="tabCategories">More Information opens Categories Tab by default</label>
-                            </div>
-                            
-                            <div class="radio-container">
-                                <input type="radio" id="tabServices" name="defaultTab">
-                                <label for="tabServices">More Information opens Services Tab by default</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Premium Feature Banner -->
-                <div class="premium-banner">
-                    <div class="premium-banner-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="premium-banner-text">
-                        <h4>This feature is available in higher plan</h4>
-                        <p>Upgrade your plan to unlock exclusive features and premium content.</p>
-                    </div>
-                    <button type="button" class="btn-upgrade">Upgrade</button>
-                </div>
-            </div>
+          
             
             <!-- Privacy Trigger Section -->
             <div class="section-card">
@@ -284,17 +216,7 @@
                     </div>
                 </div>
                 
-                <!-- Premium Feature Banner -->
-                <div class="premium-banner">
-                    <div class="premium-banner-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="premium-banner-text">
-                        <h4>This feature is available in higher plan</h4>
-                        <p>Upgrade your plan to unlock exclusive features and premium content.</p>
-                    </div>
-                    <button type="button" class="btn-upgrade">Upgrade</button>
-                </div>
+              
             </div>
         </div>
     </div>
@@ -532,8 +454,7 @@
 <style>
     body {
       margin: 0;
-      padding: 2rem;
-      background-color: #e9ecef;
+      /* background-color: #e9ecef; */
       font-family: Arial, sans-serif;
     }
 
