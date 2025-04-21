@@ -24,7 +24,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 
 // Authentication routes
 Route::group(['namespace' => 'App\Http\Controllers\Frontend\Auth', 'as' => 'frontend.auth.'], function () {
-    Route::post('new/login', 'LoginController@login')->name('login');
+    Route::post('login', 'LoginController@login')->name('login');
     Route::get('logout', 'LoginController@logout')->name('logout');
     
     // Registration routes
@@ -83,6 +83,10 @@ Route::group(['prefix' => 'companies/{company_id}/configurations/{config_id}/ana
         ->name('frontend.analytics.comparison');
     Route::get('/granular', [App\Http\Controllers\Frontend\AnalyticsController::class, 'granular'])
         ->name('frontend.analytics.granular');
+    Route::post('/filter', [App\Http\Controllers\Frontend\AnalyticsController::class, 'filter'])
+        ->name('frontend.analytics.filter');
+    Route::get('/download', [App\Http\Controllers\Frontend\AnalyticsController::class, 'downloadReport'])
+        ->name('frontend.analytics.download');
 });
 
 
@@ -92,8 +96,8 @@ Route::group(['prefix' => 'companies/{company_id}/configurations/{config_id}/ser
         ->name('frontend.service-settings.scanner');
     Route::get('/services', [App\Http\Controllers\Frontend\ServiceSettingsController::class, 'services'])
         ->name('frontend.service-settings.services');
-    Route::get('/categories', [App\Http\Controllers\Frontend\ServiceSettingsController::class, 'categories'])
-        ->name('frontend.service-settings.categories');
+    Route::get('/categories', [App\Http\Controllers\Frontend\NewCategoriesController::class, 'index'])
+    ->name('frontend.service-settings.categories');
 });
 
 
@@ -130,14 +134,31 @@ Route::group(['prefix' => 'companies/{company_id}/configurations/{config_id}/imp
 });
 
 
-// Preview route
-Route::get('/preview/{config_id}', [App\Http\Controllers\Frontend\PreviewController::class, 'preview'])
-    ->name('frontend.preview')
+
+    
+    
+    // Preview route
+Route::get('/companies/{company_id}/configurations/{config_id}/preview', [App\Http\Controllers\Frontend\PreviewController::class, 'preview'])
+    ->name('frontend.preview.consent-preview')
     ->middleware('auth');
 
+    Route::get('/preview-iframe/{config_id}',  [App\Http\Controllers\Frontend\PreviewController::class, 'iframePreview'])
+    ->middleware('auth')
+    ->name('frontend.preview.iframe-preview');
+    
+    
+    
+    
+    
+    
+    // Preview route
+Route::get('/companies/{company_id}/configurations/{config_id}/preview', [App\Http\Controllers\Frontend\PreviewController::class, 'preview'])
+    ->name('frontend.preview.consent-preview')
+    ->middleware('auth');
 
-
-
+    Route::get('/preview-iframe/{config_id}',  [App\Http\Controllers\Frontend\PreviewController::class, 'iframePreview'])
+    ->middleware('auth')
+    ->name('frontend.preview.iframe-preview');
     
     
 // Appearance save route
@@ -203,3 +224,15 @@ Route::post('/companies/{company_id}/configurations/{config_id}/add-domain',
     [App\Http\Controllers\Frontend\ConfigurationController::class, 'addDomain'])
     ->name('frontend.configurations.add-domain')
     ->middleware('auth');
+    
+// New Categories routes
+Route::prefix('company/{company_id}/configuration/{config_id}/new-categories')->name('frontend.new-categories.')->middleware(['auth'])->group(function () {
+    Route::get('/', [App\Http\Controllers\Frontend\NewCategoriesController::class, 'index'])->name('index');
+    Route::post('/', [App\Http\Controllers\Frontend\NewCategoriesController::class, 'store'])->name('store');
+    Route::put('/reorder', [App\Http\Controllers\Frontend\NewCategoriesController::class, 'reorder'])->name('reorder');
+    Route::put('/{category_id}', [App\Http\Controllers\Frontend\NewCategoriesController::class, 'update'])->name('update');
+    Route::delete('/{category_id}', [App\Http\Controllers\Frontend\NewCategoriesController::class, 'destroy'])->name('destroy');
+    Route::put('/{category_id}/toggle-essential', [App\Http\Controllers\Frontend\NewCategoriesController::class, 'toggleEssential'])->name('toggle-essential');
+});
+
+Route::post('/consent/analytics', [App\Http\Controllers\ConsentDataController::class, 'recordAnalytics']);

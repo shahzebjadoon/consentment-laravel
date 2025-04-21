@@ -566,7 +566,8 @@
                     request()->routeIs('frontend.service-settings.*') ||
                     request()->routeIs('frontend.appearance.*') ||
                     request()->routeIs('frontend.content.*') ||
-                    request()->routeIs('frontend.implementation.*'))
+                    request()->routeIs('frontend.implementation.*')||
+                    request()->routeIs('frontend.preview.*'))
                 <!-- Configuration Edit Sidebar -->
                 <a href="{{ route('frontend.companies.configurations', $company->id) }}" class="nav-link">
                     <span class="nav-link-icon"><i class="fas fa-arrow-left"></i></span>
@@ -636,7 +637,7 @@
                 </div>
 
                 <div class="sidebar-item" >
-                    <a href="{{ route('frontend.preview', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}"
+                    <a href="{{ route('frontend.preview.consent-preview', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}"
                         class="nav-link {{ request()->routeIs('frontend.preview.*') ? 'active' : '' }}">
                         <span class="nav-link-icon"><i class="fas fa-list-alt"></i></span>
                         Preveiw Implementation

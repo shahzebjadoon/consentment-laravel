@@ -74,27 +74,22 @@
                             <input type="text" class="form-control" name="name" value="{{ $configuration->name }}">
                         </div>
                         
-                        {{-- <div class="form-group">
-                            <label class="form-label">Data Controller</label>
-                            <div class="form-info-icon">
-                                <i class="fas fa-info-circle" style="color: #ccc; cursor: help;" title="The organization responsible for determining the purposes and means of processing personal data"></i>
-                            </div>
-                            <input type="text" class="form-control" name="data_controller" value="{{ $configuration->data_controller }}">
-                        </div> --}}
+                      
                     </div>
                     
                     <!-- Domain Management Section -->
                     <div class="section-card" style="margin-bottom: 30px; max-width: 100%;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
                             <div>
-                                <h4 class="section-title" style="margin-bottom: 5px;">Domain Management</h4>
+                                <h4 style="white-space: nowrap;" class="section-title" style="margin-bottom: 5px;">Domain Management
                                 <span class="badge" style="background-color: #e9ecef; color: #666; padding: 3px 8px; border-radius: 10px; font-size: 12px;">1</span>
+                            </h4>
                             </div>
                             <button type="button" class="btn btn-primary" id="addDomainBtn">
-                                Add domain
+                                Update domain
                             </button>
                         </div>
-                        <p class="section-description">Add all domains that should be scanned and show the consent banner</p>
+                        <p class="section-description">Update all domains that should be scanned and show the consent banner</p>
                         
                       
                         
@@ -125,16 +120,12 @@
 @if(count($domains) > 0)
     @foreach($domains as $domain)
     <tr>
-        <td>https://{{ $domain }}</td>
+        <td>https://www.{{ $domain }}</td>
         <td><span class="badge" style="background-color: #d4edda; color: #155724; padding: 5px 10px; border-radius: 4px;">Active</span></td>
         <td>{{ $configuration->created_at->format('d/m/Y') }}</td>
         <td>{{ auth()->user()->email }}</td>
         <td>
-            <button type="button" class="btn btn-link text-primary delete-domain" data-domain="{{ $domain }}">
-                <i class="fas fa-pencil"></i>
-
-            </button>
-            &nbsp; &nbsp;
+          
             <button type="button" class="btn btn-link text-danger delete-domain" data-domain="{{ $domain }}">
                 <i class="fas fa-trash"></i>
 
@@ -153,14 +144,16 @@
                     
                     <!-- Settings Section -->
                     <div class="section-card" style="margin-bottom: 30px;">
-                        <h4 class="section-title">Settings</h4>
+                        <h4 class="section-title">Settings
+                        <span >
+                            <i class="fas fa-info-circle" style="color: #ccc; cursor: help;" title="When enabled, an error message will be displayed if your configuration is used on domains not listed above"></i>
+                        </span>
+                    </h4>
                         
                         <div class="form-group" style="display: flex; align-items: center;">
                             <div style="flex-grow: 1;">
                                 <label class="form-label">Show error CMP when your configuration is used on unauthorized domains</label>
-                                <div class="form-info-icon">
-                                    <i class="fas fa-info-circle" style="color: #ccc; cursor: help;" title="When enabled, an error message will be displayed if your configuration is used on domains not listed above"></i>
-                                </div>
+                              
                             </div>
                             <div class="form-switch" style="margin-top: 15px">
                                 <label class="switch">
@@ -331,29 +324,29 @@
     </div>
 </div>
 
-<!-- Add Domain Modal -->
+<!-- Update Domain Modal -->
 
 <div id="addDomainModal" class="modal">
     <div class="modal-content" style="max-width: 500px;">
         <div class="modal-header">
-            <h3>Add Domain</h3>
+            <h3>Update Domain</h3>
             <span class="close" id="closeDomainModal">&times;</span>
         </div>
         <div class="modal-body">
-            <p>Enter the domain you want to add to this configuration.</p>
+            <p>Select the domain you want to update to this configuration.</p>
             
             <div class="form-group">
                 <label class="form-label">Domain</label>
                 <div style="display: flex;">
-                    <div style="background-color: #e9ecef; padding: 12px 15px; border-radius: 8px 0 0 8px; border: 1px solid #ddd; border-right: none;">https://</div>
-                    <input type="text" class="form-control" id="new_domain" placeholder="www.example.com" style="border-radius: 0 8px 8px 0;">
+                    <div style="background-color: #e9ecef; padding: 12px 15px; border-radius: 8px 0 0 8px; border: 1px solid #ddd; border-right: none;">https://www.</div>
+                    <input type="text" class="form-control" id="new_domain" placeholder="example.com" style="border-radius: 0 8px 8px 0;">
                 </div>
-                <small class="text-muted" style="display: block; margin-top: 5px;">Enter domain name without https:// prefix</small>
+                <small class="text-muted" style="display: block; margin-top: 5px;">Enter domain name without https://www. prefix</small>
             </div>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" id="cancelDomainBtn">Cancel</button>
-            <button type="button" class="btn btn-primary" id="saveDomainBtn">Add</button>
+            <button type="button" class="btn btn-primary" id="saveDomainBtn">Update</button>
         </div>
     </div>
 </div>

@@ -25,12 +25,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => 'a91de1efacc38eea14b46a898c99e9b1b5d45636',
+    'reference' => '41a3139a4b79999611e0fafae64d822b8bca3724',
     'name' => 'rappasoft/laravel-boilerplate',
   ),
   'versions' => 
@@ -427,6 +427,15 @@ private static $installed = array (
       ),
       'reference' => '3a066e5cac32e2d1cdaacd6b961692778f37b5fc',
     ),
+    'geoip2/geoip2' => 
+    array (
+      'pretty_version' => 'v2.13.0',
+      'version' => '2.13.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6a41d8fbd6b90052bc34dff3b4252d0f88067b23',
+    ),
     'graham-campbell/result-type' => 
     array (
       'pretty_version' => 'v1.0.4',
@@ -698,6 +707,24 @@ private static $installed = array (
       ),
       'reference' => '799265de4972c0c8da085b1adf475a0d9205c0a2',
     ),
+    'jaybizzle/crawler-detect' => 
+    array (
+      'pretty_version' => 'v1.3.4',
+      'version' => '1.3.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd3b7ff28994e1b0de764ab7412fa269a79634ff3',
+    ),
+    'jenssegers/agent' => 
+    array (
+      'pretty_version' => 'v2.6.4',
+      'version' => '2.6.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'daa11c43729510b3700bc34d414664966b03bffe',
+    ),
     'justinrainbow/json-schema' => 
     array (
       'pretty_version' => '5.2.11',
@@ -857,6 +884,33 @@ private static $installed = array (
       array (
       ),
       'reference' => 'e8ac3499af0ea5b440908e06cc0abe5898008b3c',
+    ),
+    'maxmind-db/reader' => 
+    array (
+      'pretty_version' => 'v1.12.0',
+      'version' => '1.12.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5b2d7a721dedfaef9dc20822c5fe7d26f9f8eb90',
+    ),
+    'maxmind/web-service-common' => 
+    array (
+      'pretty_version' => 'v0.9.0',
+      'version' => '0.9.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4dc5a3e8df38aea4ca3b1096cee3a038094e9b53',
+    ),
+    'mobiledetect/mobiledetectlib' => 
+    array (
+      'pretty_version' => '2.8.45',
+      'version' => '2.8.45.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '96aaebcf4f50d3d2692ab81d2c5132e425bca266',
     ),
     'mockery/mockery' => 
     array (
@@ -1306,12 +1360,12 @@ private static $installed = array (
     ),
     'rappasoft/laravel-boilerplate' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => 'a91de1efacc38eea14b46a898c99e9b1b5d45636',
+      'reference' => '41a3139a4b79999611e0fafae64d822b8bca3724',
     ),
     'rappasoft/laravel-livewire-tables' => 
     array (
