@@ -3,7 +3,7 @@
 @section('content')
     <div class="card" style="margin-bottom: 30px; width: 100%;">
         <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
-            <h3 class="page-title">Company Details <i class="fas fa-info-circle"
+            <h3 class="page-title">Company Details <i class=""
                     style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
         </div>
         <br>
@@ -117,75 +117,105 @@
                     <div class="collapsible-content">
 
 
-                        
-            <div class="card" style="width: 40%">
-                <div class="card-header">
-                    <h3 class="card-title">Free</h3>
-                    <button class="btn btn-primary" id="editCompanyBtn">
-                        In Trial
-                    </button>
-                </div>
-                <div class="card-body">
-              
-                      
-                      <table class="subscription-table">
-                        <tbody>
-                          <tr>
-                            <th>Status</th>
-                            <td>Trials ends on 27/04/2025</td>
-                          </tr>
-                          <tr>
-                            <th>Subscription-ID</th>
-                            <td>BTUSkWUiF5CQK30j1</td>
-                          </tr>
-                          <tr>
-                            <th>Price</th>
-                            <td>€0 / month</td>
-                          </tr>
-                          <tr>
-                            <th>Domains</th>
-                            <td>Incl. 1 domain</td>
-                          </tr>
-                          <tr>
-                            <th>Configurations</th>
-                            <td>1</td>
-                          </tr>
-                          <tr>
-                            <th>Sessions</th>
-                            <td>1,000 / month</td>
-                          </tr>
-                          <tr>
-                            <th>Payment Method</th>
-                            <td>not added</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      
-                      <button class="manage-btn">Manage Subscription</button>
-                      
-                    
-                 
+
+                        <div class="card" style="width: 40%">
+                            <div class="card-header">
+                                <h3 class="card-title">Free</h3>
+                                <button class="btn btn-primary" id="editCompanyBtn">
+                                    In Trial
+                                </button>
+                            </div>
+                            <div class="card-body">
+
+
+                                <table class="subscription-table">
+                                    <tbody>
+                                        <tr>
+                                            <th>Status</th>
+                                            <td>Trials ends on 27/04/2025</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Subscription-ID</th>
+                                            <td>BTUSkWUiF5CQK30j1</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Price</th>
+                                            <td>€0 / month</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Domains</th>
+                                            <td>Incl. 1 domain</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Configurations</th>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sessions</th>
+                                            <td>1,000 / month</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Payment Method</th>
+                                            <td>not added</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <button class="manage-btn">Manage Subscription</button>
 
 
 
 
 
+
+
+
+                            </div>
+                        </div>
                     </div>
+
+
+
+                </div>
+                <br>
+
+                <div class="collapsible-section">
+                    <div class="collapsible-header">
+                        <h5>Payment </h5>
+
+                        <button class="btn-toggle"><i class="fas fa-chevron-up"></i></button>
+                    </div>
+                    <div class="collapsible-content">
+
+
+
+                       
+                            <div class="card-body" style="background: rgb(235, 235, 235); padding: 20px; ">
+
+
+                                No payment method added yet. Please add a payment method to your account to enable automatic billing and avoid service interruptions.
+                                <br><br>
+
+
+
+                            </div>
+                            <p style="font-size: 12px">If you have any question about payment or invoices please mail us at <span style="color:blue;">invoices@consentment.com </span> </p>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
 
 
 
-                    </div>
-                </div>
 
 
-
-
-
-            </div>
         </div>
     </div>
+    </div>
+
 
 
 
@@ -322,33 +352,33 @@
 
 <style>
     .subscription-table {
-      width: 100%;
-      max-width: 600px;
-      font-size: calc(1rem - 3px);
+        width: 100%;
+        max-width: 600px;
+        font-size: calc(1rem - 3px);
     }
-  
+
     .subscription-table th,
     .subscription-table td {
-      text-align: left;
-      padding: 8px 12px;
+        text-align: left;
+        padding: 8px 12px;
     }
-  
-  
-  
+
+
+
     .manage-btn {
-      margin-top: 12px;
-      padding: 8px 16px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+        margin-top: 12px;
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
     }
-  
+
     .manage-btn:hover {
-      background-color: #0056b3;
+        background-color: #0056b3;
     }
-  </style>
+</style>
 
 @section('scripts')
     <script>
@@ -390,7 +420,7 @@
                 const content = this.nextElementSibling;
                 const toggleBtn = this.querySelector('.btn-toggle i');
 
-                if (content.style.display === 'none' ) {
+                if (content.style.display === 'none') {
                     content.style.display = 'block';
                     toggleBtn.classList.remove('fa-chevron-down');
                     toggleBtn.classList.add('fa-chevron-up');

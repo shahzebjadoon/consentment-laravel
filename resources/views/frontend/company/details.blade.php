@@ -4,7 +4,7 @@
 
 <div class="card" style="margin-bottom: 30px; width: 100%;">
     <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
-        <h3 class="page-title">Company Details <i class="fas fa-info-circle"
+        <h3 class="page-title">Company Details <i class=""
                 style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
     </div>
     <br>
