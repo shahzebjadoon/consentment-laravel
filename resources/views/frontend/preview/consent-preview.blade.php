@@ -3,7 +3,7 @@
 @section('content')
     <div class="card" style="margin-bottom: 30px; width: 100%;">
         <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
-            <h3 class="page-title">Consent Preveiw <i class="fas fa-info-circle"
+            <h3 class="page-title">Consent Preveiw <i class=""
                     style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
         </div>
         <div class="card-body" style="padding-top: 0;">
@@ -35,21 +35,14 @@
             <div class="tab-content">
                 <!-- CMP Implementation Section -->
                 <div class="implementation-section">
-                    <h4 style="margin-top:5px;">Consent Banner Preveiw</h4>
-                    <p class="section-description">
-                        To view how your consent configuration will appear to users, use the Consent Preview section below.
-                        This preview dynamically reflects your selected layout (such as banner, dialog, wall, bar, or block)
-                        and styling choices, allowing you to visually confirm the implementation before deploying it live on
-                        your website.
-                        <a href="#" class="gtm-guide-link">Preview Guide</a>.
-                    </p>
+<br>                  
 
                     <!-- Live Version Section -->
                     <div class="implementation-panel">
                         <div class="panel-header">
                             <h5>Live Version</h5>
                             <div class="version-badge">
-                                <i class="fas fa-bolt"></i> Displaying Live Version
+                                {{-- <i class="fas fa-bolt"></i> Displaying Live Version --}}
                             </div>
                             <div class="version-number"></div>
                         </div>

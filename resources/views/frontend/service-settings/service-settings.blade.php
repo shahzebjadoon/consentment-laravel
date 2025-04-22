@@ -3,7 +3,7 @@
 @section('content')
 <div class="card" style="margin-bottom: 30px; width: 100%;">
     <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
-        <h3 class="page-title">Service Settings <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
+        <h3 class="page-title">Service Settings <i class="" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
     </div>
     <div class="card-body" style="padding-top: 0;">
         <!-- Tabs Navigation -->
@@ -133,7 +133,7 @@
                 </th>
                 <th style=" white-space: nowrap !important;">
                     Category
-                    <i class="fas fa-info-circle"></i>
+                    <i class=""></i>
                 </th>
                 <th>Domain</th>
                 <th>Source</th>
@@ -156,7 +156,7 @@
                 <td>
                     <span>
                         {{ $scan->service_name ?? 'unknown' }}
-                        <i class="fas fa-info-circle"></i>
+                        <i class=""></i>
                     </span>
                 </td>
                 <td style=" white-space: nowrap !important;">

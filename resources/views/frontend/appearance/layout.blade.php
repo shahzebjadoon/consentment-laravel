@@ -4,7 +4,7 @@
 @section('content')
 <div class="card" style="margin-bottom: 30px; width: 100%;">
     <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
-        <h3 class="page-title">Appearance <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
+        <h3 class="page-title">Appearance <i class="" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
     </div>
     
     <!-- Step 4: Add Save Settings Button -->
@@ -210,7 +210,7 @@
                             
                             <div class="radio-container">
                                 <input type="radio" id="showSpecific" name="showOn">
-                                <label for="showSpecific">Show on specific pages <i class="fas fa-info-circle"></i></label>
+                                <label for="showSpecific">Show on specific pages <i class=""></i></label>
                             </div>
                         </div>
                     </div>

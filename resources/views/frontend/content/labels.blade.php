@@ -3,7 +3,7 @@
 @section('content')
 <div class="card" style="margin-bottom: 30px; width: 100%;">
     <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
-        <h3 class="page-title">Content <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
+        <h3 class="page-title">Content <i class="" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
     </div>
     
     <!-- Add Save Settings Button in Header -->
@@ -73,7 +73,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Accept Button Label</label>
-                            <button class="btn-edit" data-field="accept-button-label" data-content="{{ $contentSettings->accept_button_label ?? 'Accept' }}">
+                            <button style="display: none;" class="btn-edit" data-field="accept-button-label" data-content="{{ $contentSettings->accept_button_label ?? 'Accept' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -84,7 +84,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Deny Button Label</label>
-                            <button class="btn-edit" data-field="deny-button-label" data-content="{{ $contentSettings->deny_button_label ?? 'Deny' }}">
+                            <button style="display: none;" class="btn-edit" data-field="deny-button-label" data-content="{{ $contentSettings->deny_button_label ?? 'Deny' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -95,7 +95,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>More Information Link Label</label>
-                            <button class="btn-edit" data-field="more-info-link-label" data-content="{{ $contentSettings->more_info_label ?? 'More Information' }}">
+                            <button style="display: none;" class="btn-edit" data-field="more-info-link-label" data-content="{{ $contentSettings->more_info_label ?? 'More Information' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -111,7 +111,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Service Provider Label</label>
-                            <button class="btn-edit" data-field="service-provider-label" data-content="{{ $contentSettings->service_provider_label ?? 'Service Provider' }}">
+                            <button style="display: none;" class="btn-edit" data-field="service-provider-label" data-content="{{ $contentSettings->service_provider_label ?? 'Service Provider' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -122,7 +122,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Privacy Policy Label</label>
-                            <button class="btn-edit" data-field="privacy-policy-label" data-content="{{ $contentSettings->privacy_policy_label ?? 'Privacy Policy' }}">
+                            <button style="display: none;" class="btn-edit" data-field="privacy-policy-label" data-content="{{ $contentSettings->privacy_policy_label ?? 'Privacy Policy' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -133,7 +133,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Legitimate Interest Label</label>
-                            <button class="btn-edit" data-field="legitimate-interest-label" data-content="{{ $contentSettings->legitimate_interest_label ?? 'Legitimate Interest' }}">
+                            <button style="display: none;" class="btn-edit" data-field="legitimate-interest-label" data-content="{{ $contentSettings->legitimate_interest_label ?? 'Legitimate Interest' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -144,7 +144,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Storage Information Label</label>
-                            <button class="btn-edit" data-field="storage-info-label" data-content="{{ $contentSettings->storage_info_label ?? 'Storage Information' }}">
+                            <button style="display: none;" class="btn-edit" data-field="storage-info-label" data-content="{{ $contentSettings->storage_info_label ?? 'Storage Information' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -160,7 +160,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Save Settings Button Label</label>
-                            <button class="btn-edit" data-field="save-settings-label" data-content="{{ $contentSettings->save_settings_label ?? 'Save Settings' }}">
+                            <button style="display: none;" class="btn-edit" data-field="save-settings-label" data-content="{{ $contentSettings->save_settings_label ?? 'Save Settings' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -171,7 +171,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Accept Selected Button Label</label>
-                            <button class="btn-edit" data-field="accept-selected-label" data-content="{{ $contentSettings->accept_selected_label ?? 'Accept Selected' }}">
+                            <button style="display: none;" class="btn-edit" data-field="accept-selected-label" data-content="{{ $contentSettings->accept_selected_label ?? 'Accept Selected' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -187,7 +187,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Essential Category Label</label>
-                            <button class="btn-edit" data-field="essential-category-label" data-content="{{ $contentSettings->essential_category_label ?? 'Essential' }}">
+                            <button style="display: none;" class="btn-edit" data-field="essential-category-label" data-content="{{ $contentSettings->essential_category_label ?? 'Essential' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -198,7 +198,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Marketing Category Label</label>
-                            <button class="btn-edit" data-field="marketing-category-label" data-content="{{ $contentSettings->marketing_category_label ?? 'Marketing' }}">
+                            <button style="display: none;" class="btn-edit" data-field="marketing-category-label" data-content="{{ $contentSettings->marketing_category_label ?? 'Marketing' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -209,7 +209,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Functional Category Label</label>
-                            <button class="btn-edit" data-field="functional-category-label" data-content="{{ $contentSettings->functional_category_label ?? 'Functional' }}">
+                            <button style="display: none;" class="btn-edit" data-field="functional-category-label" data-content="{{ $contentSettings->functional_category_label ?? 'Functional' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -220,7 +220,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Analytics Category Label</label>
-                            <button class="btn-edit" data-field="analytics-category-label" data-content="{{ $contentSettings->analytics_category_label ?? 'Analytics' }}">
+                            <button style="display: none;" class="btn-edit" data-field="analytics-category-label" data-content="{{ $contentSettings->analytics_category_label ?? 'Analytics' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -236,7 +236,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Active Status Label</label>
-                            <button class="btn-edit" data-field="active-status-label" data-content="{{ $contentSettings->active_status_label ?? 'Active' }}">
+                            <button style="display: none;" class="btn-edit" data-field="active-status-label" data-content="{{ $contentSettings->active_status_label ?? 'Active' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -247,7 +247,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Inactive Status Label</label>
-                            <button class="btn-edit" data-field="inactive-status-label" data-content="{{ $contentSettings->inactive_status_label ?? 'Inactive' }}">
+                            <button style="display: none;" class="btn-edit" data-field="inactive-status-label" data-content="{{ $contentSettings->inactive_status_label ?? 'Inactive' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>
@@ -258,7 +258,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Required Status Label</label>
-                            <button class="btn-edit" data-field="required-status-label" data-content="{{ $contentSettings->required_status_label ?? 'Required' }}">
+                            <button style="display: none;" class="btn-edit" data-field="required-status-label" data-content="{{ $contentSettings->required_status_label ?? 'Required' }}">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
                         </div>

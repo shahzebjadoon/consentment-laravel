@@ -3,7 +3,7 @@
 @section('content')
 <div class="card" style="margin-bottom: 30px; width: 100%;">
     <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
-        <h3 class="page-title">Appearance <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
+        <h3 class="page-title">Appearance <i class="" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
     </div>
     
     <!-- Step 4: Add Save Settings Button -->
@@ -122,7 +122,7 @@
         <!-- Background Shadow Toggle -->
                 <div class="toggle-setting">
                     <div class="toggle-header">
-                        <h5>Background Shadow <i class="fas fa-info-circle"></i></h5>
+                        <h5>Background Shadow <i class=""></i></h5>
                         <label class="switch">
                             <input type="checkbox" id="backgroundShadowToggle" {{ $appearance->background_shadow ? 'checked' : '' }}>
                             <span class="slider round"></span>
@@ -133,7 +133,7 @@
                 <!-- Background Overlay -->
                 <div class="toggle-setting">
                     <div class="toggle-header">
-                        <h5>Background Overlay <i class="fas fa-info-circle"></i></h5>
+                        <h5>Background Overlay <i class=""></i></h5>
                         <label class="switch">
                             <input type="checkbox" id="backgroundOverlayToggle" {{ $appearance->background_overlay ? 'checked' : '' }}>
                             <span class="slider round"></span>
@@ -167,7 +167,7 @@
                 <p class="section-description">Display your logo in the first layer.</p>
                 
                 <div class="form-group">
-    <label>Logo Image <i class="fas fa-info-circle"></i></label>
+    <label>Logo Image <i class=""></i></label>
     <div class="logo-upload-container">
         @if ($appearance->logo_url)
             <div class="current-logo">
@@ -206,7 +206,7 @@
                     </div>
                     
                     <div class="form-group half">
-                        <label>Logo Alt-Tag <i class="fas fa-info-circle"></i></label>
+                        <label>Logo Alt-Tag <i class=""></i></label>
                         <input type="text" class="form-control" placeholder="Enter the alt-tag for your logo" value="{{ $appearance->logo_alt_tag ?? '' }}" id="logoAltTagInput">
                         <input type="hidden" name="logo_alt_tag" value="{{ $appearance->logo_alt_tag ?? '' }}" form="stylingForm">
                     </div>
@@ -294,7 +294,7 @@
                 </div>
                 
                 <div class="button-corners">
-                    <h5>Button Corners <i class="fas fa-info-circle"></i></h5>
+                    <h5>Button Corners <i class=""></i></h5>
                     <div class="form-group">
                         <label>Rounded corners (px)</label>
                         <input type="text" class="form-control small" value="{{ $appearance->button_corner_radius ?? '4' }}" data-target="buttonCornerRadiusInput">
@@ -403,7 +403,7 @@
                 
                 <div class="toggle-setting">
                     <div class="toggle-header">
-                        <h5>Enable Custom CSS <i class="fas fa-info-circle"></i></h5>
+                        <h5>Enable Custom CSS <i class=""></i></h5>
                         <label class="switch">
                             <input type="checkbox" id="customCssEnabledToggle" {{ $appearance->custom_css_enabled ? 'checked' : '' }}>
                             <span class="slider round"></span>

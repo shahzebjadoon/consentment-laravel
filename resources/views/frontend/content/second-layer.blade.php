@@ -3,7 +3,7 @@
 @section('content')
 <div class="card" style="margin-bottom: 30px; width: 100%;">
     <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
-        <h3 class="page-title">Content <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
+        <h3 class="page-title">Content <i class="" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
     </div>
     
     <!-- Add Save Settings Button in Header -->
@@ -61,7 +61,7 @@
                 <div class="form-group">
                     <div class="form-header">
                         <label>Title</label>
-                        <button class="btn-edit-translate" data-field="second-layer-title" data-content="{{ $contentSettings->second_layer_title ?? 'Privacy Settings' }}">
+                        <button style="display: none;" class="btn-edit-translate" data-field="second-layer-title" data-content="{{ $contentSettings->second_layer_title ?? 'Privacy Settings' }}">
                             <i class="fas fa-edit"></i> Edit & Translate
                         </button>
                     </div>
@@ -72,7 +72,7 @@
                 <div class="form-group">
                     <div class="form-header">
                         <label>Description</label>
-                        <button class="btn-edit-translate" data-field="second-layer-description" data-content="{{ $contentSettings->second_layer_description ?? 'This tool helps you manage consent to third party technologies collecting and processing personal data.' }}">
+                        <button style="display: none;" class="btn-edit-translate" data-field="second-layer-description" data-content="{{ $contentSettings->second_layer_description ?? 'This tool helps you manage consent to third party technologies collecting and processing personal data.' }}">
                             <i class="fas fa-edit"></i> Edit & Translate
                         </button>
                     </div>
@@ -103,7 +103,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Services Title</label>
-                            <button class="btn-edit-translate" data-field="services-title" data-content="{{ $contentSettings->services_title ?? 'Services' }}">
+                            <button style="display: none;" class="btn-edit-translate" data-field="services-title" data-content="{{ $contentSettings->services_title ?? 'Services' }}">
                                 <i class="fas fa-edit"></i> Edit & Translate
                             </button>
                         </div>
@@ -114,7 +114,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Services Description</label>
-                            <button class="btn-edit-translate" data-field="services-description" data-content="{{ $contentSettings->services_description ?? 'These services process personal data to display personalized or interest-based advertisements.' }}">
+                            <button style="display: none;" class="btn-edit-translate" data-field="services-description" data-content="{{ $contentSettings->services_description ?? 'These services process personal data to display personalized or interest-based advertisements.' }}">
                                 <i class="fas fa-edit"></i> Edit & Translate
                             </button>
                         </div>
@@ -131,7 +131,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Categories Title</label>
-                            <button class="btn-edit-translate" data-field="categories-title" data-content="{{ $contentSettings->categories_title ?? 'Categories' }}">
+                            <button  style="display: none;" class="btn-edit-translate" data-field="categories-title" data-content="{{ $contentSettings->categories_title ?? 'Categories' }}">
                                 <i class="fas fa-edit"></i> Edit & Translate
                             </button>
                         </div>
@@ -142,7 +142,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Categories Description</label>
-                            <button class="btn-edit-translate" data-field="categories-description" data-content="{{ $contentSettings->categories_description ?? 'These categories group services by their data processing purpose.' }}">
+                            <button style="display: none;" class="btn-edit-translate" data-field="categories-description" data-content="{{ $contentSettings->categories_description ?? 'These categories group services by their data processing purpose.' }}">
                                 <i class="fas fa-edit"></i> Edit & Translate
                             </button>
                         </div>
@@ -159,7 +159,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Accept All Button</label>
-                            <button class="btn-edit-translate" data-field="accept-all-button" data-content="{{ $contentSettings->accept_all_button ?? 'Accept All' }}">
+                            <button style="display: none;" class="btn-edit-translate" data-field="accept-all-button" data-content="{{ $contentSettings->accept_all_button ?? 'Accept All' }}">
                                 <i class="fas fa-edit"></i> Edit & Translate
                             </button>
                         </div>
@@ -170,7 +170,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Deny All Button</label>
-                            <button class="btn-edit-translate" data-field="deny-all-button" data-content="{{ $contentSettings->deny_all_button ?? 'Deny All' }}">
+                            <button style="display: none;" class="btn-edit-translate" data-field="deny-all-button" data-content="{{ $contentSettings->deny_all_button ?? 'Deny All' }}">
                                 <i class="fas fa-edit"></i> Edit & Translate
                             </button>
                         </div>
@@ -181,7 +181,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Save Button</label>
-                            <button class="btn-edit-translate" data-field="save-button" data-content="{{ $contentSettings->save_button ?? 'Save' }}">
+                            <button style="display: none;" class="btn-edit-translate" data-field="save-button" data-content="{{ $contentSettings->save_button ?? 'Save' }}">
                                 <i class="fas fa-edit"></i> Edit & Translate
                             </button>
                         </div>

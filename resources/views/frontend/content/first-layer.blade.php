@@ -3,7 +3,7 @@
 @section('content')
 <div class="card" style="margin-bottom: 30px; width: 100%;">
     <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
-        <h3 class="page-title">Content <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
+        <h3 class="page-title">Content <i class="" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
     </div>
     
     <!-- Add Save Settings Button in Header -->
@@ -69,7 +69,7 @@
                 <div class="form-group">
                     <div class="form-header">
                         <label>Title</label>
-                        <button class="btn-edit-translate" data-field="title" data-content="{{ $contentSettings->first_layer_title ?? 'Privacy Settings' }}">
+                        <button  style="display: none;" class="btn-edit-translate" data-field="title" data-content="{{ $contentSettings->first_layer_title ?? 'Privacy Settings' }}">
                             <i class="fas fa-edit"></i> Edit & Translate
                         </button>
                     </div>
@@ -80,7 +80,7 @@
                 <div class="form-group">
                     <div class="form-header">
                         <label>Banner Message</label>
-                        <button class="btn-edit-translate" data-field="banner-message" data-content="{{ $contentSettings->first_layer_message ?? 'This site uses third-party website tracking technologies to provide and continually improve our services, and to display advertisements according to users\' interests. I agree and may revoke or change my consent at any time with effect for the future.' }}">
+                        <button style="display: none;" class="btn-edit-translate" data-field="banner-message" data-content="{{ $contentSettings->first_layer_message ?? 'This site uses third-party website tracking technologies to provide and continually improve our services, and to display advertisements according to users\' interests. I agree and may revoke or change my consent at any time with effect for the future.' }}">
                             <i class="fas fa-edit"></i> Edit & Translate
                         </button>
                     </div>
@@ -122,7 +122,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Legal Notice Link Text</label>
-                            <button class="btn-edit-translate" data-field="legal-notice-text" data-content="{{ $contentSettings->legal_notice_text ?? 'Legal Notice' }}">
+                            <button style="display: none;" class="btn-edit-translate" data-field="legal-notice-text" data-content="{{ $contentSettings->legal_notice_text ?? 'Legal Notice' }}">
                                 <i class="fas fa-edit"></i> Edit & Translate
                             </button>
                         </div>
@@ -133,7 +133,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Legal Notice URL</label>
-                            <button class="btn-edit-translate" data-field="legal-notice-url" data-content="{{ $contentSettings->legal_notice_url ?? '' }}">
+                            <button style="display: none;" class="btn-edit-translate" data-field="legal-notice-url" data-content="{{ $contentSettings->legal_notice_url ?? '' }}">
                                 <i class="fas fa-edit"></i> Edit & Translate
                             </button>
                         </div>
@@ -144,7 +144,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Privacy Policy Link Text</label>
-                            <button class="btn-edit-translate" data-field="privacy-policy-text" data-content="{{ $contentSettings->privacy_policy_text ?? 'Privacy Policy' }}">
+                            <button style="display: none;" class="btn-edit-translate" data-field="privacy-policy-text" data-content="{{ $contentSettings->privacy_policy_text ?? 'Privacy Policy' }}">
                                 <i class="fas fa-edit"></i> Edit & Translate
                             </button>
                         </div>
@@ -155,7 +155,7 @@
                     <div class="form-group">
                         <div class="form-header">
                             <label>Privacy Policy URL</label>
-                            <button class="btn-edit-translate" data-field="privacy-policy-url" data-content="{{ $contentSettings->privacy_policy_url ?? '' }}">
+                            <button style="display: none;" class="btn-edit-translate" data-field="privacy-policy-url" data-content="{{ $contentSettings->privacy_policy_url ?? '' }}">
                                 <i class="fas fa-edit"></i> Edit & Translate
                             </button>
                         </div>

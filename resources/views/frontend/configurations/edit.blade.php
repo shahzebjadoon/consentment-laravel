@@ -3,7 +3,7 @@
 @section('content')
 <div class="card" style="margin-bottom: 30px; width: 60%;">
     <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
-        <h3 class="page-title">Domain Setup <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
+        <h3 class="page-title">Domain Setup <i class="" style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
     </div>
 
         <!-- Step 4: Add Save Settings Button -->
@@ -69,7 +69,7 @@
                         <div class="form-group">
                             <label class="form-label">Configuration Name</label>
                             <div class="form-info-icon">
-                                <i class="fas fa-info-circle" style="color: #ccc; cursor: help;" title="The name of your configuration that will be displayed in the dashboard"></i>
+                                <i class="" style="color: #ccc; cursor: help;" title="The name of your configuration that will be displayed in the dashboard"></i>
                             </div>
                             <input type="text" class="form-control" name="name" value="{{ $configuration->name }}">
                         </div>
@@ -143,7 +143,7 @@
                     </div>
                     
                     <!-- Settings Section -->
-                    <div class="section-card" style="margin-bottom: 30px;">
+                    <div style="display: none;" class="section-card" style="margin-bottom: 30px;">
                         <h4 class="section-title">Settings
                         <span >
                             <i class="fas fa-info-circle" style="color: #ccc; cursor: help;" title="When enabled, an error message will be displayed if your configuration is used on domains not listed above"></i>
@@ -241,7 +241,7 @@
                         <div class="form-group">
                             <label class="form-label">Regional Settings</label>
                             <div class="form-info-icon">
-                                <i class="fas fa-info-circle" style="color: #ccc; cursor: help;" title="Configure how the CMP will be displayed in different regions"></i>
+                                <i class="" style="color: #ccc; cursor: help;" title="Configure how the CMP will be displayed in different regions"></i>
                             </div>
                             <select class="form-control" name="regional_settings">
                                 <option value="default">Display CMP to all users (default)</option>
@@ -269,17 +269,7 @@
                         </div>
                     </div>
                     
-                    <!-- Premium Feature Banner -->
-                    <div style="background-color: #fff8e1; border-radius: 5px; padding: 15px; margin-bottom: 30px; display: flex; align-items: center;">
-                        <div style="background-color: #ffd600; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                            <i class="fas fa-bolt" style="color: white;"></i>
-                        </div>
-                        <div>
-                            <h4 style="margin: 0; margin-bottom: 5px; font-size: 16px;">This feature is available in higher plan</h4>
-                            <p style="margin: 0; color: #666;">Upgrade your plan to unlock exclusive features and premium content.</p>
-                        </div>
-                        <button type="button" class="btn btn-primary" style="margin-left: auto;">Upgrade</button>
-                    </div>
+                
                     
                     <!-- DPS Details Section with two columns -->
                     <div style="display: flex; gap: 20px; margin-bottom: 30px;">
