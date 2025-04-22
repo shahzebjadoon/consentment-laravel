@@ -11,7 +11,7 @@
         <div>
             <span>Last saved: {{ $appearance->updated_at ? $appearance->updated_at->diffForHumans() : 'Never' }}</span>
         </div>
-        <form action="{{ route('frontend.appearance.save', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" method="POST" id="stylingForm">
+        <form action="{{ route('frontend.appearance.save', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" method="POST" id="stylingForm" enctype="multipart/form-data">
             @csrf
             <!-- Hidden fields for the current tab's settings -->
             <input type="hidden" name="background_color" value="{{ $appearance->background_color ?? '#FFFFFF' }}" id="backgroundColorInput">
@@ -167,10 +167,32 @@
                 <p class="section-description">Display your logo in the first layer.</p>
                 
                 <div class="form-group">
-                    <label>URL <i class="fas fa-info-circle"></i></label>
-                    <input type="text" class="form-control" placeholder="Enter the URL of your logo" value="{{ $appearance->logo_url ?? '' }}" id="logoUrlInput">
-                    <input type="hidden" name="logo_url" value="{{ $appearance->logo_url ?? '' }}" form="stylingForm">
-                </div>
+    <label>Logo Image <i class="fas fa-info-circle"></i></label>
+    <div class="logo-upload-container">
+        @if ($appearance->logo_url)
+            <div class="current-logo">
+                <img src="{{ $appearance->logo_url }}" alt="Current Logo" style="max-height: 80px; max-width: 100%; margin-bottom: 10px;">
+                <div class="logo-path">{{ $appearance->logo_url }}</div>
+            </div>
+        @endif
+        <div class="logo-upload-buttons">
+            <label for="logo_file" class="btn-upload">
+                <i class="fas fa-upload"></i> {{ $appearance->logo_url ? 'Change Logo' : 'Upload Logo' }}
+            </label>
+            @if ($appearance->logo_url)
+                <button type="button" id="removeLogo" class="btn-remove">
+                    <i class="fas fa-trash"></i> Remove
+                </button>
+            @endif
+        </div>
+        <input type="file" id="logo_file" name="logo_file" class="file-input" form="stylingForm" accept="image/*" style="display: none;">
+        <input type="hidden" name="logo_url" value="{{ $appearance->logo_url ?? '' }}" form="stylingForm" id="logoUrlInput">
+        
+        <div class="logo-upload-info">
+            <small>Recommended size: 200x50px. Max file size: 2MB. Supported formats: JPEG, PNG, GIF, SVG.</small>
+        </div>
+    </div>
+</div>
                 
                 <div class="form-row">
                     <div class="form-group half">
@@ -492,6 +514,81 @@
 
 @section('scripts')
 <style>
+
+/* Logo Upload */
+.logo-upload-container {
+    margin-bottom: 15px;
+}
+
+.current-logo {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: left;
+    border: 1px solid #e6e8eb;
+}
+
+.current-logo img {
+    max-height: 80px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.logo-upload-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.btn-upload {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: #1DA1F2; /* Twitter blue color as requested */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-upload:hover {
+    background-color: #0c85d0; /* Slightly darker shade of the Twitter blue */
+}
+
+.btn-remove {
+    display: none !important;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #f8f9fa;
+    color: #dc3545;
+    border: 1px solid #e6e8eb;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-remove:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.logo-upload-info {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.logo-path {
+    display: none !important;
+}
+
     /* Styling Sections */
     .styling-intro {
         margin-bottom: 30px;
@@ -1064,5 +1161,110 @@
     document.getElementById('disabledToggleBgInput').addEventListener('input', function() {
         document.querySelector('.toggle-visual.disabled').style.backgroundColor = this.value;
     });
+    
+    
+    // Logo upload preview
+document.getElementById('logo_file').addEventListener('change', function(event) {
+    if (this.files && this.files[0]) {
+        const file = this.files[0];
+        const fileSize = file.size / 1024 / 1024; // in MB
+        
+        // Check file size
+        if (fileSize > 2) {
+            alert('File size exceeds 2MB. Please select a smaller file.');
+            this.value = '';
+            return;
+        }
+        
+        // If there's no current logo section, create one
+        let currentLogo = document.querySelector('.current-logo');
+        if (!currentLogo) {
+            const logoUploadContainer = document.querySelector('.logo-upload-container');
+            currentLogo = document.createElement('div');
+            currentLogo.className = 'current-logo';
+            
+            const img = document.createElement('img');
+            img.style.maxHeight = '80px';
+            img.style.maxWidth = '100%';
+            img.style.marginBottom = '10px';
+            img.alt = 'Selected Logo';
+            
+            const logoPath = document.createElement('div');
+            logoPath.className = 'logo-path';
+            logoPath.textContent = 'New logo selected (not yet uploaded)';
+            
+            currentLogo.appendChild(img);
+            currentLogo.appendChild(logoPath);
+            
+            logoUploadContainer.insertBefore(currentLogo, logoUploadContainer.firstChild);
+        } else {
+            const img = currentLogo.querySelector('img');
+            const logoPath = currentLogo.querySelector('.logo-path');
+            logoPath.textContent = 'New logo selected (not yet uploaded)';
+        }
+        
+        // Preview the selected image
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const img = document.querySelector('.current-logo img');
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+        
+        // Update upload button text
+        const uploadButton = document.querySelector('.btn-upload');
+        uploadButton.innerHTML = '<i class="fas fa-upload"></i> Change Logo';
+        
+        // Add remove button if it doesn't exist
+        if (!document.getElementById('removeLogo')) {
+            const removeButton = document.createElement('button');
+            removeButton.type = 'button';
+            removeButton.id = 'removeLogo';
+            removeButton.className = 'btn-remove';
+            removeButton.innerHTML = '<i class="fas fa-trash"></i> Remove';
+            
+            document.querySelector('.logo-upload-buttons').appendChild(removeButton);
+            addRemoveLogoEvent();
+        }
+    }
+});
+
+// Function to add event listener to remove logo button
+function addRemoveLogoEvent() {
+    const removeButton = document.getElementById('removeLogo');
+    if (removeButton) {
+        removeButton.addEventListener('click', function() {
+            // Clear the file input
+            document.getElementById('logo_file').value = '';
+            
+            // Clear the hidden input
+            document.getElementById('logoUrlInput').value = '';
+            
+            // Remove the current logo preview
+            const currentLogo = document.querySelector('.current-logo');
+            if (currentLogo) {
+                currentLogo.remove();
+            }
+            
+            // Update upload button text
+            const uploadButton = document.querySelector('.btn-upload');
+            uploadButton.innerHTML = '<i class="fas fa-upload"></i> Upload Logo';
+            
+            // Remove the remove button
+            this.remove();
+            
+            // Add a flag to indicate logo removal
+            const removeLogoInput = document.createElement('input');
+            removeLogoInput.type = 'hidden';
+            removeLogoInput.name = 'remove_logo';
+            removeLogoInput.value = '1';
+            document.getElementById('stylingForm').appendChild(removeLogoInput);
+        });
+    }
+}
+
+// Initialize the remove logo event
+addRemoveLogoEvent();
+    
 </script>
 @endsection

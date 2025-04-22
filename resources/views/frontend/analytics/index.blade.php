@@ -101,46 +101,46 @@
                 <div style="display: flex; gap: 20px; margin-bottom: 20px;">
                     <div style="flex: 1; border: 1px solid #e6e8eb; border-radius: 8px; padding: 20px;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                            <h4 style="margin: 0;">Interaction vs Ignores (%)</h4>
+                            <h4 style="margin: 0;">Accept vs. Deny (%)</h4>
                             <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px;"></i>
                         </div>
                         
                         <div style="display: flex; justify-content: center; align-items: center; padding: 30px 0;">
-                            <canvas id="interactionVsIgnoresChart" width="200" height="200"></canvas>
+                            <canvas id="acceptVsDenyChart" width="200" height="200"></canvas>
                         </div>
                         
                         <div style="display: flex; justify-content: center; gap: 20px; margin-top: 15px;">
                             <div style="display: flex; align-items: center;">
-                                <span style="width: 12px; height: 12px; background-color: #ff6a00; display: inline-block; margin-right: 5px;"></span>
-                                <span>Interactions</span>
+                                <span style="width: 12px; height: 12px; background-color: #0066cc; display: inline-block; margin-right: 5px;"></span>
+                                <span>Accept All</span>
                             </div>
                             <div style="display: flex; align-items: center;">
                                 <span style="width: 12px; height: 12px; background-color: #e57373; display: inline-block; margin-right: 5px;"></span>
-                                <span>Ignores</span>
+                                <span>Deny All</span>
                             </div>
                         </div>
                     </div>
                     
                     <div style="flex: 1; border: 1px solid #e6e8eb; border-radius: 8px; padding: 20px;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                            <h4 style="margin: 0;">Daily Interaction Rate (%)</h4>
+                            <h4 style="margin: 0;">Daily Accept Rate (%)</h4>
                             <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px;"></i>
                         </div>
                         
                         <div style="height: 250px; position: relative;">
-                            <canvas id="dailyInteractionRateChart"></canvas>
+                            <canvas id="dailyAcceptRateOverviewChart"></canvas>
                         </div>
                     </div>
                 </div>
                 
                 <div style="border: 1px solid #e6e8eb; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                        <h4 style="margin: 0;">Displays vs. Interactions (Total)</h4>
+                        <h4 style="margin: 0;">Accept All vs. Deny All (Total)</h4>
                         <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px;"></i>
                     </div>
                     
                     <div style="height: 250px; position: relative;">
-                        <canvas id="displaysVsInteractionsChart"></canvas>
+                        <canvas id="acceptVsDenyTotalChart"></canvas>
                     </div>
                 </div>
                 
@@ -202,12 +202,12 @@
                     
                     <div style="flex: 1; border: 1px solid #e6e8eb; border-radius: 8px; padding: 20px;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                            <h4 style="margin: 0;">Daily Accept Rate (%)</h4>
+                            <h4 style="margin: 0;">Daily Deny Rate (%)</h4>
                             <i class="fas fa-info-circle" style="color: #ccc; font-size: 16px;"></i>
                         </div>
                         
                         <div style="height: 250px; position: relative;">
-                            <canvas id="dailyAcceptRateChart"></canvas>
+                            <canvas id="dailyDenyRateChart"></canvas>
                         </div>
                     </div>
                 </div>
@@ -266,19 +266,19 @@
             return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         });
         
-        // Interaction vs Ignores Chart
-        const interactionVsIgnoresChart = new Chart(
-            document.getElementById('interactionVsIgnoresChart'),
+        // Accept vs Deny Chart
+        const acceptVsDenyChart = new Chart(
+            document.getElementById('acceptVsDenyChart'),
             {
                 type: 'doughnut',
                 data: {
-                    labels: ['Interactions', 'Ignores'],
+                    labels: ['Accept All', 'Deny All'],
                     datasets: [{
                         data: [
-                            {{ $analyticsData['interactions'] }}, 
-                            {{ $analyticsData['ignores'] }}
+                            {{ $analyticsData['accept_all'] }}, 
+                            {{ $analyticsData['deny_all'] }}
                         ],
-                        backgroundColor: ['#ff6a00', '#e57373'],
+                        backgroundColor: ['#0066cc', '#e57373'],
                         borderWidth: 0
                     }]
                 },
@@ -306,21 +306,21 @@
             }
         );
         
-        // Daily Interaction Rate Chart
-        const dailyInteractionRateChart = new Chart(
-            document.getElementById('dailyInteractionRateChart'),
+        // Daily Accept Rate Overview Chart
+        const dailyAcceptRateOverviewChart = new Chart(
+            document.getElementById('dailyAcceptRateOverviewChart'),
             {
                 type: 'line',
                 data: {
                     labels: dates,
                     datasets: [{
-                        label: 'Interaction Rate',
-                        data: dailyData.map(item => item.interaction_rate),
-                        borderColor: '#ff6a00',
-                        backgroundColor: 'rgba(255, 106, 0, 0.1)',
+                        label: 'Accept Rate',
+                        data: dailyData.map(item => item.accept_rate),
+                        borderColor: '#0066cc',
+                        backgroundColor: 'rgba(0, 102, 204, 0.1)',
                         fill: true,
                         tension: 0.3,
-                        pointBackgroundColor: '#ff6a00',
+                        pointBackgroundColor: '#0066cc',
                         pointRadius: 3
                     }]
                 },
@@ -353,23 +353,23 @@
             }
         );
         
-        // Displays vs Interactions Chart
-        const displaysVsInteractionsChart = new Chart(
-            document.getElementById('displaysVsInteractionsChart'),
+        // Accept vs Deny Total Chart
+        const acceptVsDenyTotalChart = new Chart(
+            document.getElementById('acceptVsDenyTotalChart'),
             {
                 type: 'bar',
                 data: {
                     labels: dates,
                     datasets: [
                         {
-                            label: 'Displays',
-                            data: dailyData.map(item => item.displays),
-                            backgroundColor: '#ff6a00',
+                            label: 'Accept All',
+                            data: dailyData.map(item => item.accept_all),
+                            backgroundColor: '#0066cc',
                             order: 1
                         },
                         {
-                            label: 'Interactions',
-                            data: dailyData.map(item => item.interactions),
+                            label: 'Deny All',
+                            data: dailyData.map(item => item.deny_all),
                             backgroundColor: '#e57373',
                             order: 2
                         }
@@ -431,21 +431,25 @@
             }
         );
         
-        // Daily Accept Rate Chart
-        const dailyAcceptRateChart = new Chart(
-            document.getElementById('dailyAcceptRateChart'),
+        // Daily Deny Rate Chart
+        const dailyDenyRateChart = new Chart(
+            document.getElementById('dailyDenyRateChart'),
             {
                 type: 'line',
                 data: {
                     labels: dates,
                     datasets: [{
-                        label: 'Accept Rate',
-                        data: dailyData.map(item => item.accept_rate),
-                        borderColor: '#0066cc',
-                        backgroundColor: 'rgba(0, 102, 204, 0.1)',
+                        label: 'Deny Rate',
+                        data: dailyData.map(item => {
+                            // Calculate deny rate as percentage of deny_all to total interactions
+                            const totalInteractions = item.accept_all + item.deny_all + item.custom_choice;
+                            return totalInteractions > 0 ? Math.round((item.deny_all / totalInteractions) * 100) : 0;
+                        }),
+                        borderColor: '#e57373',
+                        backgroundColor: 'rgba(229, 115, 115, 0.1)',
                         fill: true,
                         tension: 0.3,
-                        pointBackgroundColor: '#0066cc',
+                        pointBackgroundColor: '#e57373',
                         pointRadius: 3
                     }]
                 },

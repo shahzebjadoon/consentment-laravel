@@ -4,6 +4,7 @@ use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\Frontend\NewLoginController;
 use App\Http\Controllers\Frontend\NewRegisterController;
 use App\Http\Controllers\Frontend\DashboardController;
+use App\Http\Controllers\Frontend\BillingController;
 use Illuminate\Support\Facades\Route;
 
 // Home page redirect to new login
@@ -57,6 +58,7 @@ Route::group(['prefix' => 'companies/{id}', 'as' => 'frontend.companies.', 'midd
 
 
 // Configuration routes
+
 Route::post('/companies/{id}/configurations', [App\Http\Controllers\Frontend\ConfigurationController::class, 'store'])
     ->name('frontend.configurations.store')
     ->middleware('auth');
@@ -236,3 +238,11 @@ Route::prefix('company/{company_id}/configuration/{config_id}/new-categories')->
 });
 
 Route::post('/consent/analytics', [App\Http\Controllers\ConsentDataController::class, 'recordAnalytics']);
+
+
+
+
+
+Route::get('/companies/{company_id}/bill',  [BillingController::class, 'getbill'])
+    ->middleware('auth')
+    ->name('frontend.companies.billings');

@@ -29,6 +29,49 @@
         <!-- Tab Content -->
         <div class="tab-content">
            
+            <!-- Filter Section -->
+            <form action="{{ route('frontend.analytics.filter', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" method="POST" id="filterForm">
+                @csrf
+                <input type="hidden" name="active_tab" value="{{ $activeTab }}">
+                <div style="display: flex; margin-bottom: 20px; margin-top:10px">
+                    <div style="display: flex; align-items: center; margin-right: 20px;">
+                        <span style="color: #666; margin-right: 10px;">Time range</span>
+                        <input type="date" name="start_date" class="form-control" value="{{ $startDate->format('Y-m-d') }}" style="width: 150px; margin-right: 5px;">
+                        <span style="margin: 0 5px;">-</span>
+                        <input type="date" name="end_date" class="form-control" value="{{ $endDate->format('Y-m-d') }}" style="width: 150px; margin-right: 5px;">
+                        <i class="fas fa-calendar" style="color: #666;"></i>
+                    </div>
+                </div>
+                
+                <div style="display: flex; margin-bottom: 20px; gap: 10px;">
+                    <span style="color: #666; margin-right: 10px;">Filter</span>
+                    <select name="country" class="form-control" style="width: 150px;">
+                        <option value="">All Countries</option>
+                        @foreach($filterOptions['countries'] as $countryOption)
+                            <option value="{{ $countryOption }}" {{ isset($country) && $country == $countryOption ? 'selected' : '' }}>{{ $countryOption }}</option>
+                        @endforeach
+                    </select>
+                    <select name="device_type" class="form-control" style="width: 150px;">
+                        <option value="">All Devices</option>
+                        @foreach($filterOptions['device_types'] as $deviceOption)
+                            <option value="{{ $deviceOption }}" {{ isset($deviceType) && $deviceType == $deviceOption ? 'selected' : '' }}>{{ $deviceOption }}</option>
+                        @endforeach
+                    </select>
+                    <select name="os" class="form-control" style="width: 150px;">
+                        <option value="">All OS</option>
+                        @foreach($filterOptions['os'] as $osOption)
+                            <option value="{{ $osOption }}" {{ isset($os) && $os == $osOption ? 'selected' : '' }}>{{ $osOption }}</option>
+                        @endforeach
+                    </select>
+                    <select name="browser" class="form-control" style="width: 150px;">
+                        <option value="">All Browsers</option>
+                        @foreach($filterOptions['browsers'] as $browserOption)
+                            <option value="{{ $browserOption }}" {{ isset($browser) && $browser == $browserOption ? 'selected' : '' }}>{{ $browserOption }}</option>
+                        @endforeach
+                    </select>
+                    <button type="submit" class="btn btn-secondary" style="margin-left: 10px; background-color: #0066cc; color: #fff;">Apply</button>
+                </div>
+            </form>
             
             <!-- Comparison Content -->
             <div style="margin-top: 30px;">
@@ -136,12 +179,14 @@
                     countryAnalytics["{{ addslashes($item->country) }}"] = {
                         displays: 0,
                         interactions: 0,
-                        accept_all: 0
+                        accept_all: 0,
+                        deny_all: 0
                     };
                 }
                 countryAnalytics["{{ addslashes($item->country) }}"].displays += {{ $item->displays ?? 0 }};
                 countryAnalytics["{{ addslashes($item->country) }}"].interactions += {{ $item->interactions ?? 0 }};
                 countryAnalytics["{{ addslashes($item->country) }}"].accept_all += {{ $item->accept_all ?? 0 }};
+                countryAnalytics["{{ addslashes($item->country) }}"].deny_all += {{ $item->deny_all ?? 0 }};
             @endif
             
             // Process device data - make sure it's not empty
@@ -150,12 +195,14 @@
                     deviceAnalytics["{{ addslashes($item->device_type) }}"] = {
                         displays: 0,
                         interactions: 0,
-                        accept_all: 0
+                        accept_all: 0,
+                        deny_all: 0
                     };
                 }
                 deviceAnalytics["{{ addslashes($item->device_type) }}"].displays += {{ $item->displays ?? 0 }};
                 deviceAnalytics["{{ addslashes($item->device_type) }}"].interactions += {{ $item->interactions ?? 0 }};
                 deviceAnalytics["{{ addslashes($item->device_type) }}"].accept_all += {{ $item->accept_all ?? 0 }};
+                deviceAnalytics["{{ addslashes($item->device_type) }}"].deny_all += {{ $item->deny_all ?? 0 }};
             @endif
             
             // Process OS data - make sure it's not empty
@@ -164,12 +211,14 @@
                     osAnalytics["{{ addslashes($item->os) }}"] = {
                         displays: 0,
                         interactions: 0,
-                        accept_all: 0
+                        accept_all: 0,
+                        deny_all: 0
                     };
                 }
                 osAnalytics["{{ addslashes($item->os) }}"].displays += {{ $item->displays ?? 0 }};
                 osAnalytics["{{ addslashes($item->os) }}"].interactions += {{ $item->interactions ?? 0 }};
                 osAnalytics["{{ addslashes($item->os) }}"].accept_all += {{ $item->accept_all ?? 0 }};
+                osAnalytics["{{ addslashes($item->os) }}"].deny_all += {{ $item->deny_all ?? 0 }};
             @endif
         @endforeach
         
@@ -182,15 +231,16 @@
                         countryAnalytics["{{ addslashes($country) }}"] = {
                             displays: Math.floor(Math.random() * 100) + 50,
                             interactions: Math.floor(Math.random() * 80) + 40,
-                            accept_all: Math.floor(Math.random() * 60) + 30
+                            accept_all: Math.floor(Math.random() * 60) + 30,
+                            deny_all: Math.floor(Math.random() * 20) + 10
                         };
                     @endif
                 @endforeach
             @else
                 // Sample data if no countries from filter options
-                countryAnalytics["Germany"] = { displays: 150, interactions: 120, accept_all: 90 };
-                countryAnalytics["France"] = { displays: 100, interactions: 80, accept_all: 60 };
-                countryAnalytics["UK"] = { displays: 80, interactions: 65, accept_all: 50 };
+                countryAnalytics["Germany"] = { displays: 150, interactions: 120, accept_all: 90, deny_all: 20 };
+                countryAnalytics["France"] = { displays: 100, interactions: 80, accept_all: 60, deny_all: 15 };
+                countryAnalytics["UK"] = { displays: 80, interactions: 65, accept_all: 50, deny_all: 12 };
             @endif
         }
         
@@ -202,13 +252,14 @@
                         deviceAnalytics["{{ addslashes($device) }}"] = {
                             displays: Math.floor(Math.random() * 100) + 50,
                             interactions: Math.floor(Math.random() * 80) + 40,
-                            accept_all: Math.floor(Math.random() * 60) + 30
+                            accept_all: Math.floor(Math.random() * 60) + 30,
+                            deny_all: Math.floor(Math.random() * 20) + 10
                         };
                     @endif
                 @endforeach
             @else
-                deviceAnalytics["Mobile"] = { displays: 100, interactions: 85, accept_all: 60 };
-                deviceAnalytics["Desktop"] = { displays: 230, interactions: 115, accept_all: 65 };
+                deviceAnalytics["Mobile"] = { displays: 100, interactions: 85, accept_all: 60, deny_all: 15 };
+                deviceAnalytics["Desktop"] = { displays: 230, interactions: 115, accept_all: 65, deny_all: 20 };
             @endif
         }
         
@@ -220,15 +271,16 @@
                         osAnalytics["{{ addslashes($os) }}"] = {
                             displays: Math.floor(Math.random() * 100) + 50,
                             interactions: Math.floor(Math.random() * 80) + 40,
-                            accept_all: Math.floor(Math.random() * 60) + 30
+                            accept_all: Math.floor(Math.random() * 60) + 30,
+                            deny_all: Math.floor(Math.random() * 20) + 10
                         };
                     @endif
                 @endforeach
             @else
-                osAnalytics["Windows"] = { displays: 150, interactions: 75, accept_all: 40 };
-                osAnalytics["iOS"] = { displays: 100, interactions: 80, accept_all: 60 };
-                osAnalytics["Android"] = { displays: 80, interactions: 65, accept_all: 50 };
-                osAnalytics["Mac OS"] = { displays: 70, interactions: 60, accept_all: 45 };
+                osAnalytics["Windows"] = { displays: 150, interactions: 75, accept_all: 40, deny_all: 20 };
+                osAnalytics["iOS"] = { displays: 100, interactions: 80, accept_all: 60, deny_all: 15 };
+                osAnalytics["Android"] = { displays: 80, interactions: 65, accept_all: 50, deny_all: 12 };
+                osAnalytics["Mac OS"] = { displays: 70, interactions: 60, accept_all: 45, deny_all: 10 };
             @endif
         }
         
@@ -237,18 +289,21 @@
             const data = countryAnalytics[country];
             data.interaction_rate = data.displays > 0 ? Math.round((data.interactions / data.displays) * 100) : 0;
             data.accept_rate = data.interactions > 0 ? Math.round((data.accept_all / data.interactions) * 100) : 0;
+            data.deny_rate = data.interactions > 0 ? Math.round((data.deny_all / data.interactions) * 100) : 0;
         });
         
         Object.keys(deviceAnalytics).forEach(device => {
             const data = deviceAnalytics[device];
             data.interaction_rate = data.displays > 0 ? Math.round((data.interactions / data.displays) * 100) : 0;
             data.accept_rate = data.interactions > 0 ? Math.round((data.accept_all / data.interactions) * 100) : 0;
+            data.deny_rate = data.interactions > 0 ? Math.round((data.deny_all / data.interactions) * 100) : 0;
         });
         
         Object.keys(osAnalytics).forEach(os => {
             const data = osAnalytics[os];
             data.interaction_rate = data.displays > 0 ? Math.round((data.interactions / data.displays) * 100) : 0;
             data.accept_rate = data.interactions > 0 ? Math.round((data.accept_all / data.interactions) * 100) : 0;
+            data.deny_rate = data.interactions > 0 ? Math.round((data.deny_all / data.interactions) * 100) : 0;
         });
         
         console.log('Country Analytics:', countryAnalytics);
@@ -259,8 +314,8 @@
         // Since we don't have actual layer data in the provided controller,
         // we'll mock it for the UI consistency
         const layerData = {
-            'First Layer': { interactions: 85, accept_rate: 65 },
-            'Second Layer': { interactions: 35, accept_rate: 40 }
+            'First Layer': { interactions: 85, accept_rate: 65, deny_rate: 20 },
+            'Second Layer': { interactions: 35, accept_rate: 40, deny_rate: 30 }
         };
 
         // Render Country Analytics
@@ -312,30 +367,13 @@
                 content.style.marginBottom = '10px';
                 countryContainer.appendChild(content);
                 
-                // Create the interaction rate bar
-                if (data.displays > 0) {
-                    const displayWidth = Math.min(data.interaction_rate, 100); // Cap display width at 100%
-                    const interactionRateBar = document.createElement('div');
-                    interactionRateBar.style.marginBottom = '5px';
-                    interactionRateBar.innerHTML = `
-                        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-                            <span style="width: 90px; color: #666; font-size: 12px;">Interaction Rate</span>
-                            <div style="flex-grow: 1; height: 16px; background-color: #f2f2f2; border-radius: 4px; overflow: hidden; position: relative;">
-                                <div style="position: absolute; height: 100%; background-color: #ff6a00; width: ${displayWidth}%;">
-                                    <span style="position: absolute; right: 5px; top: 0; color: white; font-size: 10px; line-height: 16px;">${data.interaction_rate}%</span>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    content.appendChild(interactionRateBar);
-                }
-                
                 // Create the accept rate bar
                 if (data.interactions > 0) {
                     const displayWidth = Math.min(data.accept_rate, 100); // Cap display width at 100%
                     const acceptRateBar = document.createElement('div');
+                    acceptRateBar.style.marginBottom = '5px';
                     acceptRateBar.innerHTML = `
-                        <div style="display: flex; align-items: center;">
+                        <div style="display: flex; align-items: center; margin-bottom: 5px;">
                             <span style="width: 90px; color: #666; font-size: 12px;">Accept Rate</span>
                             <div style="flex-grow: 1; height: 16px; background-color: #f2f2f2; border-radius: 4px; overflow: hidden; position: relative;">
                                 <div style="position: absolute; height: 100%; background-color: #0066cc; width: ${displayWidth}%;">
@@ -345,6 +383,23 @@
                         </div>
                     `;
                     content.appendChild(acceptRateBar);
+                }
+                
+                // Create the deny rate bar
+                if (data.interactions > 0) {
+                    const displayWidth = Math.min(data.deny_rate, 100); // Cap display width at 100%
+                    const denyRateBar = document.createElement('div');
+                    denyRateBar.innerHTML = `
+                        <div style="display: flex; align-items: center;">
+                            <span style="width: 90px; color: #666; font-size: 12px;">Deny Rate</span>
+                            <div style="flex-grow: 1; height: 16px; background-color: #f2f2f2; border-radius: 4px; overflow: hidden; position: relative;">
+                                <div style="position: absolute; height: 100%; background-color: #e57373; width: ${displayWidth}%;">
+                                    <span style="position: absolute; right: 5px; top: 0; color: white; font-size: 10px; line-height: 16px;">${data.deny_rate}%</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    content.appendChild(denyRateBar);
                 }
             });
         }
@@ -386,30 +441,13 @@
                 content.style.marginBottom = '10px';
                 deviceContainer.appendChild(content);
                 
-                // Create the interaction rate bar
-                if (data.displays > 0) {
-                    const displayWidth = Math.min(data.interaction_rate, 100); // Cap display width at 100%
-                    const interactionRateBar = document.createElement('div');
-                    interactionRateBar.style.marginBottom = '5px';
-                    interactionRateBar.innerHTML = `
-                        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-                            <span style="width: 90px; color: #666; font-size: 12px;">Interaction Rate</span>
-                            <div style="flex-grow: 1; height: 16px; background-color: #f2f2f2; border-radius: 4px; overflow: hidden; position: relative;">
-                                <div style="position: absolute; height: 100%; background-color: #ff6a00; width: ${displayWidth}%;">
-                                    <span style="position: absolute; right: 5px; top: 0; color: white; font-size: 10px; line-height: 16px;">${data.interaction_rate}%</span>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    content.appendChild(interactionRateBar);
-                }
-                
                 // Create the accept rate bar
                 if (data.interactions > 0) {
                     const displayWidth = Math.min(data.accept_rate, 100); // Cap display width at 100%
                     const acceptRateBar = document.createElement('div');
+                    acceptRateBar.style.marginBottom = '5px';
                     acceptRateBar.innerHTML = `
-                        <div style="display: flex; align-items: center;">
+                        <div style="display: flex; align-items: center; margin-bottom: 5px;">
                             <span style="width: 90px; color: #666; font-size: 12px;">Accept Rate</span>
                             <div style="flex-grow: 1; height: 16px; background-color: #f2f2f2; border-radius: 4px; overflow: hidden; position: relative;">
                                 <div style="position: absolute; height: 100%; background-color: #0066cc; width: ${displayWidth}%;">
@@ -419,6 +457,23 @@
                         </div>
                     `;
                     content.appendChild(acceptRateBar);
+                }
+                
+                // Create the deny rate bar
+                if (data.interactions > 0) {
+                    const displayWidth = Math.min(data.deny_rate, 100); // Cap display width at 100%
+                    const denyRateBar = document.createElement('div');
+                    denyRateBar.innerHTML = `
+                        <div style="display: flex; align-items: center;">
+                            <span style="width: 90px; color: #666; font-size: 12px;">Deny Rate</span>
+                            <div style="flex-grow: 1; height: 16px; background-color: #f2f2f2; border-radius: 4px; overflow: hidden; position: relative;">
+                                <div style="position: absolute; height: 100%; background-color: #e57373; width: ${displayWidth}%;">
+                                    <span style="position: absolute; right: 5px; top: 0; color: white; font-size: 10px; line-height: 16px;">${data.deny_rate}%</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    content.appendChild(denyRateBar);
                 }
             });
         }
@@ -456,19 +511,35 @@
                 layerContainer.appendChild(content);
                 
                 // Create the accept rate bar
-                const displayWidth = Math.min(data.accept_rate, 100); // Cap display width at 100%
+                const acceptDisplayWidth = Math.min(data.accept_rate, 100); // Cap display width at 100%
                 const acceptRateBar = document.createElement('div');
+                acceptRateBar.style.marginBottom = '5px';
                 acceptRateBar.innerHTML = `
-                    <div style="display: flex; align-items: center;">
+                    <div style="display: flex; align-items: center; margin-bottom: 5px;">
                         <span style="width: 90px; color: #666; font-size: 12px;">Accept Rate</span>
                         <div style="flex-grow: 1; height: 16px; background-color: #f2f2f2; border-radius: 4px; overflow: hidden; position: relative;">
-                            <div style="position: absolute; height: 100%; background-color: #0066cc; width: ${displayWidth}%;">
+                            <div style="position: absolute; height: 100%; background-color: #0066cc; width: ${acceptDisplayWidth}%;">
                                 <span style="position: absolute; right: 5px; top: 0; color: white; font-size: 10px; line-height: 16px;">${data.accept_rate}%</span>
                             </div>
                         </div>
                     </div>
                 `;
                 content.appendChild(acceptRateBar);
+                
+                // Create the deny rate bar
+                const denyDisplayWidth = Math.min(data.deny_rate, 100); // Cap display width at 100%
+                const denyRateBar = document.createElement('div');
+                denyRateBar.innerHTML = `
+                    <div style="display: flex; align-items: center;">
+                        <span style="width: 90px; color: #666; font-size: 12px;">Deny Rate</span>
+                        <div style="flex-grow: 1; height: 16px; background-color: #f2f2f2; border-radius: 4px; overflow: hidden; position: relative;">
+                            <div style="position: absolute; height: 100%; background-color: #e57373; width: ${denyDisplayWidth}%;">
+                                <span style="position: absolute; right: 5px; top: 0; color: white; font-size: 10px; line-height: 16px;">${data.deny_rate}%</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                content.appendChild(denyRateBar);
             });
         }
         
@@ -509,39 +580,39 @@
                 content.style.marginBottom = '10px';
                 osContainer.appendChild(content);
                 
-                // Create the interaction rate bar
-                if (data.displays > 0) {
-                    const displayWidth = Math.min(data.interaction_rate, 100); // Cap display width at 100%
-                    const interactionRateBar = document.createElement('div');
-                    interactionRateBar.style.marginBottom = '5px';
-                    interactionRateBar.innerHTML = `
-                        <div style="display: flex; align-items: center; margin-bottom: 5px;">
-                            <span style="width: 90px; color: #666; font-size: 12px;">Interaction Rate</span>
-                            <div style="flex-grow: 1; height: 16px; background-color: #f2f2f2; border-radius: 4px; overflow: hidden; position: relative;">
-                                <div style="position: absolute; height: 100%; background-color: #ff6a00; width: ${displayWidth}%;">
-                                    <span style="position: absolute; right: 5px; top: 0; color: white; font-size: 10px; line-height: 16px;">${data.interaction_rate}%</span>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    content.appendChild(interactionRateBar);
-                }
-                
                 // Create the accept rate bar
                 if (data.interactions > 0) {
-                    const displayWidth = Math.min(data.accept_rate, 100); // Cap display width at 100%
+                    const acceptDisplayWidth = Math.min(data.accept_rate, 100); // Cap display width at 100%
                     const acceptRateBar = document.createElement('div');
+                    acceptRateBar.style.marginBottom = '5px';
                     acceptRateBar.innerHTML = `
-                        <div style="display: flex; align-items: center;">
+                        <div style="display: flex; align-items: center; margin-bottom: 5px;">
                             <span style="width: 90px; color: #666; font-size: 12px;">Accept Rate</span>
                             <div style="flex-grow: 1; height: 16px; background-color: #f2f2f2; border-radius: 4px; overflow: hidden; position: relative;">
-                                <div style="position: absolute; height: 100%; background-color: #0066cc; width: ${displayWidth}%;">
+                                <div style="position: absolute; height: 100%; background-color: #0066cc; width: ${acceptDisplayWidth}%;">
                                     <span style="position: absolute; right: 5px; top: 0; color: white; font-size: 10px; line-height: 16px;">${data.accept_rate}%</span>
                                 </div>
                             </div>
                         </div>
                     `;
                     content.appendChild(acceptRateBar);
+                }
+                
+                // Create the deny rate bar
+                if (data.interactions > 0) {
+                    const denyDisplayWidth = Math.min(data.deny_rate, 100); // Cap display width at 100%
+                    const denyRateBar = document.createElement('div');
+                    denyRateBar.innerHTML = `
+                        <div style="display: flex; align-items: center;">
+                            <span style="width: 90px; color: #666; font-size: 12px;">Deny Rate</span>
+                            <div style="flex-grow: 1; height: 16px; background-color: #f2f2f2; border-radius: 4px; overflow: hidden; position: relative;">
+                                <div style="position: absolute; height: 100%; background-color: #e57373; width: ${denyDisplayWidth}%;">
+                                    <span style="position: absolute; right: 5px; top: 0; color: white; font-size: 10px; line-height: 16px;">${data.deny_rate}%</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    content.appendChild(denyRateBar);
                 }
             });
         }

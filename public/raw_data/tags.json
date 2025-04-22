@@ -1,0 +1,566 @@
+[
+    {
+        "id": 31,
+        "count": 0,
+        "description": "",
+        "link": "https:\/\/cookiedatabase.org\/tag\/function\/",
+        "name": "Function",
+        "slug": "function",
+        "taxonomy": "post_tag",
+        "meta": [],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>Function Archives - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/cookiedatabase.org\/tag\/function\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"Function Archives - Cookiedatabase.org\" \/>\n<meta property=\"og:url\" content=\"https:\/\/cookiedatabase.org\/tag\/function\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\/\/cookiedatabase.org\/tag\/function\/\",\"url\":\"https:\/\/cookiedatabase.org\/tag\/function\/\",\"name\":\"Function Archives - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"breadcrumb\":{\"@id\":\"https:\/\/cookiedatabase.org\/tag\/function\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/cookiedatabase.org\/tag\/function\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Function\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Function Archives - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/cookiedatabase.org\/tag\/function\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "Function Archives - Cookiedatabase.org",
+            "og_url": "https:\/\/cookiedatabase.org\/tag\/function\/",
+            "og_site_name": "Cookiedatabase.org",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": "https:\/\/cookiedatabase.org\/tag\/function\/",
+                        "url": "https:\/\/cookiedatabase.org\/tag\/function\/",
+                        "name": "Function Archives - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "breadcrumb": {
+                            "@id": "https:\/\/cookiedatabase.org\/tag\/function\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/cookiedatabase.org\/tag\/function\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Function"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tags\/31",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tags"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/taxonomies\/post_tag"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts?tags=31"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 32,
+        "count": 0,
+        "description": "",
+        "link": "https:\/\/cookiedatabase.org\/tag\/personal-data-1\/",
+        "name": "Personal Data (1)",
+        "slug": "personal-data-1",
+        "taxonomy": "post_tag",
+        "meta": [],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>Personal Data (1) Archives - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/cookiedatabase.org\/tag\/personal-data-1\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"Personal Data (1) Archives - Cookiedatabase.org\" \/>\n<meta property=\"og:url\" content=\"https:\/\/cookiedatabase.org\/tag\/personal-data-1\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\/\/cookiedatabase.org\/tag\/personal-data-1\/\",\"url\":\"https:\/\/cookiedatabase.org\/tag\/personal-data-1\/\",\"name\":\"Personal Data (1) Archives - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"breadcrumb\":{\"@id\":\"https:\/\/cookiedatabase.org\/tag\/personal-data-1\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/cookiedatabase.org\/tag\/personal-data-1\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Personal Data (1)\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Personal Data (1) Archives - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/cookiedatabase.org\/tag\/personal-data-1\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "Personal Data (1) Archives - Cookiedatabase.org",
+            "og_url": "https:\/\/cookiedatabase.org\/tag\/personal-data-1\/",
+            "og_site_name": "Cookiedatabase.org",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": "https:\/\/cookiedatabase.org\/tag\/personal-data-1\/",
+                        "url": "https:\/\/cookiedatabase.org\/tag\/personal-data-1\/",
+                        "name": "Personal Data (1) Archives - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "breadcrumb": {
+                            "@id": "https:\/\/cookiedatabase.org\/tag\/personal-data-1\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/cookiedatabase.org\/tag\/personal-data-1\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Personal Data (1)"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tags\/32",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tags"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/taxonomies\/post_tag"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts?tags=32"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 33,
+        "count": 0,
+        "description": "",
+        "link": "https:\/\/cookiedatabase.org\/tag\/personal-data-2\/",
+        "name": "Personal Data (2)",
+        "slug": "personal-data-2",
+        "taxonomy": "post_tag",
+        "meta": [],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>Personal Data (2) Archives - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/cookiedatabase.org\/tag\/personal-data-2\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"Personal Data (2) Archives - Cookiedatabase.org\" \/>\n<meta property=\"og:url\" content=\"https:\/\/cookiedatabase.org\/tag\/personal-data-2\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\/\/cookiedatabase.org\/tag\/personal-data-2\/\",\"url\":\"https:\/\/cookiedatabase.org\/tag\/personal-data-2\/\",\"name\":\"Personal Data (2) Archives - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"breadcrumb\":{\"@id\":\"https:\/\/cookiedatabase.org\/tag\/personal-data-2\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/cookiedatabase.org\/tag\/personal-data-2\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Personal Data (2)\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Personal Data (2) Archives - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/cookiedatabase.org\/tag\/personal-data-2\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "Personal Data (2) Archives - Cookiedatabase.org",
+            "og_url": "https:\/\/cookiedatabase.org\/tag\/personal-data-2\/",
+            "og_site_name": "Cookiedatabase.org",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": "https:\/\/cookiedatabase.org\/tag\/personal-data-2\/",
+                        "url": "https:\/\/cookiedatabase.org\/tag\/personal-data-2\/",
+                        "name": "Personal Data (2) Archives - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "breadcrumb": {
+                            "@id": "https:\/\/cookiedatabase.org\/tag\/personal-data-2\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/cookiedatabase.org\/tag\/personal-data-2\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Personal Data (2)"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tags\/33",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tags"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/taxonomies\/post_tag"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts?tags=33"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 30,
+        "count": 0,
+        "description": "",
+        "link": "https:\/\/cookiedatabase.org\/tag\/purpose\/",
+        "name": "Purpose",
+        "slug": "purpose",
+        "taxonomy": "post_tag",
+        "meta": [],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>Purpose Archives - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/cookiedatabase.org\/tag\/purpose\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"Purpose Archives - Cookiedatabase.org\" \/>\n<meta property=\"og:url\" content=\"https:\/\/cookiedatabase.org\/tag\/purpose\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\/\/cookiedatabase.org\/tag\/purpose\/\",\"url\":\"https:\/\/cookiedatabase.org\/tag\/purpose\/\",\"name\":\"Purpose Archives - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"breadcrumb\":{\"@id\":\"https:\/\/cookiedatabase.org\/tag\/purpose\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/cookiedatabase.org\/tag\/purpose\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Purpose\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Purpose Archives - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/cookiedatabase.org\/tag\/purpose\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "Purpose Archives - Cookiedatabase.org",
+            "og_url": "https:\/\/cookiedatabase.org\/tag\/purpose\/",
+            "og_site_name": "Cookiedatabase.org",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": "https:\/\/cookiedatabase.org\/tag\/purpose\/",
+                        "url": "https:\/\/cookiedatabase.org\/tag\/purpose\/",
+                        "name": "Purpose Archives - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "breadcrumb": {
+                            "@id": "https:\/\/cookiedatabase.org\/tag\/purpose\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/cookiedatabase.org\/tag\/purpose\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Purpose"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tags\/30",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tags"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/taxonomies\/post_tag"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts?tags=30"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]

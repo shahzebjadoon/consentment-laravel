@@ -657,7 +657,7 @@
                 </a>
 
                 <a href="{{ route('frontend.companies.geolocation', $company->id) }}"
-                    class="nav-link {{ $activeTab == 'geolocation' ? 'active' : '' }}">
+                    class="nav-link {{ $activeTab == 'geolocation' ? 'active' : '' }}" style="display: none;">
                     <span class="nav-link-icon"><i class="fas fa-globe"></i></span>
                     Geolocation Rulesets
                 </a>
@@ -669,7 +669,7 @@
                 </a>
 
                 <a href="{{ route('frontend.companies.details', $company->id) }}"
-                    class="nav-link {{ $activeTab == 'details' ? 'active' : '' }}">
+                    class="nav-link {{ $activeTab == 'details' || $activeTab =='billing' ? 'active' : '' }}">
                     <span class="nav-link-icon"><i class="fas fa-building"></i></span>
                     Company Details
                 </a>

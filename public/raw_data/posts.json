@@ -1,0 +1,803 @@
+[
+    {
+        "id": 85192,
+        "date": "2021-07-01T13:03:16",
+        "date_gmt": "2021-07-01T13:03:16",
+        "guid": {
+            "rendered": "https:\/\/cookiedatabase.org\/?p=85192"
+        },
+        "modified": "2021-07-01T20:26:57",
+        "modified_gmt": "2021-07-01T20:26:57",
+        "slug": "about-first-second-and-third-party",
+        "status": "publish",
+        "type": "post",
+        "link": "https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/",
+        "title": {
+            "rendered": "About first, second and third party"
+        },
+        "content": {
+            "rendered": "<h2>First-party:<\/h2>\n<p>If a service is categorized as First-party,\u00a0 it means that the service is being used stand-alone and on the website itself, and does not share or need to share any received personal information from or about the website visitors with the vendor of the service.\u00a0 Any possible cookies placed by this service are placed on the own domain of the website. Because the vendor itself does not collect or receive that personal information, it is the website operator that is responsible for the use of the service and the data it collects.\u00a0 The website&#8217;s privacy statement should mention how the website operator handles the personal data of its visitors.<\/p>\n<h2>Second-party:<\/h2>\n<p>If a service is categorized as Second-party,\u00a0 it means that the service does share or needs to share any received personal information from or about the website visitors with the vendor of the service.\u00a0 \u00a0The website&#8217;s privacy statement or cookiepolicy should mention that the data is being shared with the vendor. The website operator should have a data processing agreement, or alternatively a joint controller arrangement, with the vendors that are categorized as Second party. Possible cookies placed by this service are also placed on the own domain of the website.<\/p>\n<h2>Third-party:<\/h2>\n<p>A third-party service is a service on the website that is able to place cookies by a domain that the user did not directly visit. Once they are stored in the browser they can track visitors and their behavior across several websites. The website&#8217;s privacy statement or cookiepolicy should mention that the data is being shared with the vendor.<\/p>\n<h2>Miscellaneous:<\/h2>\n<p>Because browser support for third-party cookies will be phased out in the coming years, some third-party services are now also placing and reading cookies and other resources on the website&#8217;s own domain. If personal information gathered from the own domain is being shared with the vendor, who will also -until they are phased out- receive information from third-party cookies, we will categorize the service as a second party.<\/p>\n<p>&nbsp;<\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>First-party: If a service is categorized as First-party,\u00a0 it means that the service is being used stand-alone and on the website itself, and does not share or need to share any received personal information from or about the website visitors with the vendor of the service.\u00a0 Any possible cookies placed by this service are placed [&hellip;]<\/p>\n",
+            "protected": false
+        },
+        "author": 5,
+        "featured_media": 0,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": {
+            "footnotes": ""
+        },
+        "categories": [
+            1
+        ],
+        "tags": [],
+        "class_list": [
+            "post-85192",
+            "post",
+            "type-post",
+            "status-publish",
+            "format-standard",
+            "hentry",
+            "category-documentation"
+        ],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>About first, second and third party - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"About first, second and third party - Cookiedatabase.org\" \/>\n<meta property=\"og:description\" content=\"First-party: If a service is categorized as First-party,\u00a0 it means that the service is being used stand-alone and on the website itself, and does not share or need to share any received personal information from or about the website visitors with the vendor of the service.\u00a0 Any possible cookies placed by this service are placed [&hellip;]\" \/>\n<meta property=\"og:url\" content=\"https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta property=\"article:published_time\" content=\"2021-07-01T13:03:16+00:00\" \/>\n<meta property=\"article:modified_time\" content=\"2021-07-01T20:26:57+00:00\" \/>\n<meta name=\"author\" content=\"Paapst\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/#article\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/\"},\"author\":{\"name\":\"Paapst\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/person\/937e9b419877fb1e7a90a8f4c0f266a7\"},\"headline\":\"About first, second and third party\",\"datePublished\":\"2021-07-01T13:03:16+00:00\",\"dateModified\":\"2021-07-01T20:26:57+00:00\",\"mainEntityOfPage\":{\"@id\":\"https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/\"},\"wordCount\":342,\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"articleSection\":[\"Documentation\"],\"inLanguage\":\"en-US\"},{\"@type\":\"WebPage\",\"@id\":\"https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/\",\"url\":\"https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/\",\"name\":\"About first, second and third party - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"datePublished\":\"2021-07-01T13:03:16+00:00\",\"dateModified\":\"2021-07-01T20:26:57+00:00\",\"breadcrumb\":{\"@id\":\"https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Documentation\",\"item\":\"https:\/\/test.cookiedatabase.org\/pt-pt\/category\/documentation\/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"About first, second and third party\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}},{\"@type\":\"Person\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/person\/937e9b419877fb1e7a90a8f4c0f266a7\",\"name\":\"Paapst\",\"url\":\"https:\/\/cookiedatabase.org\/author\/mathieupaapst\/\"}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "About first, second and third party - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "About first, second and third party - Cookiedatabase.org",
+            "og_description": "First-party: If a service is categorized as First-party,\u00a0 it means that the service is being used stand-alone and on the website itself, and does not share or need to share any received personal information from or about the website visitors with the vendor of the service.\u00a0 Any possible cookies placed by this service are placed [&hellip;]",
+            "og_url": "https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/",
+            "og_site_name": "Cookiedatabase.org",
+            "article_published_time": "2021-07-01T13:03:16+00:00",
+            "article_modified_time": "2021-07-01T20:26:57+00:00",
+            "author": "Paapst",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "Article",
+                        "@id": "https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/#article",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/"
+                        },
+                        "author": {
+                            "name": "Paapst",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/person\/937e9b419877fb1e7a90a8f4c0f266a7"
+                        },
+                        "headline": "About first, second and third party",
+                        "datePublished": "2021-07-01T13:03:16+00:00",
+                        "dateModified": "2021-07-01T20:26:57+00:00",
+                        "mainEntityOfPage": {
+                            "@id": "https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/"
+                        },
+                        "wordCount": 342,
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "articleSection": [
+                            "Documentation"
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/",
+                        "url": "https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/",
+                        "name": "About first, second and third party - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "datePublished": "2021-07-01T13:03:16+00:00",
+                        "dateModified": "2021-07-01T20:26:57+00:00",
+                        "breadcrumb": {
+                            "@id": "https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US",
+                        "potentialAction": [
+                            {
+                                "@type": "ReadAction",
+                                "target": [
+                                    "https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/cookiedatabase.org\/about-first-second-and-third-party\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Documentation",
+                                "item": "https:\/\/test.cookiedatabase.org\/pt-pt\/category\/documentation\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "About first, second and third party"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    },
+                    {
+                        "@type": "Person",
+                        "@id": "https:\/\/cookiedatabase.org\/#\/schema\/person\/937e9b419877fb1e7a90a8f4c0f266a7",
+                        "name": "Paapst",
+                        "url": "https:\/\/cookiedatabase.org\/author\/mathieupaapst\/"
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts\/85192",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/users\/5"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/comments?post=85192"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 3,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts\/85192\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 85216,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts\/85192\/revisions\/85216"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/media?parent=85192"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories?post=85192"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tags?post=85192"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 85167,
+        "date": "2021-07-01T11:14:49",
+        "date_gmt": "2021-07-01T11:14:49",
+        "guid": {
+            "rendered": "https:\/\/cookiedatabase.org\/?p=85167"
+        },
+        "modified": "2021-07-19T07:52:52",
+        "modified_gmt": "2021-07-19T07:52:52",
+        "slug": "function-and-purpose-of-cookies",
+        "status": "publish",
+        "type": "post",
+        "link": "https:\/\/cookiedatabase.org\/function-and-purpose-of-cookies\/",
+        "title": {
+            "rendered": "Function and purpose of cookies"
+        },
+        "content": {
+            "rendered": "<p>Cookies or any other form of local storage use have a function and a purpose. A function is a particular task a cookie has. So a function can be \u201cstore the IP address\u201d. Purpose can be seen as the <strong>Why<\/strong> behind the function. So maybe the IP address is stored because it is needed for Statistics, or it is stored because it is used for marketing\/tracking purposes or is needed for functional purposes.<\/p>\n<p>There are five purpose categories used in Cookiedatabase: statistics-anonymous, statistics\/analytics, marketing\/tracking, functional, and preferences. These five are explained below.<\/p>\n<h2>1 Statistics-Anonymous<\/h2>\n<p>Cookies or any other form of local storage that is used exclusively for anonymous statistical purposes (Anonymous Analytics Cookies), that are placed on a first-party domain. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.<\/p>\n<h2>2 Statistics\/analytics (also known as performance)<\/h2>\n<p>Cookies or any other form of local storage that is used exclusively for statistical purposes (Analytics Cookies). These are also known as &#8220;performance cookies&#8221;.<\/p>\n<h2>3 Marketing\/Tracking (also known as Ad-storage, or social media)<\/h2>\n<p>Cookies or any other form of local storage required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.<\/p>\n<h2>4 Functional\u00a0 (also known as technical, essential or strictly necessary)<\/h2>\n<p>The cookie or any other form of local storage is used for the sole purpose of carrying out the transmission of a communication over an electronic communications network;<\/p>\n<p><strong>OR<\/strong><\/p>\n<p>The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user. If cookies are disabled, the requested functionality will not be available. This makes them <em>essential functional cookies<\/em>. Sometimes these cookies are also called &#8220;strictly necessary&#8221; or &#8220;technical&#8221;.<\/p>\n<h2>5 Preferences Cookies (in some jurisdictions known as functionality)<\/h2>\n<p>Cookies or any other form of local storage that can not be seen as statistics-anonymous, statistics, marketing, or functional, and where the technical storage or access is necessary for the legitimate purpose of storing preferences. Note however that if saving preferences is actually a functionality &#8220;requested&#8221; by the subscriber or the user, they can be categorized under &#8220;Functional&#8221;.<\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Cookies or any other form of local storage use have a function and a purpose. A function is a particular task a cookie has. So a function can be \u201cstore the IP address\u201d. Purpose can be seen as the Why behind the function. So maybe the IP address is stored because it is needed for [&hellip;]<\/p>\n",
+            "protected": false
+        },
+        "author": 5,
+        "featured_media": 0,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": {
+            "footnotes": ""
+        },
+        "categories": [
+            1
+        ],
+        "tags": [],
+        "class_list": [
+            "post-85167",
+            "post",
+            "type-post",
+            "status-publish",
+            "format-standard",
+            "hentry",
+            "category-documentation"
+        ],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>Function and purpose of cookies - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"Function and purpose of cookies - Cookiedatabase.org\" \/>\n<meta property=\"og:description\" content=\"Cookies or any other form of local storage use have a function and a purpose. A function is a particular task a cookie has. So a function can be \u201cstore the IP address\u201d. Purpose can be seen as the Why behind the function. So maybe the IP address is stored because it is needed for [&hellip;]\" \/>\n<meta property=\"og:url\" content=\"https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta property=\"article:published_time\" content=\"2021-07-01T11:14:49+00:00\" \/>\n<meta property=\"article:modified_time\" content=\"2021-07-19T07:52:52+00:00\" \/>\n<meta name=\"author\" content=\"Paapst\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/#article\",\"isPartOf\":{\"@id\":\"https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/\"},\"author\":{\"name\":\"Paapst\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/person\/937e9b419877fb1e7a90a8f4c0f266a7\"},\"headline\":\"Function and purpose of cookies\",\"datePublished\":\"2021-07-01T11:14:49+00:00\",\"dateModified\":\"2021-07-19T07:52:52+00:00\",\"mainEntityOfPage\":{\"@id\":\"https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/\"},\"wordCount\":391,\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"articleSection\":[\"Documentation\"],\"inLanguage\":\"en-US\"},{\"@type\":\"WebPage\",\"@id\":\"https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/\",\"url\":\"https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/\",\"name\":\"Function and purpose of cookies - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"datePublished\":\"2021-07-01T11:14:49+00:00\",\"dateModified\":\"2021-07-19T07:52:52+00:00\",\"breadcrumb\":{\"@id\":\"https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Documentation\",\"item\":\"https:\/\/test.cookiedatabase.org\/pt-pt\/category\/documentation\/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Function and purpose of cookies\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}},{\"@type\":\"Person\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/person\/937e9b419877fb1e7a90a8f4c0f266a7\",\"name\":\"Paapst\",\"url\":\"https:\/\/cookiedatabase.org\/author\/mathieupaapst\/\"}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Function and purpose of cookies - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "Function and purpose of cookies - Cookiedatabase.org",
+            "og_description": "Cookies or any other form of local storage use have a function and a purpose. A function is a particular task a cookie has. So a function can be \u201cstore the IP address\u201d. Purpose can be seen as the Why behind the function. So maybe the IP address is stored because it is needed for [&hellip;]",
+            "og_url": "https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/",
+            "og_site_name": "Cookiedatabase.org",
+            "article_published_time": "2021-07-01T11:14:49+00:00",
+            "article_modified_time": "2021-07-19T07:52:52+00:00",
+            "author": "Paapst",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "Article",
+                        "@id": "https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/#article",
+                        "isPartOf": {
+                            "@id": "https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/"
+                        },
+                        "author": {
+                            "name": "Paapst",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/person\/937e9b419877fb1e7a90a8f4c0f266a7"
+                        },
+                        "headline": "Function and purpose of cookies",
+                        "datePublished": "2021-07-01T11:14:49+00:00",
+                        "dateModified": "2021-07-19T07:52:52+00:00",
+                        "mainEntityOfPage": {
+                            "@id": "https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/"
+                        },
+                        "wordCount": 391,
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "articleSection": [
+                            "Documentation"
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/",
+                        "url": "https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/",
+                        "name": "Function and purpose of cookies - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "datePublished": "2021-07-01T11:14:49+00:00",
+                        "dateModified": "2021-07-19T07:52:52+00:00",
+                        "breadcrumb": {
+                            "@id": "https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US",
+                        "potentialAction": [
+                            {
+                                "@type": "ReadAction",
+                                "target": [
+                                    "https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/test.cookiedatabase.org\/function-and-purpose-of-cookies\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Documentation",
+                                "item": "https:\/\/test.cookiedatabase.org\/pt-pt\/category\/documentation\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Function and purpose of cookies"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    },
+                    {
+                        "@type": "Person",
+                        "@id": "https:\/\/cookiedatabase.org\/#\/schema\/person\/937e9b419877fb1e7a90a8f4c0f266a7",
+                        "name": "Paapst",
+                        "url": "https:\/\/cookiedatabase.org\/author\/mathieupaapst\/"
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts\/85167",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/users\/5"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/comments?post=85167"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 4,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts\/85167\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 86427,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts\/85167\/revisions\/86427"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/media?parent=85167"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories?post=85167"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tags?post=85167"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 83499,
+        "date": "2021-06-07T18:09:46",
+        "date_gmt": "2021-06-07T18:09:46",
+        "guid": {
+            "rendered": "https:\/\/cookiedatabase.org\/?p=83499"
+        },
+        "modified": "2021-06-07T18:22:35",
+        "modified_gmt": "2021-06-07T18:22:35",
+        "slug": "aggregated-data",
+        "status": "publish",
+        "type": "post",
+        "link": "https:\/\/cookiedatabase.org\/aggregated-data\/",
+        "title": {
+            "rendered": "Aggregated Data"
+        },
+        "content": {
+            "rendered": "<p>Aggregated Data<\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Aggregated Data<\/p>\n",
+            "protected": false
+        },
+        "author": 4,
+        "featured_media": 0,
+        "comment_status": "closed",
+        "ping_status": "closed",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": {
+            "footnotes": ""
+        },
+        "categories": [
+            1
+        ],
+        "tags": [],
+        "class_list": [
+            "post-83499",
+            "post",
+            "type-post",
+            "status-publish",
+            "format-standard",
+            "hentry",
+            "category-documentation"
+        ],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>Aggregated Data - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/cookiedatabase.org\/aggregated-data\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"Aggregated Data - Cookiedatabase.org\" \/>\n<meta property=\"og:description\" content=\"Aggregated Data\" \/>\n<meta property=\"og:url\" content=\"https:\/\/cookiedatabase.org\/aggregated-data\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta property=\"article:published_time\" content=\"2021-06-07T18:09:46+00:00\" \/>\n<meta property=\"article:modified_time\" content=\"2021-06-07T18:22:35+00:00\" \/>\n<meta name=\"author\" content=\"Aert Hulsebos\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https:\/\/cookiedatabase.org\/aggregated-data\/#article\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/aggregated-data\/\"},\"author\":{\"name\":\"Aert Hulsebos\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/person\/67d841100e541260245af4e079a8a711\"},\"headline\":\"Aggregated Data\",\"datePublished\":\"2021-06-07T18:09:46+00:00\",\"dateModified\":\"2021-06-07T18:22:35+00:00\",\"mainEntityOfPage\":{\"@id\":\"https:\/\/cookiedatabase.org\/aggregated-data\/\"},\"wordCount\":4,\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"articleSection\":[\"Documentation\"],\"inLanguage\":\"en-US\"},{\"@type\":\"WebPage\",\"@id\":\"https:\/\/cookiedatabase.org\/aggregated-data\/\",\"url\":\"https:\/\/cookiedatabase.org\/aggregated-data\/\",\"name\":\"Aggregated Data - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"datePublished\":\"2021-06-07T18:09:46+00:00\",\"dateModified\":\"2021-06-07T18:22:35+00:00\",\"breadcrumb\":{\"@id\":\"https:\/\/cookiedatabase.org\/aggregated-data\/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\/\/cookiedatabase.org\/aggregated-data\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/cookiedatabase.org\/aggregated-data\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Documentation\",\"item\":\"https:\/\/test.cookiedatabase.org\/pt-pt\/category\/documentation\/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Aggregated Data\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}},{\"@type\":\"Person\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/person\/67d841100e541260245af4e079a8a711\",\"name\":\"Aert Hulsebos\",\"sameAs\":[\"http:\/\/abrahamendeleeuw.nl\"],\"url\":\"https:\/\/cookiedatabase.org\/author\/aahulsebosgmail-com\/\"}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Aggregated Data - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/cookiedatabase.org\/aggregated-data\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "Aggregated Data - Cookiedatabase.org",
+            "og_description": "Aggregated Data",
+            "og_url": "https:\/\/cookiedatabase.org\/aggregated-data\/",
+            "og_site_name": "Cookiedatabase.org",
+            "article_published_time": "2021-06-07T18:09:46+00:00",
+            "article_modified_time": "2021-06-07T18:22:35+00:00",
+            "author": "Aert Hulsebos",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "Article",
+                        "@id": "https:\/\/cookiedatabase.org\/aggregated-data\/#article",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/aggregated-data\/"
+                        },
+                        "author": {
+                            "name": "Aert Hulsebos",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/person\/67d841100e541260245af4e079a8a711"
+                        },
+                        "headline": "Aggregated Data",
+                        "datePublished": "2021-06-07T18:09:46+00:00",
+                        "dateModified": "2021-06-07T18:22:35+00:00",
+                        "mainEntityOfPage": {
+                            "@id": "https:\/\/cookiedatabase.org\/aggregated-data\/"
+                        },
+                        "wordCount": 4,
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "articleSection": [
+                            "Documentation"
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https:\/\/cookiedatabase.org\/aggregated-data\/",
+                        "url": "https:\/\/cookiedatabase.org\/aggregated-data\/",
+                        "name": "Aggregated Data - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "datePublished": "2021-06-07T18:09:46+00:00",
+                        "dateModified": "2021-06-07T18:22:35+00:00",
+                        "breadcrumb": {
+                            "@id": "https:\/\/cookiedatabase.org\/aggregated-data\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US",
+                        "potentialAction": [
+                            {
+                                "@type": "ReadAction",
+                                "target": [
+                                    "https:\/\/cookiedatabase.org\/aggregated-data\/"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/cookiedatabase.org\/aggregated-data\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Documentation",
+                                "item": "https:\/\/test.cookiedatabase.org\/pt-pt\/category\/documentation\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Aggregated Data"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    },
+                    {
+                        "@type": "Person",
+                        "@id": "https:\/\/cookiedatabase.org\/#\/schema\/person\/67d841100e541260245af4e079a8a711",
+                        "name": "Aert Hulsebos",
+                        "sameAs": [
+                            "http:\/\/abrahamendeleeuw.nl"
+                        ],
+                        "url": "https:\/\/cookiedatabase.org\/author\/aahulsebosgmail-com\/"
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts\/83499",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/users\/4"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/comments?post=83499"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 4,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts\/83499\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 83506,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts\/83499\/revisions\/83506"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/media?parent=83499"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories?post=83499"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tags?post=83499"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]

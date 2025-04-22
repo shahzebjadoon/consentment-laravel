@@ -84,72 +84,119 @@
             @csrf
             <div class="modal-body">
                 <!-- Step 1: Framework Type -->
-                <div class="config-step" id="step1">
-                    <!-- Warning Banner (only in step 1) -->
-                    <div style="background-color: #fff8e1; border-radius: 5px; padding: 15px; margin-bottom: 20px; display: flex; align-items: center;">
-                        <div style="background-color: #ffd600; width: 60px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                            <i class="fas fa-bolt" style="color: white;"></i>
-                        </div>
-                        <div>
-                            <h4 style="margin: 0; margin-bottom: 5px; font-size: 16px;">Maximum number of configurations reached</h4>
-                            <p style="margin: 0; color: #666;">You reached maximum number of 1 configuration, unlock full access by upgrading your account.</p>
-                        </div>
-                        <button type="button" class="btn btn-primary" style="margin-left: auto;">Upgrade</button>
-                    </div>
-                    
-                    <h4 style="margin-top: 0; margin-bottom: 5px; font-size: 18px;">Compliance  Type</h4>
-                    <p style="color: #666; margin-bottom: 20px;">Select the legal compliance your configuration should support. Depending on your choice, there will be a default setup prepared including all required features to be compliant with the selected framework.</p>
-                    
-                    <div class="framework-options">
-                        <div class="framework-option" data-framework="GDPR" data-region="Europe">
-                            <div style="display: flex; align-items: center;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/1200px-Flag_of_Europe.svg.png" alt="EU Flag" style="width: 40px; height: 30px; margin-right: 15px;">
-                                <div>
-                                    <h5 style="margin: 0; font-size: 16px;">GDPR</h5>
-                                    <p style="margin: 0; color: #666; font-size: 13px;">General Data Protection Regulation</p>
-                                </div>
-                            </div>
-                            <div style="display: flex; align-items: center;">
-                                <span style="margin-right: 10px; color: #1da1f2;">Europe</span>
-                                <div class="radio-button"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="framework-option" data-framework="TCF_2.2" data-region="Europe">
-                            <div style="display: flex; align-items: center;">
-                                <img src="https://iabeurope.eu/wp-content/uploads/2021/08/tcf-v2-0-icon-red-background.png" alt="TCF Logo" style="width: 40px; height: 30px; margin-right: 15px;">
-                                <div>
-                                    <h5 style="margin: 0; font-size: 16px;">TCF 2.2</h5>
-                                    <p style="margin: 0; color: #666; font-size: 13px;">Transparency & Consent Framework 2.2</p>
-                                </div>
-                            </div>
-                            <div style="display: flex; align-items: center;">
-                                <span style="margin-right: 10px; color: #1da1f2;">Europe</span>
-                                {{-- <div style="color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px; margin-right: 10px;">
-                                    {{-- <i class="fas fa-bolt" style="font-size: 10px;"></i> 
-                                </div> --}}
-                                <div class="radio-button"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="framework-option" data-framework="CCPA" data-region="California">
-                            <div style="display: flex; align-items: center;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1200px-Flag_of_California.svg.png" alt="California Flag" style="width: 40px; height: 30px; margin-right: 15px;">
-                                <div>
-                                    <h5 style="margin: 0; font-size: 16px;">CCPA</h5>
-                                    <p style="margin: 0; color: #666; font-size: 13px;">California Consumer Privacy Act</p>
-                                </div>
-                            </div>
-                            <div style="display: flex; align-items: center;">
-                                <span style="margin-right: 10px; color: #1da1f2;">California</span>
-                                <div class="radio-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <input type="hidden" name="framework_type" id="framework_type" value="">
-                    <input type="hidden" name="framework_region" id="framework_region" value="">
+<div class="config-step" id="step1">
+    <!-- Warning Banner (only in step 1) -->
+    <div style="background-color: #fff8e1; border-radius: 5px; padding: 15px; margin-bottom: 20px; display: flex; align-items: center;">
+        <div style="background-color: #ffd600; width: 60px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+            <i class="fas fa-bolt" style="color: white;"></i>
+        </div>
+        <div>
+            <h4 style="margin: 0; margin-bottom: 5px; font-size: 16px;">Maximum number of configurations reached</h4>
+            <p style="margin: 0; color: #666;">You reached maximum number of 1 configuration, unlock full access by upgrading your account.</p>
+        </div>
+        <button type="button" class="btn btn-primary" style="margin-left: auto;">Upgrade</button>
+    </div>
+    
+    <h4 style="margin-top: 0; margin-bottom: 5px; font-size: 18px;">Compliance Type</h4>
+    <p style="color: #666; margin-bottom: 20px;">Select the legal compliance your configuration should support. Depending on your choice, there will be a default setup prepared including all required features to be compliant with the selected framework.</p>
+    
+    <div class="framework-options">
+        @foreach($frameworks as $framework)
+        <div class="framework-option" data-framework="{{ $framework->code }}" data-region="{{ $framework->region }}">
+            <div style="display: flex; align-items: center;">
+                <img src="{{ $framework->logo }}" alt="{{ $framework->name }} Logo" style="width: 40px; height: 30px; margin-right: 15px;">
+                <div>
+                    <h5 style="margin: 0; font-size: 16px;">{{ strtoupper($framework->code) }}</h5>
+                    <p style="margin: 0; color: #666; font-size: 13px;">{{ $framework->name }}</p>
                 </div>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <span style="margin-right: 10px; color: #1da1f2;">{{ $framework->region }}</span>
+                <div class="radio-button"></div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+    
+    <input type="hidden" name="framework_type" id="framework_type" value="">
+    <input type="hidden" name="framework_region" id="framework_region" value="">
+</div>
+
+<style>
+.framework-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px; /* Shows approximately 3 frameworks */
+    overflow-y: auto;
+    padding-right: 5px; /* Ensures content doesn't touch scrollbar */
+}
+
+.framework-option {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-height: 80px; /* Ensure consistent height */
+}
+
+.framework-option:hover {
+    border-color: #1da1f2;
+    background-color: rgba(29, 161, 242, 0.05);
+}
+
+.framework-option.selected {
+    border-color: #1da1f2;
+    background-color: rgba(29, 161, 242, 0.05);
+}
+
+.radio-button {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    position: relative;
+}
+
+.framework-option.selected .radio-button {
+    border-color: #1da1f2;
+}
+
+.framework-option.selected .radio-button:after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #1da1f2;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Custom scrollbar styling for better appearance */
+.framework-options::-webkit-scrollbar {
+    width: 8px;
+}
+
+.framework-options::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.framework-options::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.framework-options::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+</style>
                 
                 <!-- Step 2: Add Domain -->
                 <div class="config-step" id="step2" style="display: none;">

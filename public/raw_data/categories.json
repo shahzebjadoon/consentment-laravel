@@ -1,0 +1,896 @@
+[
+    {
+        "id": 29,
+        "count": 0,
+        "description": "",
+        "link": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/",
+        "name": "Google Ads",
+        "slug": "google-ads",
+        "taxonomy": "category",
+        "parent": 27,
+        "meta": [],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>Google Ads - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"Google Ads - Cookiedatabase.org\" \/>\n<meta property=\"og:url\" content=\"https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/\",\"url\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/\",\"name\":\"Google Ads - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"breadcrumb\":{\"@id\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Google LLC\",\"item\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Google Ads\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Google Ads - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "Google Ads - Cookiedatabase.org",
+            "og_url": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/",
+            "og_site_name": "Cookiedatabase.org",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/",
+                        "url": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/",
+                        "name": "Google Ads - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "breadcrumb": {
+                            "@id": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-ads\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Google LLC",
+                                "item": "https:\/\/cookiedatabase.org\/category\/google-llc\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Google Ads"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories\/29",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/taxonomies\/category"
+                }
+            ],
+            "up": [
+                {
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories\/27"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts?categories=29"
+                },
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tcf?categories=29"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 28,
+        "count": 0,
+        "description": "",
+        "link": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/",
+        "name": "Google Analytics",
+        "slug": "google-analytics",
+        "taxonomy": "category",
+        "parent": 27,
+        "meta": [],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>Google Analytics - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"Google Analytics - Cookiedatabase.org\" \/>\n<meta property=\"og:url\" content=\"https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/\",\"url\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/\",\"name\":\"Google Analytics - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"breadcrumb\":{\"@id\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Google LLC\",\"item\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Google Analytics\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Google Analytics - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "Google Analytics - Cookiedatabase.org",
+            "og_url": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/",
+            "og_site_name": "Cookiedatabase.org",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/",
+                        "url": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/",
+                        "name": "Google Analytics - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "breadcrumb": {
+                            "@id": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/cookiedatabase.org\/category\/google-llc\/google-analytics\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Google LLC",
+                                "item": "https:\/\/cookiedatabase.org\/category\/google-llc\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Google Analytics"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories\/28",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/taxonomies\/category"
+                }
+            ],
+            "up": [
+                {
+                    "embeddable": true,
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories\/27"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts?categories=28"
+                },
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tcf?categories=28"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 27,
+        "count": 0,
+        "description": "",
+        "link": "https:\/\/cookiedatabase.org\/category\/google-llc\/",
+        "name": "Google LLC",
+        "slug": "google-llc",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>Google LLC - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/cookiedatabase.org\/category\/google-llc\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"Google LLC - Cookiedatabase.org\" \/>\n<meta property=\"og:url\" content=\"https:\/\/cookiedatabase.org\/category\/google-llc\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/\",\"url\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/\",\"name\":\"Google LLC - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"breadcrumb\":{\"@id\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/cookiedatabase.org\/category\/google-llc\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Google LLC\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Google LLC - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/cookiedatabase.org\/category\/google-llc\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "Google LLC - Cookiedatabase.org",
+            "og_url": "https:\/\/cookiedatabase.org\/category\/google-llc\/",
+            "og_site_name": "Cookiedatabase.org",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": "https:\/\/cookiedatabase.org\/category\/google-llc\/",
+                        "url": "https:\/\/cookiedatabase.org\/category\/google-llc\/",
+                        "name": "Google LLC - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "breadcrumb": {
+                            "@id": "https:\/\/cookiedatabase.org\/category\/google-llc\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/cookiedatabase.org\/category\/google-llc\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Google LLC"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories\/27",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/taxonomies\/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts?categories=27"
+                },
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tcf?categories=27"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 5213,
+        "count": 0,
+        "description": "",
+        "link": "https:\/\/cookiedatabase.org\/category\/sem-categoria\/",
+        "name": "Sem categoria",
+        "slug": "sem-categoria",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>Sem categoria - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/cookiedatabase.org\/category\/sem-categoria\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"Sem categoria - Cookiedatabase.org\" \/>\n<meta property=\"og:url\" content=\"https:\/\/cookiedatabase.org\/category\/sem-categoria\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\/\/cookiedatabase.org\/category\/sem-categoria\/\",\"url\":\"https:\/\/cookiedatabase.org\/category\/sem-categoria\/\",\"name\":\"Sem categoria - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"breadcrumb\":{\"@id\":\"https:\/\/cookiedatabase.org\/category\/sem-categoria\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/cookiedatabase.org\/category\/sem-categoria\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Sem categoria\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Sem categoria - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/cookiedatabase.org\/category\/sem-categoria\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "Sem categoria - Cookiedatabase.org",
+            "og_url": "https:\/\/cookiedatabase.org\/category\/sem-categoria\/",
+            "og_site_name": "Cookiedatabase.org",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": "https:\/\/cookiedatabase.org\/category\/sem-categoria\/",
+                        "url": "https:\/\/cookiedatabase.org\/category\/sem-categoria\/",
+                        "name": "Sem categoria - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "breadcrumb": {
+                            "@id": "https:\/\/cookiedatabase.org\/category\/sem-categoria\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/cookiedatabase.org\/category\/sem-categoria\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Sem categoria"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories\/5213",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/taxonomies\/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts?categories=5213"
+                },
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tcf?categories=5213"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 34,
+        "count": 0,
+        "description": "",
+        "link": "https:\/\/cookiedatabase.org\/category\/service-providers\/",
+        "name": "Service Providers",
+        "slug": "service-providers",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>Service Providers - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/cookiedatabase.org\/category\/service-providers\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"Service Providers - Cookiedatabase.org\" \/>\n<meta property=\"og:url\" content=\"https:\/\/cookiedatabase.org\/category\/service-providers\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\/\/cookiedatabase.org\/category\/service-providers\/\",\"url\":\"https:\/\/cookiedatabase.org\/category\/service-providers\/\",\"name\":\"Service Providers - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"breadcrumb\":{\"@id\":\"https:\/\/cookiedatabase.org\/category\/service-providers\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/cookiedatabase.org\/category\/service-providers\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Service Providers\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Service Providers - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/cookiedatabase.org\/category\/service-providers\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "Service Providers - Cookiedatabase.org",
+            "og_url": "https:\/\/cookiedatabase.org\/category\/service-providers\/",
+            "og_site_name": "Cookiedatabase.org",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": "https:\/\/cookiedatabase.org\/category\/service-providers\/",
+                        "url": "https:\/\/cookiedatabase.org\/category\/service-providers\/",
+                        "name": "Service Providers - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "breadcrumb": {
+                            "@id": "https:\/\/cookiedatabase.org\/category\/service-providers\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/cookiedatabase.org\/category\/service-providers\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Service Providers"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories\/34",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/taxonomies\/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts?categories=34"
+                },
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tcf?categories=34"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 3098,
+        "count": 14,
+        "description": "",
+        "link": "https:\/\/cookiedatabase.org\/category\/tcf\/",
+        "name": "TCF",
+        "slug": "tcf",
+        "taxonomy": "category",
+        "parent": 0,
+        "meta": [],
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.8.1 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>TCF - Cookiedatabase.org<\/title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" \/>\n<link rel=\"canonical\" href=\"https:\/\/cookiedatabase.org\/category\/tcf\/\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"article\" \/>\n<meta property=\"og:title\" content=\"TCF - Cookiedatabase.org\" \/>\n<meta property=\"og:url\" content=\"https:\/\/cookiedatabase.org\/category\/tcf\/\" \/>\n<meta property=\"og:site_name\" content=\"Cookiedatabase.org\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\/\/cookiedatabase.org\/category\/tcf\/\",\"url\":\"https:\/\/cookiedatabase.org\/category\/tcf\/\",\"name\":\"TCF - Cookiedatabase.org\",\"isPartOf\":{\"@id\":\"https:\/\/cookiedatabase.org\/#website\"},\"breadcrumb\":{\"@id\":\"https:\/\/cookiedatabase.org\/category\/tcf\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/cookiedatabase.org\/category\/tcf\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/cookiedatabase.org\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"TCF\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/cookiedatabase.org\/#website\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"name\":\"Cookiedatabase.org\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\/\/cookiedatabase.org\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/cookiedatabase.org\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\/\/cookiedatabase.org\/#organization\",\"name\":\"Cookiedatabase.org\",\"url\":\"https:\/\/cookiedatabase.org\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\",\"url\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"contentUrl\":\"https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png\",\"width\":500,\"height\":176,\"caption\":\"Cookiedatabase.org\"},\"image\":{\"@id\":\"https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/\"}}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "TCF - Cookiedatabase.org",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https:\/\/cookiedatabase.org\/category\/tcf\/",
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "TCF - Cookiedatabase.org",
+            "og_url": "https:\/\/cookiedatabase.org\/category\/tcf\/",
+            "og_site_name": "Cookiedatabase.org",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": "https:\/\/cookiedatabase.org\/category\/tcf\/",
+                        "url": "https:\/\/cookiedatabase.org\/category\/tcf\/",
+                        "name": "TCF - Cookiedatabase.org",
+                        "isPartOf": {
+                            "@id": "https:\/\/cookiedatabase.org\/#website"
+                        },
+                        "breadcrumb": {
+                            "@id": "https:\/\/cookiedatabase.org\/category\/tcf\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/cookiedatabase.org\/category\/tcf\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/cookiedatabase.org\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "TCF"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/cookiedatabase.org\/#website",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "name": "Cookiedatabase.org",
+                        "description": "",
+                        "publisher": {
+                            "@id": "https:\/\/cookiedatabase.org\/#organization"
+                        },
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/cookiedatabase.org\/?s={search_term_string}"
+                                },
+                                "query-input": {
+                                    "@type": "PropertyValueSpecification",
+                                    "valueRequired": true,
+                                    "valueName": "search_term_string"
+                                }
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https:\/\/cookiedatabase.org\/#organization",
+                        "name": "Cookiedatabase.org",
+                        "url": "https:\/\/cookiedatabase.org\/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en-US",
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/",
+                            "url": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "contentUrl": "https:\/\/cookiedatabase.org\/wp-content\/uploads\/2019\/07\/Cookiedatabase.png",
+                            "width": 500,
+                            "height": 176,
+                            "caption": "Cookiedatabase.org"
+                        },
+                        "image": {
+                            "@id": "https:\/\/cookiedatabase.org\/#\/schema\/logo\/image\/"
+                        }
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories\/3098",
+                    "targetHints": {
+                        "allow": [
+                            "GET"
+                        ]
+                    }
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/categories"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/taxonomies\/category"
+                }
+            ],
+            "wp:post_type": [
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/posts?categories=3098"
+                },
+                {
+                    "href": "https:\/\/cookiedatabase.org\/wp-json\/wp\/v2\/tcf?categories=3098"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]
