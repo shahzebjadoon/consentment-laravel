@@ -16,51 +16,57 @@ class NewCategoriesController extends Controller
     /**
      * Display the categories page
      */
-    public function index($company_id, $config_id)
-    {
-        $company = Company::findOrFail($company_id);
-        $configuration = Configuration::findOrFail($config_id);
-        
-        // Get categories with their services ordered by order_index
-        $categories = NewCategory::where('configuration_id', $config_id)
-            ->orderBy('order_index')
+   public function index($company_id, $config_id)
+{
+    $company = Company::findOrFail($company_id);
+    $configuration = Configuration::findOrFail($config_id);
+    
+    // Ensure the configuration belongs to the company
+    if ($configuration->company_id != $company_id) {
+        abort(403, 'Configuration does not belong to this company');
+    }
+    
+    // Get categories with their services ordered by order_index
+    $categories = NewCategory::where('configuration_id', $config_id)
+        ->where('company_id', $company_id) // Add this line to filter by company_id
+        ->orderBy('order_index')
+        ->get();
+    
+    // Load services for each category
+    foreach ($categories as $category) {
+        // EXPLICITLY select only the columns we need
+        $dpsScans = DpsScan::select(['id', 'display_name'])
+            ->where('configuration_id', $config_id)
+            ->where('category', $category->identifier)
+            ->where('status', 'added')
+            ->whereNotNull('display_name')
+            ->whereRaw("TRIM(display_name) != ''") // Ensure display_name is not empty string
+            ->orderBy('display_name')
             ->get();
         
-        // Load services for each category
-        foreach ($categories as $category) {
-            // EXPLICITLY select only the columns we need
-            $dpsScans = DpsScan::select(['id', 'display_name'])
-                ->where('configuration_id', $config_id)
-                ->where('category', $category->identifier)
-                ->where('status', 'added')
-                ->whereNotNull('display_name')
-                ->whereRaw("TRIM(display_name) != ''") // Ensure display_name is not empty string
-                ->orderBy('display_name')
-                ->get();
-            
-            // Extra safeguard to ensure we use ONLY display_name
-            $services = collect();
-            foreach ($dpsScans as $scan) {
-                // Only add if display_name is a valid, non-empty string
-                if (!empty($scan->display_name) && is_string($scan->display_name)) {
-                    $services->push((object)[
-                        'id' => $scan->id,
-                        'name' => $scan->display_name
-                    ]);
-                }
+        // Extra safeguard to ensure we use ONLY display_name
+        $services = collect();
+        foreach ($dpsScans as $scan) {
+            // Only add if display_name is a valid, non-empty string
+            if (!empty($scan->display_name) && is_string($scan->display_name)) {
+                $services->push((object)[
+                    'id' => $scan->id,
+                    'name' => $scan->display_name
+                ]);
             }
-            
-            // Assign to category
-            $category->servicesList = $services;
         }
         
-        return view('frontend.service-settings.categories', [
-            'company' => $company,
-            'configuration' => $configuration,
-            'categories' => $categories,
-            'activeTab' => 'categories'
-        ]);
+        // Assign to category
+        $category->servicesList = $services;
     }
+    
+    return view('frontend.service-settings.categories', [
+        'company' => $company,
+        'configuration' => $configuration,
+        'categories' => $categories,
+        'activeTab' => 'categories'
+    ]);
+}
     
     /**
      * Store a new category
@@ -129,57 +135,68 @@ class NewCategoriesController extends Controller
      * Update an existing category
      */
     public function update(Request $request, $company_id, $config_id, $category_id)
-    {
-        $category = NewCategory::findOrFail($category_id);
-        
-        // Ensure the category belongs to the configuration
-        if ($category->configuration_id != $config_id) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Category does not belong to this configuration'
-            ], 403);
-        }
-        
-        // Validate request
-        $validated = $request->validate([
-            'name' => 'sometimes|required|string|max:255',
-            'description' => 'nullable|string',
-            'is_essential' => 'sometimes|boolean',
-            'order_index' => 'sometimes|integer'
-        ]);
-        
-        // Update category
-        $category->update([
-            'name' => $request->input('name', $category->name),
-            'description' => $request->input('description', $category->description),
-            'is_essential' => $request->input('is_essential', $category->is_essential),
-            'order_index' => $request->input('order_index', $category->order_index)
-        ]);
-        
-        // Handle translations if provided
-        if ($request->has('translations')) {
-            foreach ($request->input('translations') as $lang => $fields) {
-                foreach ($fields as $field => $value) {
-                    CategoryTranslation::updateOrCreate(
-                        [
-                            'category_id' => $category_id,
-                            'language' => $lang,
-                            'field' => $field
-                        ],
-                        [
-                            'translation' => $value
-                        ]
-                    );
-                }
+{
+    $company = Company::findOrFail($company_id);
+    $configuration = Configuration::findOrFail($config_id);
+    
+    // Ensure the configuration belongs to the company
+    if ($configuration->company_id != $company_id) {
+        return response()->json([
+            'success' => false,
+            'message' => 'Configuration does not belong to this company'
+        ], 403);
+    }
+    
+    $category = NewCategory::findOrFail($category_id);
+    
+    // Ensure the category belongs to the company and configuration
+    if ($category->company_id != $company_id || $category->configuration_id != $config_id) {
+        return response()->json([
+            'success' => false,
+            'message' => 'Category does not belong to this company or configuration'
+        ], 403);
+    }
+    
+    // Validate request
+    $validated = $request->validate([
+        'name' => 'sometimes|required|string|max:255',
+        'description' => 'nullable|string',
+        'is_essential' => 'sometimes|boolean',
+        'order_index' => 'sometimes|integer'
+    ]);
+    
+    // Update category
+    $category->update([
+        'name' => $request->input('name', $category->name),
+        'description' => $request->input('description', $category->description),
+        'is_essential' => $request->input('is_essential', $category->is_essential),
+        'order_index' => $request->input('order_index', $category->order_index)
+    ]);
+    
+    // Handle translations if provided
+    if ($request->has('translations')) {
+        foreach ($request->input('translations') as $lang => $fields) {
+            foreach ($fields as $field => $value) {
+                CategoryTranslation::updateOrCreate(
+                    [
+                        'category_id' => $category_id,
+                        'language' => $lang,
+                        'field' => $field
+                    ],
+                    [
+                        'translation' => $value
+                    ]
+                );
             }
         }
-        
-        return response()->json([
-            'success' => true,
-            'message' => 'Category updated successfully',
-            'category' => $category
-        ]);
     }
+    
+    return response()->json([
+        'success' => true,
+        'message' => 'Category updated successfully',
+        'category' => $category
+    ]);
+}
     
     /**
      * Delete a category
