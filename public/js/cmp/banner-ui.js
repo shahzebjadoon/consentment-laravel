@@ -157,23 +157,45 @@
             font-family: 'Roboto', sans-serif;
         `;
         
-        // Left section (logo)
-        const leftSection = document.createElement('div');
-        leftSection.className = 'consentment-left-section';
-        leftSection.style.cssText = `
-            flex: 0 0 auto;
-            margin-right: 20px;
-            display: flex;
-            align-items: center;
-            font-family: 'Roboto', sans-serif;
-        `;
-        
-        // Hardcoded logo
-        const logo = document.createElement('img');
-        logo.src = 'https://app.consentment.com/consentment-main.png';
-        logo.alt = 'ConsentMent Logo';
-        logo.style.cssText = 'width: 150px; display: block; margin-right: 30px;';
-        leftSection.appendChild(logo);
+        // Left section (logos)
+const leftSection = document.createElement('div');
+leftSection.className = 'consentment-left-section';
+leftSection.style.cssText = `
+    flex: 0 0 auto;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Roboto', sans-serif;
+`;
+
+// Customer logo (from database)
+if (config && config.appearance && config.appearance.logo_url) {
+    const customerLogo = document.createElement('img');
+    // Prepend base URL if the logo_url is a relative path
+    customerLogo.src = config.appearance.logo_url.startsWith('http') ? 
+        config.appearance.logo_url : 
+        'https://app.consentment.com' + config.appearance.logo_url;
+    customerLogo.alt = 'Company Logo';
+    customerLogo.style.cssText = 'max-width: 200px; max-height: 60px; display: block; margin-bottom: 77px;';
+    leftSection.appendChild(customerLogo);
+    console.log('[ConsentMent-BannerUI] Added customer logo from:', customerLogo.src);
+}
+
+// ConsentMent logo with link
+const logoLink = document.createElement('a');
+logoLink.href = 'https://consentment.com';
+logoLink.target = '_blank';
+logoLink.rel = 'noopener noreferrer';
+logoLink.style.cssText = 'display: block; text-decoration: none;';
+
+const logo = document.createElement('img');
+logo.src = 'https://app.consentment.com/consentment-n.png';
+logo.alt = 'ConsentMent Logo';
+logo.style.cssText = 'width: 150px; display: block;';
+
+logoLink.appendChild(logo);
+leftSection.appendChild(logoLink);
         
         // Center section (main content) - adjusted to better use available space
         const centerSection = document.createElement('div');
@@ -219,10 +241,11 @@
         togglesContainer.className = 'consentment-toggles-container';
         togglesContainer.style.cssText = `
             display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            font-family: 'Roboto', sans-serif;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-family: Roboto, sans-serif;
+    margin-top: 40px;
         `;
         
         // Service categories with toggles
@@ -277,40 +300,42 @@
             }
             
             // Style to match the toggles in screenshot
-            toggleInput.style.cssText = `
-                position: absolute;
-                cursor: ${category.essential ? 'default' : 'pointer'};
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-                height: 100%;
-                background-color: ${category.essential ? 
-                    (appearance.active_toggle_bg || '#D98A8A') : 
-                    (appearance.inactive_toggle_bg || '#6B6B6B')};
-                transition: .4s;
-                border-radius: 15px;
-                border: none;
-                padding: 0;
-                font-family: 'Roboto', sans-serif;
-            `;
+toggleInput.style.cssText = `
+    position: absolute;
+    cursor: ${category.essential ? 'default' : 'pointer'};
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ${category.essential ? 
+        (appearance.disabled_toggle_bg || '#CF7A7A') : 
+        (appearance.inactive_toggle_bg || '#696A80')};
+    transition: .4s;
+    border-radius: 15px;
+    border: none;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+`;
             
-            // Create the toggle slider
-            const toggleSlider = document.createElement('span');
-            toggleSlider.className = 'toggle-slider';
-            toggleSlider.style.cssText = `
-                position: absolute;
-                content: "";
-                height: 16px;
-                width: 16px;
-                left: ${category.essential ? '21px' : '2px'};
-                top: 2px;
-                background-color: white;
-                transition: .4s;
-                border-radius: 50%;
-                pointer-events: none;
-            `;
+// Create the toggle slider
+const toggleSlider = document.createElement('span');
+toggleSlider.className = 'toggle-slider';
+toggleSlider.style.cssText = `
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: ${category.essential ? '21px' : '2px'};
+    top: 2px;
+    background-color: ${category.essential ? 
+        (appearance.disabled_toggle_icon || '#FFFFFF') : 
+        (appearance.inactive_toggle_icon || '#FFFFFF')};
+    transition: .4s;
+    border-radius: 50%;
+    pointer-events: none;
+`;
             
             toggleInput.appendChild(toggleSlider);
             toggle.appendChild(toggleInput);
@@ -504,17 +529,25 @@
                     this.setAttribute('aria-checked', isChecked ? 'false' : 'true');
                     
                     // Update visual state using appearance settings
-                    if (isChecked) {
-                        this.style.backgroundColor = appearance.inactive_toggle_bg || '#6B6B6B';
-                        // Move toggle slider to left
-                        const slider = this.querySelector('.toggle-slider');
-                        if (slider) slider.style.left = '2px';
-                    } else {
-                        this.style.backgroundColor = appearance.active_toggle_bg || '#D98A8A';
-                        // Move toggle slider to right
-                        const slider = this.querySelector('.toggle-slider');
-                        if (slider) slider.style.left = '21px';
-                    }
+if (isChecked) {
+    // Switch to inactive
+    this.style.backgroundColor = appearance.inactive_toggle_bg || '#696A80';
+    // Move toggle slider to left
+    const slider = this.querySelector('.toggle-slider');
+    if (slider) {
+        slider.style.left = '2px';
+        slider.style.backgroundColor = appearance.inactive_toggle_icon || '#FFFFFF';
+    }
+} else {
+    // Switch to active
+    this.style.backgroundColor = appearance.active_toggle_bg || '#888888';
+    // Move toggle slider to right
+    const slider = this.querySelector('.toggle-slider');
+    if (slider) {
+        slider.style.left = '21px';
+        slider.style.backgroundColor = appearance.active_toggle_icon || '#FFFFFF';
+    }
+}
                 });
             }
         });

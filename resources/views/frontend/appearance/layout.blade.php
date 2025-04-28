@@ -155,7 +155,7 @@
           
             
             <!-- Privacy Trigger Section -->
-            <div class="section-card">
+            <div class="section-card" style="display: none;">
                 <div class="section-header">
                     <h3>Privacy Trigger</h3>
                     <span class="premium-feature-badge">

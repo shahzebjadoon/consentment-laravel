@@ -124,11 +124,69 @@
             z-index: 2147483647;
             font-family: 'Roboto', sans-serif;
             font-size: ${fontSize};
-            padding: 30px;
+            padding: 0;
             box-sizing: border-box;
             border-radius: 8px;
             text-align: left;
+            overflow: hidden;
         `;
+        
+        // Add header with customer and ConsentMent logos
+        const header = document.createElement('div');
+        header.className = 'wall-header';
+        header.style.cssText = `
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        `;
+
+        // Customer logo on the left side
+        const customerLogo = document.createElement('div');
+        customerLogo.className = 'customer-logo';
+        customerLogo.style.cssText = `
+            display: flex;
+            align-items: center;
+        `;
+
+        // Add customer logo if available in config
+        if (config && config.appearance && config.appearance.logo_url) {
+            const customerImg = document.createElement('img');
+            // Prepend base URL if the logo_url is a relative path
+            customerImg.src = config.appearance.logo_url.startsWith('http') ? 
+                config.appearance.logo_url : 
+                'https://app.consentment.com' + config.appearance.logo_url;
+            customerImg.alt = 'Company Logo';
+            customerImg.style.cssText = 'max-height: 50px; max-width: 120px; width: auto;';
+            customerLogo.appendChild(customerImg);
+            console.log('[ConsentMent-WallUI] Added customer logo from:', customerImg.src);
+        }
+
+        // ConsentMent logo on the right side with link
+        const consentmentLogo = document.createElement('div');
+        consentmentLogo.className = 'consentment-logo';
+        consentmentLogo.style.cssText = `
+            display: flex;
+            align-items: center;
+        `;
+
+        const logoLink = document.createElement('a');
+        logoLink.href = 'https://consentment.com';
+        logoLink.target = '_blank';
+        logoLink.rel = 'noopener noreferrer';
+        logoLink.style.cssText = 'display: block; text-decoration: none;';
+
+        const consentmentImg = document.createElement('img');
+        consentmentImg.src = 'https://app.consentment.com/consentment-n.png';
+        consentmentImg.alt = 'ConsentMent';
+        consentmentImg.style.cssText = 'max-height: 35px; width: auto;';
+        logoLink.appendChild(consentmentImg);
+        consentmentLogo.appendChild(logoLink);
+
+        // Assemble header with both logos
+        header.appendChild(customerLogo);
+        header.appendChild(consentmentLogo);
         
         // Create main content container
         const mainContainer = document.createElement('div');
@@ -140,6 +198,7 @@
             margin: 0 auto;
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
+            padding: 30px;
         `;
         
         // Privacy Settings title
@@ -263,23 +322,8 @@
         
         mainContainer.appendChild(buttonsContainer);
         
-        // Logo image at the bottom instead of text
-        const logoContainer = document.createElement('div');
-        logoContainer.className = 'consentment-powered-by';
-        logoContainer.style.cssText = `
-            margin-top: 20px;
-            text-align: center;
-            font-family: 'Roboto', sans-serif; 
-        `;
-        
-        const logoImage = document.createElement('img');
-        logoImage.src = 'https://app.consentment.com/consentment.png';
-        logoImage.alt = 'ConsentMent';
-        logoImage.style.cssText = 'max-height: 55px;width: auto;margin-top: 20px;';
-        
-        logoContainer.appendChild(logoImage);
-        mainContainer.appendChild(logoContainer);
-        
+        // Assemble the dialog
+        dialog.appendChild(header);
         dialog.appendChild(mainContainer);
         wrapper.appendChild(dialog);
         

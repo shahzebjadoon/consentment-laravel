@@ -154,33 +154,62 @@
             box-sizing: border-box;
         `;
         
-        // Add header similar to detail-ui.js
-        const header = document.createElement('div');
-        header.className = 'dialog-header';
-        header.style.cssText = `
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 15px 20px;
-            border-bottom: 1px solid #eee;
-        `;
+       // Add header with customer and ConsentMent logos
+const header = document.createElement('div');
+header.className = 'dialog-header';
+header.style.cssText = `
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+`;
 
-        // ConsentMent logo
-        const consentmentLogo = document.createElement('div');
-        consentmentLogo.className = 'consentment-logo';
-        consentmentLogo.style.cssText = `
-            display: flex;
-            align-items: center;
-        `;
+// Customer logo (left side)
+const customerLogo = document.createElement('div');
+customerLogo.className = 'customer-logo';
+customerLogo.style.cssText = `
+    display: flex;
+    align-items: center;
+`;
 
-        const consentmentImg = document.createElement('img');
-        consentmentImg.src = 'https://app.consentment.com/consentment.png';
-        consentmentImg.alt = 'ConsentMent';
-        consentmentImg.style.cssText = 'max-height: 50px; width: auto;';
-        consentmentLogo.appendChild(consentmentImg);
+// Add customer logo if available in config
+if (config && config.appearance && config.appearance.logo_url) {
+    const customerImg = document.createElement('img');
+    // Prepend base URL if the logo_url is a relative path
+    customerImg.src = config.appearance.logo_url.startsWith('http') ? 
+        config.appearance.logo_url : 
+        'https://app.consentment.com' + config.appearance.logo_url;
+    customerImg.alt = 'Company Logo';
+    customerImg.style.cssText = 'max-height: 40px; max-width: 150px; width: auto;';
+    customerLogo.appendChild(customerImg);
+    console.log('[ConsentMent-DialogUI] Added customer logo from:', customerImg.src);
+}
 
-        // Assemble header (only keeping the ConsentMent logo on right)
-        header.appendChild(consentmentLogo);
+// ConsentMent logo (right side) with link
+const consentmentLogo = document.createElement('div');
+consentmentLogo.className = 'consentment-logo';
+consentmentLogo.style.cssText = `
+    display: flex;
+    align-items: center;
+`;
+
+const logoLink = document.createElement('a');
+logoLink.href = 'https://consentment.com';
+logoLink.target = '_blank';
+logoLink.rel = 'noopener noreferrer';
+logoLink.style.cssText = 'display: block; text-decoration: none;';
+
+const consentmentImg = document.createElement('img');
+consentmentImg.src = 'https://app.consentment.com/consentment-n.png';
+consentmentImg.alt = 'ConsentMent';
+consentmentImg.style.cssText = 'max-height: 30px; width: auto;';
+logoLink.appendChild(consentmentImg);
+consentmentLogo.appendChild(logoLink);
+
+// Assemble header with both logos
+header.appendChild(customerLogo);
+header.appendChild(consentmentLogo);
         
         // Content section
         const contentSection = document.createElement('div');
@@ -315,39 +344,41 @@
             }
             
             // Style to match the toggles in screenshot
-            toggleInput.style.cssText = `
-                position: absolute;
-                cursor: ${category.essential ? 'default' : 'pointer'};
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-                height: 100%;
-                background-color: ${category.essential ? 
-                    (appearance.active_toggle_bg || '#D98A8A') : 
-                    (appearance.inactive_toggle_bg || '#6B6B6B')};
-                transition: .4s;
-                border-radius: 15px;
-                border: none;
-                padding: 0;
-            `;
+toggleInput.style.cssText = `
+    position: absolute;
+    cursor: ${category.essential ? 'default' : 'pointer'};
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ${category.essential ? 
+        (appearance.disabled_toggle_bg || '#CF7A7A') : 
+        (appearance.inactive_toggle_bg || '#696A80')};
+    transition: .4s;
+    border-radius: 15px;
+    border: none;
+    padding: 0;
+`;
             
             // Create the toggle slider
-            const toggleSlider = document.createElement('span');
-            toggleSlider.className = 'toggle-slider';
-            toggleSlider.style.cssText = `
-                position: absolute;
-                content: "";
-                height: 16px;
-                width: 16px;
-                left: ${category.essential ? '21px' : '2px'};
-                top: 2px;
-                background-color: white;
-                transition: .4s;
-                border-radius: 50%;
-                pointer-events: none;
-            `;
+const toggleSlider = document.createElement('span');
+toggleSlider.className = 'toggle-slider';
+toggleSlider.style.cssText = `
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: ${category.essential ? '21px' : '2px'};
+    top: 2px;
+    background-color: ${category.essential ? 
+        (appearance.disabled_toggle_icon || '#FFFFFF') : 
+        (appearance.inactive_toggle_icon || '#FFFFFF')};
+    transition: .4s;
+    border-radius: 50%;
+    pointer-events: none;
+`;
             
             toggleInput.appendChild(toggleSlider);
             toggle.appendChild(toggleInput);
@@ -501,17 +532,25 @@
                     this.setAttribute('aria-checked', isChecked ? 'false' : 'true');
                     
                     // Update visual state using appearance settings
-                    if (isChecked) {
-                        this.style.backgroundColor = appearance.inactive_toggle_bg || '#6B6B6B';
-                        // Move toggle slider to left
-                        const slider = this.querySelector('.toggle-slider');
-                        if (slider) slider.style.left = '2px';
-                    } else {
-                        this.style.backgroundColor = appearance.active_toggle_bg || '#D98A8A';
-                        // Move toggle slider to right
-                        const slider = this.querySelector('.toggle-slider');
-                        if (slider) slider.style.left = '21px';
-                    }
+if (isChecked) {
+    // Switch to inactive
+    this.style.backgroundColor = appearance.inactive_toggle_bg || '#696A80';
+    // Move toggle slider to left
+    const slider = this.querySelector('.toggle-slider');
+    if (slider) {
+        slider.style.left = '2px';
+        slider.style.backgroundColor = appearance.inactive_toggle_icon || '#FFFFFF';
+    }
+} else {
+    // Switch to active
+    this.style.backgroundColor = appearance.active_toggle_bg || '#888888';
+    // Move toggle slider to right
+    const slider = this.querySelector('.toggle-slider');
+    if (slider) {
+        slider.style.left = '21px';
+        slider.style.backgroundColor = appearance.active_toggle_icon || '#FFFFFF';
+    }
+}
                 });
             }
         });

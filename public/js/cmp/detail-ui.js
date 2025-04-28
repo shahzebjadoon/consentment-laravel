@@ -13,11 +13,14 @@
     }
     
     // Add UI rendering function to main object
-    window.ConsentMent.renderDetailUI = function(config) {
-        console.log('[ConsentMent-DetailUI] Rendering detail UI with config:', config);
-        console.log('[ConsentMent-DetailUI] Appearance settings:', config.appearance);
-        
-        loadResponsiveDetailCSS();
+window.ConsentMent.renderDetailUI = function(config) {
+    console.log('[ConsentMent-DetailUI] Rendering detail UI with config:', config);
+    console.log('[ConsentMent-DetailUI] Appearance settings:', config.appearance);
+    
+    // Load Roboto font
+    loadRobotoFont();
+    
+    loadResponsiveDetailCSS();
         
         // Create and append the detail dialog
         const dialog = createDetailDialog(config);
@@ -67,25 +70,25 @@
         dialog.setAttribute('tabindex', '0');
         
         // Apply the layout with similar styling to the main dialog
-        dialog.style.cssText = `
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 800px;
-            max-width: 90%;
-            max-height: 80vh;
-            background-color: ${appearance.background_color || '#FFFFFF'};
-            color: ${appearance.text_color || '#000000'};
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            z-index: 2147483647;
-            font-family: ${appearance.font_family || 'Arial, sans-serif'};
-            font-size: ${fontSize};
-            border-radius: 6px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        `;
+dialog.style.cssText = `
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    max-width: 90%;
+    max-height: 80vh;
+    background-color: ${appearance.background_color || '#FFFFFF'};
+    color: ${appearance.text_color || '#000000'};
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 2147483647;
+    font-family: 'Roboto', sans-serif;
+    font-size: ${fontSize};
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+`;
         
         // Header section
 const header = document.createElement('div');
@@ -98,13 +101,28 @@ header.style.cssText = `
     border-bottom: 1px solid #eee;
 `;
 
-// Logo in header
+// Customer logo on the left side
 const headerLogo = document.createElement('div');
 headerLogo.className = 'detail-header-logo';
+headerLogo.style.cssText = `
+    display: flex;
+    align-items: center;
+`;
 
+// Add customer logo if available in config
+if (config && config.appearance && config.appearance.logo_url) {
+    const customerImg = document.createElement('img');
+    // Prepend base URL if the logo_url is a relative path
+    customerImg.src = config.appearance.logo_url.startsWith('http') ? 
+        config.appearance.logo_url : 
+        'https://app.consentment.com' + config.appearance.logo_url;
+    customerImg.alt = 'Company Logo';
+    customerImg.style.cssText = 'max-height: 40px; max-width: 150px; width: auto;';
+    headerLogo.appendChild(customerImg);
+    console.log('[ConsentMent-DetailUI] Added customer logo from:', customerImg.src);
+}
 
-
-// ConsentMent logo on the right side
+// ConsentMent logo on the right side with link
 const consentmentLogo = document.createElement('div');
 consentmentLogo.className = 'consentment-logo';
 consentmentLogo.style.cssText = `
@@ -112,11 +130,18 @@ consentmentLogo.style.cssText = `
     align-items: center;
 `;
 
+const logoLink = document.createElement('a');
+logoLink.href = 'https://consentment.com';
+logoLink.target = '_blank';
+logoLink.rel = 'noopener noreferrer';
+logoLink.style.cssText = 'display: block; text-decoration: none;';
+
 const consentmentImg = document.createElement('img');
-consentmentImg.src = 'https://app.consentment.com/consentment.png';
+consentmentImg.src = 'https://app.consentment.com/consentment-n.png';
 consentmentImg.alt = 'ConsentMent';
-consentmentImg.style.cssText = 'max-height: 55px; width: auto;';
-consentmentLogo.appendChild(consentmentImg);
+consentmentImg.style.cssText = 'max-height: 35px; width: auto;';
+logoLink.appendChild(consentmentImg);
+consentmentLogo.appendChild(logoLink);
 
 // Close button
 const closeButton = document.createElement('button');
@@ -346,39 +371,41 @@ categoriesContent.appendChild(categoriesHeader);
             }
             
             // Style to match the toggles in screenshot
-            toggleInput.style.cssText = `
-                position: absolute;
-                cursor: ${category.essential ? 'default' : 'pointer'};
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-                height: 100%;
-                background-color: ${category.essential ? 
-                    (appearance.active_toggle_bg || '#D98A8A') : 
-                    (appearance.inactive_toggle_bg || '#6B6B6B')};
-                transition: .4s;
-                border-radius: 15px;
-                border: none;
-                padding: 0;
-            `;
+toggleInput.style.cssText = `
+    position: absolute;
+    cursor: ${category.essential ? 'default' : 'pointer'};
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ${category.essential ? 
+        (appearance.disabled_toggle_bg || '#CF7A7A') : 
+        (appearance.inactive_toggle_bg || '#696A80')};
+    transition: .4s;
+    border-radius: 15px;
+    border: none;
+    padding: 0;
+`;
             
             // Create the toggle slider
-            const toggleSlider = document.createElement('span');
-            toggleSlider.className = 'toggle-slider';
-            toggleSlider.style.cssText = `
-                position: absolute;
-                content: "";
-                height: 16px;
-                width: 16px;
-                left: ${category.essential ? '21px' : '2px'};
-                top: 2px;
-                background-color: white;
-                transition: .4s;
-                border-radius: 50%;
-                pointer-events: none;
-            `;
+const toggleSlider = document.createElement('span');
+toggleSlider.className = 'toggle-slider';
+toggleSlider.style.cssText = `
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: ${category.essential ? '21px' : '2px'};
+    top: 2px;
+    background-color: ${category.essential ? 
+        (appearance.disabled_toggle_icon || '#FFFFFF') : 
+        (appearance.inactive_toggle_icon || '#FFFFFF')};
+    transition: .4s;
+    border-radius: 50%;
+    pointer-events: none;
+`;
             
             toggleInput.appendChild(toggleSlider);
             toggle.appendChild(toggleInput);
@@ -723,17 +750,25 @@ categoriesContent.appendChild(categoriesHeader);
                     this.setAttribute('aria-checked', isChecked ? 'false' : 'true');
                     
                     // Update visual state using appearance settings
-                    if (isChecked) {
-                        this.style.backgroundColor = appearance.inactive_toggle_bg || '#6B6B6B';
-                        // Move toggle slider to left
-                        const slider = this.querySelector('.toggle-slider');
-                        if (slider) slider.style.left = '2px';
-                    } else {
-                        this.style.backgroundColor = appearance.active_toggle_bg || '#D98A8A';
-                        // Move toggle slider to right
-                        const slider = this.querySelector('.toggle-slider');
-                        if (slider) slider.style.left = '21px';
-                    }
+if (isChecked) {
+    // Switch to inactive
+    this.style.backgroundColor = appearance.inactive_toggle_bg || '#696A80';
+    // Move toggle slider to left
+    const slider = this.querySelector('.toggle-slider');
+    if (slider) {
+        slider.style.left = '2px';
+        slider.style.backgroundColor = appearance.inactive_toggle_icon || '#FFFFFF';
+    }
+} else {
+    // Switch to active
+    this.style.backgroundColor = appearance.active_toggle_bg || '#888888';
+    // Move toggle slider to right
+    const slider = this.querySelector('.toggle-slider');
+    if (slider) {
+        slider.style.left = '21px';
+        slider.style.backgroundColor = appearance.active_toggle_icon || '#FFFFFF';
+    }
+}
                 });
             }
         });
@@ -780,19 +815,19 @@ categoriesContent.appendChild(categoriesHeader);
         const appearance = window.ConsentMent.config.appearance;
         
 tabButtons.forEach(button => {
-            const buttonTabId = button.getAttribute('data-tab');
-            if (buttonTabId === tabId) {
-                button.classList.add('active');
-                button.style.fontWeight = '600';
-                button.style.color = appearance.text_color || '#000000';
-                button.style.borderBottom = `3px solid ${appearance.active_toggle_bg || '#D98A8A'}`;
-            } else {
-                button.classList.remove('active');
-                button.style.fontWeight = 'normal';
-                button.style.color = '#666';
-                button.style.borderBottom = '3px solid transparent';
-            }
-        });
+    const buttonTabId = button.getAttribute('data-tab');
+    if (buttonTabId === tabId) {
+        button.classList.add('active');
+        button.style.fontWeight = '600';
+        button.style.color = appearance.text_color || '#000000';
+        button.style.borderBottom = `3px solid ${appearance.active_toggle_bg || '#888888'}`;
+    } else {
+        button.classList.remove('active');
+        button.style.fontWeight = 'normal';
+        button.style.color = '#666';
+        button.style.borderBottom = '3px solid transparent';
+    }
+});
         
         // Update tab content
         const tabContents = container.querySelectorAll('.detail-tab-content');
@@ -911,6 +946,26 @@ tabButtons.forEach(button => {
         // Remove detail dialog
         removeDetailUI();
     }
+
+/**
+ * Load Roboto font
+ */
+function loadRobotoFont() {
+    // Check if fonts are already loaded
+    if (document.getElementById('consentment-fonts')) {
+        return;
+    }
+    
+    // Create link element for Google Roboto font
+    const fontLink = document.createElement('link');
+    fontLink.id = 'consentment-fonts';
+    fontLink.rel = 'stylesheet';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+    document.head.appendChild(fontLink);
+    
+    console.log('[ConsentMent-DetailUI] Google Roboto font loaded');
+}
+
     
  function loadResponsiveDetailCSS() {
     // Check if already loaded

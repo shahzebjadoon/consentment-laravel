@@ -46,7 +46,7 @@
                     <div class="panel-header">
                         <h5>Live Version</h5>
                         <div class="version-badge">
-                            <i class="fas fa-bolt"></i> Premium Feature
+                            {{-- <i class="fas fa-bolt"></i> Premium Feature --}}
                         </div>
                         <div class="version-number">Version: 3.0.4</div>
                     </div>
@@ -124,7 +124,7 @@ async&gt;&lt;/script&gt;</code></pre>
                 </div> --}}
                 
                 <!-- Testing Section -->
-                <div class="implementation-panel">
+                <div class="implementation-panel" style="display: none;">
                     <div class="panel-header">
                         <h5>Test Your Implementation</h5>
                     </div>
