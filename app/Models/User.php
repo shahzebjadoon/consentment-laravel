@@ -16,15 +16,12 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+   
+    
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'company_id',
-        'role',
-        'last_login_at',
+        'type', 'name', 'email', 'password', 'timezone', 'active', 
+        'company_id', 'role', 'price_plan_id', 'agency_id', 'reset_otp', 'otp_expires_at',
     ];
-
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -42,7 +39,6 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'password' => 'hashed',
         'last_login_at' => 'datetime',
     ];
 

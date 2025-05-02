@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Spatie\Permission\Exceptions\UnauthorizedException;
 use Illuminate\Auth\AuthenticationException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Throwable;
 
 /**
@@ -58,6 +59,15 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+
+
+        // Check for the type of error and if the request expects JSON
+        if ($exception instanceof NotFoundHttpException) {
+            if ($request->expectsJson()) {
+                return response()->json(['error' => 'Not Found'], 404); // Customize the message if needed
+            }
+        }
+
         if ($exception instanceof UnauthorizedException) {
             return redirect()
                 ->route(homeRoute())
@@ -82,7 +92,7 @@ class Handler extends ExceptionHandler
 
     protected function unauthenticated($request, AuthenticationException $exception)
     {
-            return $request->expectsJson()
+        return $request->expectsJson()
             ? response()->json(['message' => $exception->getMessage()], 401)
             : redirect()->guest('/new/login');
     }

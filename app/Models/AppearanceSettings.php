@@ -51,6 +51,8 @@ class AppearanceSettings extends Model
         'custom_css'
     ];
 
+  
+
     public function configuration()
     {
         return $this->belongsTo(Configuration::class);
