@@ -17,7 +17,7 @@ class ConfigController extends Controller
     public function getConfig($settingsId)
     {
         // Find configuration
-        $configuration = Configuration::where('id', $settingsId)->first();
+        $configuration = Configuration::where('hash_key', $settingsId)->first();
         
         if (!$configuration) {
             return response()->json(['error' => 'Configuration not found'], 404);

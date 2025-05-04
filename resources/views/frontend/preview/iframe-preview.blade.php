@@ -172,7 +172,7 @@
     <!-- Include the consent script with the configuration ID -->
     <script id="consentment-cmp" 
         src="{{ url('/js/cmp/loader.js') }}" 
-        data-settings-id="{{ $configuration->id }}" 
+        data-settings-id="{{ $configuration->hash_key ?? null }}" 
         async></script>
 </body>
 </html>

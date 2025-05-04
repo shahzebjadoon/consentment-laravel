@@ -152,13 +152,15 @@
 
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
 
-                    <h3 style="margin: 0;">User Interaction Analytics</h3>
+                    <h3 style="margin: 0;">User Interaction Analytics </h3>
 
                     <div style="display: flex; align-items: center;">
 
                         <div style="text-align: center; margin-right: 20px;">
 
                             <span style="color: #666; display: block; margin-bottom: 5px;">Displays <i class="" style="color: #ccc; font-size: 12px;"></i></span>
+
+{{-- {{$analyticsData ?? "null analyticsData"}} null akdjk  --}}
 
                             <span style="font-weight: 600; font-size: 18px;">{{ number_format($analyticsData['displays']) }}</span>
 
@@ -193,7 +195,7 @@
                 </div>
 
                 
-
+                {{-- {{ json_encode($analyticsData)}} --}}
                 <p style="color: #666; margin-bottom: 20px;">User Interaction Data enables you to monitor and analyze how users are interacting with your CMP when it is being displayed. The interaction rate indicates the percentage of users who actively engage with the CMP compared to those who ignore it.</p>
 
                 

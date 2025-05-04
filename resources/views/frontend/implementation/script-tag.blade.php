@@ -68,7 +68,7 @@
 <div class="code-block">
     <pre><code>&lt;script id="consentment-cmp"
 src="{{ url('/js/cmp/loader.js') }}" 
-data-settings-id="{{ $configuration->id }}" 
+data-settings-id="{{ $configuration->hash_key ?? null }}" 
 data-api-base="{{ url('/api') }}"
 async&gt;&lt;/script&gt;</code></pre>
     <button class="btn-copy-code"><i class="fas fa-copy"></i></button>
