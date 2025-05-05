@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Frontend\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+use App\Models\Subscription;
 
 class LoginController extends Controller
 {
@@ -53,6 +56,24 @@ class LoginController extends Controller
             ]);
         }
 
-        return redirect()->intended($this->redirectPath());
+       return $this->checkSubscriptionAndRedirect();
     }
+
+
+
+    public function checkSubscriptionAndRedirect()
+{
+    $user = Auth::user();
+
+    $subscription = Subscription::where('user_id', $user->id)
+        ->orderByDesc('expire_at')
+        ->first();
+
+    if (!$subscription || ($subscription->expire_at && Carbon::parse($subscription->expire_at)->isPast())) {
+        return redirect()->route('price.plans')->with('message', 'Your subscription has expired.');
+    }
+
+    return redirect()->intended($this->redirectPath());
+    
+}
 }
