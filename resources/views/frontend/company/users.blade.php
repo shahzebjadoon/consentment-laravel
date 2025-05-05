@@ -25,9 +25,9 @@
             </div>
             <div>
                 <span class="company-badge admin">Admin</span>
-                <button class="btn btn-secondary" style="width: 36px; height: 36px; padding: 0; display: flex; align-items: center; justify-content: center; margin-left: 10px;">
+                {{-- <button class="btn btn-secondary" style="width: 36px; height: 36px; padding: 0; display: flex; align-items: center; justify-content: center; margin-left: 10px;">
                     <i class="fas fa-ellipsis-v"></i>
-                </button>
+                </button> --}}
             </div>
         </div>
         

@@ -117,17 +117,17 @@
                             <h2>Select a plan</h2>
                             <div class="currency-dropdown">
                                 <button type="button" class="currency-button" id="currencyBtn">
-                                    EUR € 
-                                    <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24">
+                                    GBP £
+                                    {{-- <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24">
                                         <path d="M7 10l5 5 5-5z" fill="currentColor"/>
-                                    </svg>
+                                    </svg> --}}
                                 </button>
-                                <div class="dropdown-content" id="currencyDropdown">
+                                {{-- <div class="dropdown-content" id="currencyDropdown">
                                     <a href="#" class="dropdown-item">USD $</a>
                                     <a href="#" class="dropdown-item">GBP £</a>
                                     <a href="#" class="dropdown-item">JPY ¥</a>
                                     <a href="#" class="dropdown-item">AUD $</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
 
@@ -143,7 +143,7 @@
                                         <h3>{{$plan->membership}}</h3>
                                         <p class="plan-description">{{$plan->description}}</p>
                                         @if($plan->is_custom == 0)
-                                        <div class="price"> € {{ $plan->price_month }} <span>per month</span></div>
+                                        <div class="price"> £ {{ $plan->price_month }} <span>per month</span></div>
                                         <ul class="features">
                                             <li class="feature-item">{{$plan->domain_allowed}} domain</li>
                                             <li class="feature-item">{{$plan->max_visitors}} visitors / month</li>
@@ -217,14 +217,14 @@
                         </div>
 
                         <!-- Static footer -->
-                        <div class="static-footer">
+                        {{-- <div class="static-footer">
                             <div class="or-section">
                                 <div class="or-divider">
                                     <span class="or-text">OR</span>
                                 </div>
                                 <p class="downgrade-text">Downgrade to our <a href="#">Free Plan</a></p>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
 
                     <!-- New bottom footer bar -->
@@ -259,6 +259,7 @@
 
 body {
     background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -323,7 +324,7 @@ header {
 
 /* Hover effect */
 .plan-card:hover {
-    border-color: #144B8C; /* Dark blue border */
+    border-color: #1da1f2; /* Dark blue border */
     box-shadow: 0 4px 12px rgba(20, 75, 140, 0.15); /* Subtle blue shadow */
     transform: translateY(-2px); /* Slight lift effect */
 }
@@ -336,7 +337,7 @@ header {
 }
 
 .plan-card:hover h3 {
-    color: #144B8C; /* Dark blue on hover */
+    color: #0797f1; /* Dark blue on hover */
 }
 
 /* Optional: Make the "View plan details" link more prominent on hover */
@@ -347,7 +348,7 @@ header {
 }
 
 .plan-card:hover .view-details {
-    color: #144B8C;
+    color: #0797f1;
     text-decoration: underline;
 }
 
@@ -360,7 +361,7 @@ header {
 
 .plan-badge {
     display: inline-block;
-    background-color: #ff6b6b;
+    background-color: #1da1f2; /* Light blue background */
     color: white;
     padding: 4px 12px;
     border-radius: 4px;
@@ -369,8 +370,8 @@ header {
 .trial-expired-badge {
     display: inline-flex;
     align-items: center;
-    background-color: rgba(255, 107, 107, 0.1); /* Light red transparent background */
-    color: #ff6b6b; /* Same red as plan-badge */
+    background-color: #f0f7ff; 
+    color: #1da1f2; 
     padding: 4px 12px;
     border-radius: 4px;
     font-size: 14px;
@@ -378,7 +379,7 @@ header {
 }
 
 .plan-expired {
-    background-color: #fff3f3;
+    background-color: #f0f7ff;
     padding: 15px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -623,22 +624,8 @@ header {
     padding: 16px 24px; /* Move padding to price note */
 }
 
-.continue-button {
-    background-color: #000;
-    color: white;
-    border: none;
-    border-radius: 0 8px 8px 0; /* Round only right corners */
-    padding: 16px 24px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    margin: 5px; /* Push button to the right */
-    height: 100%; /* Make button full height */
-}
 
-.continue-button:hover {
-    background-color: #333;
-}
+
 
 /* Scrollbar styling */
 .scroll-wrapper::-webkit-scrollbar {
@@ -716,13 +703,21 @@ header {
     width: 200px;
     margin: 5px;
     padding: 12px 24px;
-    background-color: #000;
-    color: white;
+    /* background-color: #000;
+    color: white; */
+    background-color: #1da1f2; 
+    color: #f0f7ff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 500;
 }
+
+
+.continue-button:hover {
+    background-color: #169cf0;
+}
+
 
 .header-section {
     display: flex;
