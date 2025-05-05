@@ -5,9 +5,9 @@
     <div>
         <h1 class="page-title">Geolocation Rulesets</h1>
         <p class="page-description">Create and manage Geolocation Rulesets for an international CMP setup.</p>
-        <div class="premium-badge">
+        {{-- <div class="premium-badge">
             <i class="fas fa-star"></i> Premium Feature
-        </div>
+        </div> --}}
     </div>
 </div>
 

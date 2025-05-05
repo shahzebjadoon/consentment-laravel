@@ -567,7 +567,8 @@
                     request()->routeIs('frontend.appearance.*') ||
                     request()->routeIs('frontend.content.*') ||
                     request()->routeIs('frontend.implementation.*')||
-                    request()->routeIs('frontend.preview.*'))
+                    request()->routeIs('frontend.preview.*')||
+                    request()->routeIs('frontend.company.geolocation.*'))
                 <!-- Configuration Edit Sidebar -->
                 <a href="{{ route('frontend.companies.configurations', $company->id) }}" class="nav-link">
                     <span class="nav-link-icon"><i class="fas fa-arrow-left"></i></span>
@@ -606,9 +607,7 @@
                         <span class="nav-link-icon"><i class="fas fa-palette"></i></span>
                         Appearance
                     </a>
-                    {{-- <div class="premium-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div> --}}
+                   
                 </div>
 
                 <div class="sidebar-item">
@@ -626,6 +625,15 @@
                         Integrations
                     </a>
                 </div>
+
+                <div class="sidebar-item">
+                <a href="{{ route('frontend.company.geolocation.index', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}"
+                    class="nav-link {{ $activeTab == 'geolocation' ? 'active' : '' }}" >
+                    <span class="nav-link-icon"><i class="fas fa-globe"></i></span>
+                    Geolocation Rulesets
+                </a>
+            </div>
+
 
                 <div class="sidebar-item">
                     <a href="{{ route('frontend.implementation.script-tag', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}"
@@ -656,11 +664,11 @@
                     Domain Settings
                 </a>
 
-                <a href="{{ route('frontend.companies.geolocation', $company->id) }}"
-                    class="nav-link {{ $activeTab == 'geolocation' ? 'active' : '' }}" style="display: none;">
+                {{-- <a href="{{ route('frontend.companies.geolocation', $company->id) }}"
+                    class="nav-link {{ $activeTab == 'geolocation' ? 'active' : '' }}" >
                     <span class="nav-link-icon"><i class="fas fa-globe"></i></span>
                     Geolocation Rulesets
-                </a>
+                </a> --}}
 
                 <a href="{{ route('frontend.companies.users', $company->id) }}"
                     class="nav-link {{ $activeTab == 'users' ? 'active' : '' }}">
@@ -714,8 +722,8 @@
                                 <div class="user-email">{{ auth()->user()->email }}</div>
                                 <div class="last-login">Last login: {{ now()->format('d/m/Y, H:i:s') }}</div>
                             </div>
-                            <a href="#" class="dropdown-item">
-                                <i class="fas fa-user-cog"></i> Account & Billing
+                            <a href="{{ route('frontend.companies.billings', ['company_id' => $company->id]) }}" class="dropdown-item">
+                                <i class="fas fa-user-cog"></i> Account & Billing 
                             </a>
                             <a href="{{ route('frontend.auth.logout') }}" class="dropdown-item">
                                 <i class="fas fa-sign-out-alt"></i> Logout

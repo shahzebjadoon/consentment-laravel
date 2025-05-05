@@ -28,13 +28,14 @@ class CompanyViewController extends Controller
     return view('frontend.company.configurations', compact('company', 'activeTab', 'configurations'));
 }
     
-    public function geolocation($id)
+    public function geolocation($company_id, $config_id)
     {
-        $company = Company::findOrFail($id);
+        $company = Company::findOrFail($company_id);
+        $configuration = Configuration::findOrFail($config_id);
         $activeTab = 'geolocation';
         $rulesets = []; // In the future, fetch actual geolocation rulesets
         
-        return view('frontend.company.geolocation', compact('company', 'activeTab', 'rulesets'));
+        return view('frontend.company.geolocation', compact('company', 'activeTab', 'rulesets', 'configuration'));
     }
     
     public function users($id)

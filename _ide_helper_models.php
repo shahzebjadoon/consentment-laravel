@@ -952,6 +952,43 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\PricePlan
+ *
+ * @property int $id
+ * @property string|null $membership
+ * @property string|null $description
+ * @property int|null $domain_allowed
+ * @property int|null $level
+ * @property float|null $price_month
+ * @property float|null $price_yearly
+ * @property int|null $max_domain
+ * @property bool|null $is_custom
+ * @property \Illuminate\Support\Carbon $created_at
+ * @property \Illuminate\Support\Carbon $updated_at
+ * @property int|null $max_visitors
+ * @property int|null $max_languages
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan query()
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan whereDomainAllowed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan whereIsCustom($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan whereLevel($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan whereMaxDomain($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan whereMaxLanguages($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan whereMaxVisitors($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan whereMembership($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan wherePriceMonth($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan wherePriceYearly($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PricePlan whereUpdatedAt($value)
+ */
+	class PricePlan extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\ServiceCategories
  *
  * @property int $id
@@ -1024,6 +1061,41 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|ServiceCategory whereUpdatedAt($value)
  */
 	class ServiceCategory extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Subscription
+ *
+ * @property int $id
+ * @property string|null $status
+ * @property \Illuminate\Support\Carbon|null $started_at
+ * @property \Illuminate\Support\Carbon|null $expired_at
+ * @property float|null $price_paid
+ * @property bool|null $is_life_time
+ * @property string|null $coupon
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int $price_plan_id
+ * @property int $user_id
+ * @property-read \App\Models\PricePlan $pricePlan
+ * @property-read \App\Models\User $user
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereCoupon($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereExpiredAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereIsLifeTime($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription wherePricePaid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription wherePricePlanId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereStartedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereUserId($value)
+ */
+	class Subscription extends \Eloquent {}
 }
 
 namespace App\Models{

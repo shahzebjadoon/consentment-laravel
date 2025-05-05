@@ -7,8 +7,9 @@
                     style="color: #ccc; font-size: 16px; vertical-align: middle;"></i></h3>
         </div>
         <div class="card-body" style="padding-top: 0;">
+            <br> <br> 
             <!-- Tabs Navigation -->
-            <div style="display: flex; margin-bottom: 20px;">
+            <div style="display: none; margin-bottom: 20px;">
                 <a href="#" class="tab-link active"
                     style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; background-color: white; color: #333; font-weight: 500;   margin-right: 5px;">
                     Preview

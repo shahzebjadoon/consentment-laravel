@@ -36,4 +36,23 @@ class LoginController extends Controller
 
         return redirect('/new/login');
     }
+
+
+    // function override due to json response expected by ajax, fetch or api 
+
+    protected function sendLoginResponse(Request $request)
+    {
+        $request->session()->regenerate();
+
+        $this->clearLoginAttempts($request);
+
+        if ($request->expectsJson()) {
+            return response()->json([
+                'message' => 'Login successful',
+                'user' => $this->guard()->user()
+            ]);
+        }
+
+        return redirect()->intended($this->redirectPath());
+    }
 }

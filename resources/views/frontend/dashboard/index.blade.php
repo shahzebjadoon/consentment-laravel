@@ -674,9 +674,9 @@
                                 <div class="user-email">{{ auth()->user()->email }}</div>
                                 <div class="last-login">Last login: {{ now()->format('d/m/Y, H:i:s') }}</div>
                             </div>
-                            <a href="#" class="dropdown-item">
-                                <i class="fas fa-user-cog"></i> Account & Billing
-                            </a>
+                            {{-- <a href="#" class="dropdown-item">
+                                <i class="fas fa-user-cog"></i> Account & Billing {{$companies[1]->id}}
+                            </a> --}}
                             <a href="{{ route('frontend.auth.logout') }}" class="dropdown-item">
                                 <i class="fas fa-sign-out-alt"></i> Logout
                             </a>

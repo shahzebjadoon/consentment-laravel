@@ -253,26 +253,32 @@
                         <!-- Reshow GDPR CMP Section -->
                         <div class="form-group" style="margin-top: 25px;">
                             <h5 style="font-size: 16px; margin-bottom: 10px;">Reshow GDPR CMP</h5>
+                       
+                            <div class="form-switch" style="float: right; margin-top: -32px;">
+                                <label class="switch">
+
+                                    <input type="checkbox" name="google_consent_mode" >
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        
                             <p class="section-description">This reshows the CMP and refreshes the users consent choice after the selected time period in months.</p>
+
+                            <select class="form-control" name="regional_settings">
+                                <option value="7">Every 07 Days (default)</option>
+                                <option value="30">Every 30 Days</option>
+                                <option value="90">Every 90 Days</option>
+                            </select>
+                       
                         </div>
                         
-                        <!-- Category Consent Section -->
-                        <div class="form-group">
-                            <h5 style="font-size: 16px; margin-bottom: 10px;">Category Consent</h5>
-                            <p class="section-description">Users will be able to consent on category level only. The granular toggles for more detailed consent decisions on Data Processing Service level will not be shown anymore if this feature is enabled.</p>
-                        </div>
-                        
-                        <!-- Close CMP without accepting Section -->
-                        <div class="form-group">
-                            <h5 style="font-size: 16px; margin-bottom: 10px;">Close CMP without accepting</h5>
-                            <p class="section-description">Users are enabled to close the First Layer of the CMP order to be compliant with regional recommendations. This action is treated in the same way as clicking on Deny All.</p>
-                        </div>
+                    
                     </div>
                     
                 
                     
                     <!-- DPS Details Section with two columns -->
-                    <div style="display: flex; gap: 20px; margin-bottom: 30px;">
+                    <div style="display: none; gap: 20px; margin-bottom: 30px;">
                         <!-- All DPS Details -->
                         <div style="flex: 1; background: white; border: 1px solid #e6e8eb; border-radius: 8px; padding: 20px;">
                             <div style="display: flex; align-items: center; margin-bottom: 15px;">

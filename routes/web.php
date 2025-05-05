@@ -6,6 +6,7 @@ use App\Http\Controllers\Frontend\NewRegisterController;
 use App\Http\Controllers\Frontend\DashboardController;
 use App\Http\Controllers\Frontend\BillingController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PricePlanController;
 
 // Home page redirect to new login
 Route::get('/', function() {
@@ -150,6 +151,11 @@ Route::get('/companies/{company_id}/configurations/{config_id}/preview', [App\Ht
     
     
     
+// geolocation route
+Route::get('/companies/{company_id}/configurations/{config_id}/geolocation',
+[App\Http\Controllers\Frontend\CompanyViewController::class, 'geolocation'])
+    ->name('frontend.company.geolocation.index')
+    ->middleware('auth');
     
     
     
@@ -246,3 +252,6 @@ Route::post('/consent/analytics', [App\Http\Controllers\ConsentDataController::c
 Route::get('/companies/{company_id}/bill',  [BillingController::class, 'getbill'])
     ->middleware('auth')
     ->name('frontend.companies.billings');
+
+
+Route::get('/price-plans', [PricePlanController::class, 'index'])->name('price.plans');
