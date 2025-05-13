@@ -601,6 +601,39 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\ContactSale
+ *
+ * @property int $id
+ * @property string $first_name
+ * @property string $last_name
+ * @property string $email
+ * @property string|null $phone
+ * @property string|null $country
+ * @property string|null $company_name
+ * @property string $searching_for
+ * @property string|null $message
+ * @property \Illuminate\Support\Carbon $created_at
+ * @property \Illuminate\Support\Carbon $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale query()
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale whereCompanyName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale whereCountry($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale whereFirstName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale whereLastName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale whereMessage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale whereSearchingFor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ContactSale whereUpdatedAt($value)
+ */
+	class ContactSale extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\ContentSettings
  *
  * @property int $id
@@ -641,11 +674,15 @@ namespace App\Models{
  * @property string|null $required_status_label
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $about_title
+ * @property string|null $about_description
  * @property-read \App\Models\Company $company
  * @property-read \App\Models\Configuration $configuration
  * @method static \Illuminate\Database\Eloquent\Builder|ContentSettings newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ContentSettings newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ContentSettings query()
+ * @method static \Illuminate\Database\Eloquent\Builder|ContentSettings whereAboutDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ContentSettings whereAboutTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ContentSettings whereAcceptAllButton($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ContentSettings whereAcceptButtonLabel($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ContentSettings whereAcceptSelectedLabel($value)
@@ -952,6 +989,27 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\NewsletterSubscription
+ *
+ * @property int $id
+ * @property string $email
+ * @property bool|null $is_active
+ * @property \Illuminate\Support\Carbon $created_at
+ * @property \Illuminate\Support\Carbon $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|NewsletterSubscription newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|NewsletterSubscription newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|NewsletterSubscription query()
+ * @method static \Illuminate\Database\Eloquent\Builder|NewsletterSubscription whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NewsletterSubscription whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NewsletterSubscription whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NewsletterSubscription whereIsActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NewsletterSubscription whereUpdatedAt($value)
+ */
+	class NewsletterSubscription extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\PricePlan
  *
  * @property int $id
@@ -1070,7 +1128,7 @@ namespace App\Models{
  * @property int $id
  * @property string|null $status
  * @property \Illuminate\Support\Carbon|null $started_at
- * @property \Illuminate\Support\Carbon|null $expired_at
+ * @property string|null $expire_at
  * @property float|null $price_paid
  * @property bool|null $is_life_time
  * @property string|null $coupon
@@ -1085,7 +1143,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Subscription query()
  * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereCoupon($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereExpiredAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereExpireAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereIsLifeTime($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Subscription wherePricePaid($value)

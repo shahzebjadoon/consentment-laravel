@@ -1,99 +1,206 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ConsentManager Integration Example</title>
+
     
+
     <!-- ConsentManager Integration (Single Script) -->
-  
-    <script id="consentment-cmp"
-src="http://127.0.0.1:8000/js/cmp/loader.js" 
-data-settings-id="abcde" 
-data-api-base="http://127.0.0.1:8000/api"
-async></script>
+
+    <!-- <script id="consentment-cmp" 
+
+            src="https://app.consentment.com/js/cmp/loader.js" 
+
+            data-settings-id="fffde" 
+
+            data-api-base="https://app.consentment.com/api"
+
+            async>
+        
+        </script> -->
+
+    <script id="consentment-cmp" 
+
+            src="http://127.0.0.1:8000/js/cmp/loader.js" 
+
+            data-settings-id="fffde" 
+
+            data-api-base="http://127.0.0.1:8000/api"
+
+            async></script>
             
+
     <script>
+
     // Force load wall-ui.js after a short delay
+
     setTimeout(function() {
+
         const scriptEl = document.createElement('script');
-        scriptEl.src = "http://127.0.0.1:8000/js/cmp/wall-ui.js";
+
+        scriptEl.src = "https://app.consentment.com/js/cmp/wall-ui.js";
+
         scriptEl.onload = function() {
+
             console.log("MANUALLY LOADED WALL UI");
+
         };
+
         document.head.appendChild(scriptEl);
+
     }, 500);
+
 </script>
+
     
+
     <style>
+
         body {
+
             font-family: Arial, sans-serif;
+
             line-height: 1.6;
+
             margin: 0;
+
             padding: 20px;
+
             color: #333;
+
         }
+
         h1 {
+
             color: #2c3e50;
+
         }
+
         .container {
+
             max-width: 800px;
+
             margin: 0 auto;
+
         }
+
         pre {
+
             background-color: #f5f5f5;
+
             padding: 15px;
+
             border-radius: 5px;
+
             overflow-x: auto;
+
         }
+
         code {
+
             font-family: monospace;
+
         }
+
     </style>
+
 </head>
+
 <body>
+
     <div class="container">
+
         <h1>ConsentManager Integration Example</h1>
+
         
+
         <h2>Clean Single-Script Integration</h2>
+
         <p>The ConsentManager is integrated with a single script tag in the head of this page:</p>
+
         <pre><code>&lt;script id="consentment-cmp" 
+
         src="https://app.consentment.com/js/cmp/loader.js" 
-        data-settings-id="abcde" 
+
+        data-settings-id="fffde" 
+
         data-api-base="https://app.consentment.com/api"
+
         async&gt;&lt;/script&gt;</code></pre>
+
         
+
         <h2>How It Works</h2>
+
         <p>The loader script:</p>
+
         <ul>
+
             <li>Automatically blocks scripts requiring consent</li>
+
             <li>Loads configuration from the API</li>
+
             <li>Loads the appropriate UI component based on configuration</li>
+
             <li>Handles consent preferences storage</li>
+
         </ul>
+
         
+
         <h2>Testing the Integration</h2>
+
         <p>This page has ConsentManager integrated. The consent UI should appear based on your configuration.</p>
+
         <button id="reset-consent">Reset Consent (For Testing)</button>
+
     </div>
+
     
+
     <!-- Example script that would be blocked until consent -->
+
     <script>
+
         // Reset consent for testing
+
         document.getElementById('reset-consent').addEventListener('click', function() {
+
             localStorage.removeItem('consentManager_consent');
+
             alert('Consent preferences reset. Reload the page to see the consent UI again.');
+
             location.reload();
+
         });
+
         
+
         // Example of checking consent status
+
         document.addEventListener('DOMContentLoaded', function() {
+
             if (window.ConsentManager && window.ConsentManager.hasConsentBeenGiven()) {
+
                 console.log('Consent already given:', window.ConsentManager.consent);
+
             } else {
+
                 console.log('Consent not yet given');
+
             }
+
         });
+
     </script>
+
 </body>
+
 </html>

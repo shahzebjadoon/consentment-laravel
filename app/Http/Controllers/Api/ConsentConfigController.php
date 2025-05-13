@@ -29,6 +29,8 @@ class ConsentConfigController extends Controller
     /**
 
      * Get configuration for a specific domain
+     * this controller is not used as same controller in web.php 
+     * used please avoid it by Shahzeb problem identification
 
      */
 
@@ -37,7 +39,6 @@ class ConsentConfigController extends Controller
     {
 
         // Find configuration by settings ID
-
 
         $configuration = Configuration::where('hash_key', $settingsId)->first();
         
@@ -56,7 +57,7 @@ class ConsentConfigController extends Controller
 
         $content = ContentSettings::where('configuration_id', $configuration->id)->first();
 
-        
+        // return response()->json($content);
 
         // Get services and categories
 

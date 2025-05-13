@@ -20,6 +20,8 @@
             <input type="hidden" name="services_description" id="servicesDescriptionInput" value="{{ $contentSettings->services_description ?? 'These services process personal data to display personalized or interest-based advertisements.' }}">
             <input type="hidden" name="categories_title" id="categoriesTitleInput" value="{{ $contentSettings->categories_title ?? 'Categories' }}">
             <input type="hidden" name="categories_description" id="categoriesDescriptionInput" value="{{ $contentSettings->categories_description ?? 'These categories group services by their data processing purpose.' }}">
+            <input type="hidden" name="about_title" id="aboutTitleInput" value="{{ $contentSettings->about_title ?? 'About' }}">
+            <input type="hidden" name="about_description" id="aboutDescriptionInput" value="{{ $contentSettings->about_description ?? 'This is about us section shows company whereabout.' }}">
             <input type="hidden" name="accept_all_button" id="acceptAllButtonInput" value="{{ $contentSettings->accept_all_button ?? 'Accept All' }}">
             <input type="hidden" name="deny_all_button" id="denyAllButtonInput" value="{{ $contentSettings->deny_all_button ?? 'Deny All' }}">
             <input type="hidden" name="save_button" id="saveButtonInput" value="{{ $contentSettings->save_button ?? 'Save' }}">
@@ -150,6 +152,30 @@
                     </div>
                 </div>
                 
+
+                 <!-- About Section -->
+                 <div class="form-group">
+                    <h5>About Section</h5>
+                    <p class="section-description">Define labels for the About section of the Second Layer.</p>
+                    
+                    <!-- Categories Title -->
+                    <div class="form-group">
+                        <div class="form-header">
+                            <label>About Title</label>
+                          
+                        </div>
+                        <input type="text" class="form-control" id="aboutTitle" value="{{ $contentSettings->about_title ?? 'About' }}">
+                    </div>
+                    
+                    <!-- Categories Description -->
+                    <div class="form-group">
+                        <div class="form-header">
+                            <label>About Description</label>
+                            
+                        </div>
+                        <textarea class="form-control" id="aboutDescription" rows="3">{{ $contentSettings->about_description ?? 'This is about us section shows company whereabout.' }}</textarea>
+                    </div>
+                </div>
                 <!-- Button Labels -->
                 <div class="form-group">
                     <h5>Button Labels</h5>
@@ -488,6 +514,8 @@
         document.getElementById('servicesDescriptionInput').value = document.getElementById('servicesDescription').value;
         document.getElementById('categoriesTitleInput').value = document.getElementById('categoriesTitle').value;
         document.getElementById('categoriesDescriptionInput').value = document.getElementById('categoriesDescription').value;
+        document.getElementById('aboutTitleInput').value = document.getElementById('aboutTitle').value;
+        document.getElementById('aboutDescriptionInput').value = document.getElementById('aboutDescription').value;
         document.getElementById('acceptAllButtonInput').value = document.getElementById('acceptAllButton').value;
         document.getElementById('denyAllButtonInput').value = document.getElementById('denyAllButton').value;
         document.getElementById('saveButtonInput').value = document.getElementById('saveButton').value;

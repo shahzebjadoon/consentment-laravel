@@ -255,3 +255,6 @@ Route::get('/companies/{company_id}/bill',  [BillingController::class, 'getbill'
 
 
 Route::get('/price-plans', [PricePlanController::class, 'index'])->name('price.plans');
+
+
+

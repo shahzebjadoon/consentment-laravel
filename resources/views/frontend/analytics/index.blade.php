@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="card" style="margin-bottom: 30px; width: 73%;">
+<div class="card" style="margin-bottom: 30px; width: 100%;">
 
     <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
 

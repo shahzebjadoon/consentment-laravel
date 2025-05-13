@@ -22,14 +22,14 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-           
+
             'email' => 'required|email|unique:users,email',
         ]);
 
         $password = rand(10000098, 99990090); // Generate a random password
         $otp = rand(100000, 999999);
         // return response()->json($request->all());
-       
+
         $user = User::create([
             'name' => $validated['email'],
             'email' => $validated['email'],
@@ -39,6 +39,9 @@ class UserController extends Controller
             'reset_otp' => $otp,
             'otp_expires_at' => now()->addMinutes(20), // Set expiry time for OTP
         ]);
+
+        // Send OTP to user's email 
+        $this->emailOtpToUser($validated['email'], $otp);
 
         return response()->json($user, 201);
     }
@@ -85,18 +88,43 @@ class UserController extends Controller
             return response()->json(['error' => 'OTP has expired'], 422);
         }
 
-       
+
 
         return response()->json(['message' => 'OTP Verfied: You can now reset your password']);
     }
 
+    public function emailOtpToUser($email, $otp)
+    {
+        // Here you would send the OTP to the user's email
+        // For example, using Laravel's Mail facade
+        // Mail::to($email)->send(new OtpMail($otp));
+
+        // From controller method
+        $emailController = new \App\Http\Controllers\EmailController();
+        $emailController->sendSimpleEmail($email, 'Consentment -- Your One-Time Password (OTP)', 'Hi,
+
+        Your verification code is:
+
+        ' . $otp . '
+
+        This OTP is valid for 20 minutes.
+
+        Please don\'t share this code with anyone.
+
+        If you didn\'t request this, please ignore this email or contact support.
+
+        Thanks,
+        Consetment Team');
+
+        return response()->json(['message' => 'OTP sent to email']);
+    }
 
     public function updatePassword(Request $request)
     {
 
-      
 
-      
+
+
 
         $validator = Validator::make($request->all(), [
             'email' => 'required|email|exists:users,email',
@@ -119,8 +147,6 @@ class UserController extends Controller
         $user->last_login_at = now(); // Update last login time
         $user->email_verified_at = now(); // Set email as verified
         $user->save();
-        return response()->json(['message' => 'Password updated successfully', 'user'=>$user], 200);
-}
-
- 
+        return response()->json(['message' => 'Password updated successfully', 'user' => $user], 200);
+    }
 }

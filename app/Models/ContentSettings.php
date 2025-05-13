@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ContentSettings extends Model
 {
     use HasFactory;
-    
+
     protected $table = 'content_settings';
     
     protected $fillable = [
@@ -30,6 +30,8 @@ class ContentSettings extends Model
         'services_description',
         'categories_title',
         'categories_description',
+        'about_title',
+        'about_description',
         'accept_all_button',
         'deny_all_button',
         'save_button',

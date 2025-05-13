@@ -8,13 +8,15 @@
     <title>{{ config('app.name') }} | {{ $company->name }}</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Montserrat', sans-serif;
+            font-family:  'Urbanist', sans-serif;
         }
 
         body {
@@ -57,7 +59,7 @@
         }
 
         .nav-link {
-            padding: 14px 20px;
+            padding: 10px 20px;
             display: flex;
             align-items: center;
             color: #555;

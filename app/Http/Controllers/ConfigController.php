@@ -146,6 +146,13 @@ class ConfigController extends Controller
         'services_description' => $content->services_description ?? 'These services process personal data to display personalized or interest-based advertisements.',
         'categories_title' => $content->categories_title ?? 'Categories',
         'categories_description' => $content->categories_description ?? 'These categories group services by their data processing purpose.',
+        'about_title' => $content->about_title ?? 'About Us',
+        'about_description' => $content->about_description ?? 'This about us section used to show whereabout of company.',
+        'privacy_policy_text' => $content->privacy_policy_text,
+        'privacy_policy_url' => $content->privacy_policy_url,
+        'legal_notice_text' => $content->legal_notice_text,
+        'legal_notice_url' => $content->legal_notice_url
+        
         // Add more content settings as needed...
     ];
 }
