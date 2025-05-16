@@ -7,6 +7,8 @@ use App\Http\Controllers\Frontend\DashboardController;
 use App\Http\Controllers\Frontend\BillingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PricePlanController;
+use App\Http\Controllers\Frontend\Auth\ForgotPasswordController;
+use App\Http\Controllers\Frontend\Auth\ResetPasswordController;
 
 // Home page redirect to new login
 Route::get('/', function() {
@@ -15,6 +17,7 @@ Route::get('/', function() {
 
 // New login page
 Route::get('/new/login', [NewLoginController::class, 'showLoginForm'])->name('frontend.new.login');
+
 
 // New register page
 Route::get('/new/register', [NewRegisterController::class, 'showRegistrationForm'])->name('frontend.new.register');
@@ -258,3 +261,29 @@ Route::get('/price-plans', [PricePlanController::class, 'index'])->name('price.p
 
 
 
+// forgot password 
+
+Route::middleware('guest')->group(function () {
+    Route::prefix('password')->name('password.')->group(function () {
+        // Email request
+        Route::get('forgot', [ForgotPasswordController::class, 'showForgotPasswordForm'])
+            ->name('request-forgot-password');
+        
+        Route::post('forgot', [ForgotPasswordController::class, 'sendResetLinkEmail'])
+            ->name('email-otp');
+
+        // OTP verification
+        Route::get('verify-otp', [ForgotPasswordController::class, 'showVerifyOtpForm'])
+            ->name('verify-otp');
+        
+        Route::post('verify-otp', [ForgotPasswordController::class, 'verifyOtp'])
+            ->name('verify-otp.submit');
+
+        // Reset password
+        Route::get('reset', [ResetPasswordController::class, 'showResetForm'])
+            ->name('reset');
+        
+        Route::post('reset', [ResetPasswordController::class, 'reset'])
+            ->name('update');
+    });
+});

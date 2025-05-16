@@ -182,8 +182,8 @@
     <div class="login-container">
         <div class="login-left">
             <img src="{{ asset('img/brand/logo.png') }}" alt="Consentment Logo" class="app-logo">
-            <h1 class="welcome-text">Welcome back</h1>
-            <p class="welcome-subtext">Log in to the Consentment Admin Interface to access and edit your configuration(s).</p>
+            <h1 class="welcome-text">Password Recovery </h1>
+            <p class="welcome-subtext">Consentment Admin Interface to access and edit your configuration(s).</p>
             
             <div class="awards-section">
                 <img src="https://img.usercentrics.eu/auth0/certifiedCMP.svg" alt="Certified Badge" class="award-img">
@@ -193,40 +193,7 @@
             </div>
         </div>
         
-        <div class="login-right">
-            <div class="login-form-container">
-                <h2 class="login-title">Login</h2>
-                <p class="login-subtitle">Login to your account</p>
-                
-                <button class="social-login-btn">
-                    <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google">
-                    Continue with Google
-                </button>
-                
-                <button class="social-login-btn">
-                    <img src="https://img.icons8.com/color/48/000000/microsoft.png" alt="Microsoft">
-                    Continue with Microsoft Account
-                </button>
-                
-                <div class="divider">
-                    <span>OR</span>
-                </div>
-                
-                <form method="POST" action="{{ route('frontend.auth.login') }}">
-                    @csrf
-                    <input type="email" name="email" class="form-control" placeholder="Email address*" required>
-                    <input type="password" name="password" class="form-control" placeholder="Password*" required>
-                   
-                  <a href="{{ route('password.request-forgot-password') }}" class="signup-link" style="float: right; font-size:14px;margin-top: -10px;">Forgot Password</a>
-                   <br> <br>
-                   <button type="submit" class="btn-primary">Continue</button>
-                </form>
-                
-                <p class="signup-text">
-                    Don't have an account? <a href="{{ route('frontend.new.register') }}" class="signup-link">Sign up</a>
-                </p>
-            </div>
-        </div>
+      @yield('content')
     </div>
 </body>
 </html>

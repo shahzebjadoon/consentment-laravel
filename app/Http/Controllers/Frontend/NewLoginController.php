@@ -11,4 +11,10 @@ class NewLoginController extends Controller
     {
         return view('frontend.new.login');
     }
+
+
+  
+
+
+
 }

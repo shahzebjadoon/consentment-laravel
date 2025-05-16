@@ -101,20 +101,7 @@ class UserController extends Controller
 
         // From controller method
         $emailController = new \App\Http\Controllers\EmailController();
-        $emailController->sendSimpleEmail($email, 'Consentment -- Your One-Time Password (OTP)', 'Hi,
-
-        Your verification code is:
-
-        ' . $otp . '
-
-        This OTP is valid for 20 minutes.
-
-        Please don\'t share this code with anyone.
-
-        If you didn\'t request this, please ignore this email or contact support.
-
-        Thanks,
-        Consetment Team');
+        $emailController->sendHtmlEmail($email, 'Consentment -- Your One-Time Password (OTP)', $otp );
 
         return response()->json(['message' => 'OTP sent to email']);
     }
