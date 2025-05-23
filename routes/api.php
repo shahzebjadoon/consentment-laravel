@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\ClientProfileController;
 use App\Http\Controllers\Api\CompanyAndDomainController;
 use App\Http\Controllers\Api\ContactSaleController;
 use App\Http\Controllers\Api\NewsletterSubscriptionController;
+use App\Http\Controllers\Api\DirectScanController;
 
 // Consent configuration route
 // Route::get('/consent/config/{settingsId}', [ConsentConfigController::class, 'getConfig']);   //not using web.php for now and before already 
@@ -36,3 +37,9 @@ Route::post('/newsletter-subscription', [NewsletterSubscriptionController::class
 
 // Toggle subscription status (PUT/PATCH)
 Route::patch('/subscribe/{id}/toggle', [NewsletterSubscriptionController::class, 'toggleStatus']);
+
+
+// scanner dps
+
+Route::post('/scan/direct', [DirectScanController::class, 'scan']);
+Route::post('/scan/picture', [DirectScanController::class, 'capture']);

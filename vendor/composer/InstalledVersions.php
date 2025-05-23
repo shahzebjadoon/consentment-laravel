@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '41a3139a4b79999611e0fafae64d822b8bca3724',
+    'reference' => 'fe5376dad7223987ac536df0e76ad0f22db78fb5',
     'name' => 'rappasoft/laravel-boilerplate',
   ),
   'versions' => 
@@ -698,6 +698,15 @@ private static $installed = array (
         0 => 'v8.79.0',
       ),
     ),
+    'intervention/image' => 
+    array (
+      'pretty_version' => '2.7.2',
+      'version' => '2.7.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '04be355f8d6734c826045d02a1079ad658322dad',
+    ),
     'jamesmills/laravel-timezone' => 
     array (
       'pretty_version' => '1.10.0',
@@ -848,6 +857,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '094defdb4a7001845300334e7c1ee2335925ef99',
+    ),
+    'league/glide' => 
+    array (
+      'pretty_version' => '1.7.2',
+      'version' => '1.7.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8dba756ada0b8e525bf6f1f7d1bd83c1e99e124e',
     ),
     'league/mime-type-detection' => 
     array (
@@ -1365,7 +1383,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '41a3139a4b79999611e0fafae64d822b8bca3724',
+      'reference' => 'fe5376dad7223987ac536df0e76ad0f22db78fb5',
     ),
     'rappasoft/laravel-livewire-tables' => 
     array (
@@ -1572,6 +1590,33 @@ private static $installed = array (
       ),
       'reference' => '9f3452c93ff423469c0d56450431562ca423dcee',
     ),
+    'spatie/browsershot' => 
+    array (
+      'pretty_version' => '3.61.0',
+      'version' => '3.61.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '14d75679390b8b84a71b3a17dc5905928deeb887',
+    ),
+    'spatie/image' => 
+    array (
+      'pretty_version' => '1.10.6',
+      'version' => '1.10.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '897e819848096ea8eee8ed4a3531c6166f9a99e0',
+    ),
+    'spatie/image-optimizer' => 
+    array (
+      'pretty_version' => '1.8.0',
+      'version' => '1.8.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4fd22035e81d98fffced65a8c20d9ec4daa9671c',
+    ),
     'spatie/laravel-activitylog' => 
     array (
       'pretty_version' => '3.17.0',
@@ -1598,6 +1643,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '1c51a5fa12131565fe3860705163e53d7a26258a',
+    ),
+    'spatie/temporary-directory' => 
+    array (
+      'pretty_version' => '2.3.0',
+      'version' => '2.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '580eddfe9a0a41a902cac6eeb8f066b42e65a32b',
     ),
     'swiftmailer/swiftmailer' => 
     array (
