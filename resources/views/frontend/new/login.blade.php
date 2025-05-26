@@ -181,16 +181,16 @@
 <body>
     <div class="login-container">
         <div class="login-left">
-            <img src="{{ asset('img/brand/logo.png') }}" alt="Consentment Logo" class="app-logo">
+            <img src="{{ asset('img/brand/logo.svg') }}" alt="Consentment Logo" class="app-logo">
             <h1 class="welcome-text">Welcome back</h1>
             <p class="welcome-subtext">Log in to the Consentment Admin Interface to access and edit your configuration(s).</p>
             
-            <div class="awards-section">
+            {{-- <div class="awards-section">
                 <img src="https://img.usercentrics.eu/auth0/certifiedCMP.svg" alt="Certified Badge" class="award-img">
                 <img src="https://img.usercentrics.eu/auth0/leader23.svg" alt="Leader Badge" class="award-img">
                 <img src="https://img.usercentrics.eu/auth0/Badge-IAB@2x.png" alt="IAB Badge" class="award-img">
                 <img src="https://img.usercentrics.eu/auth0/reviews.svg" alt="Reviews" class="award-img">
-            </div>
+            </div> --}}
         </div>
         
         <div class="login-right">

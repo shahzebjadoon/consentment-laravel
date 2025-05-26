@@ -181,7 +181,7 @@
 <body>
     <div class="login-container">
         <div class="login-left">
-            <img src="{{ asset('img/brand/logo.png') }}" alt="Consentment Logo" class="app-logo">
+            <img src="{{ asset('img/brand/logo.svg') }}" alt="Consentment Logo" class="app-logo">
             <h1 class="welcome-text">Password Recovery </h1>
             <p class="welcome-subtext">Consentment Admin Interface to access and edit your configuration(s).</p>
             

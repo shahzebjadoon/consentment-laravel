@@ -7,7 +7,7 @@
         <p class="page-description">Users added to the company can access all configurations.</p>
     </div>
     <button class="btn btn-primary" id="manageAccessBtn">
-        <i class="fas fa-user-plus mr-2"></i> Manage Access
+        <i class="fas fa-user-plus mr-2"></i> &nbsp; Manage Access
     </button>
 </div>
 
@@ -56,46 +56,47 @@
 
 <!-- Manage Access Modal -->
 <div id="manageAccessModal" class="modal">
-    <div class="modal-content">
+    <div class="modal-content" style="width:50% !important;">
         <div class="modal-header">
             <h3>Manage Company Access</h3>
             <span class="close" id="closeAccessModal">&times;</span>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" style="font-size: 20px !important;">
             <p>Add and manage users to grant access to all configurations within your company.</p>
             
-            <div class="form-group">
+            <div class="form-group" style="font-size: 20px !important;">
                 <div class="form-row">
                     <div class="form-column">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-control" placeholder="Email">
+                        <br>
+                        <label class="form-label" style="font-size: 20px; font-weight:700">Email</label>
+                        <input type="email" style="font-size: 20px;" class="form-control" placeholder="Email" >
                     </div>
-                    <div class="form-column">
+                    {{-- <div class="form-column">
                         <label class="form-label">Permission</label>
                         <select class="form-control">
                             <option value="write">Write</option>
                             <option value="read">Read</option>
                             <option value="admin">Admin</option>
                         </select>
-                    </div>
+                    </div> --}}
                     <div style="display: flex; align-items: flex-end; padding-bottom: 12px; margin-left: 10px;">
-                        <button class="btn btn-primary">Add</button>
+                        <button class="btn btn-primary" style="font-size: 20px;">Add</button>
                     </div>
                 </div>
                 
-                <div style="display: flex; align-items: center; margin-top: 10px;">
-                    <input type="checkbox" id="notifyUser" style="margin-right: 10px;">
+                <div style="display: flex; align-items: center; margin-top: 10px; font-size: 20px;">
+                    <input type="checkbox" id="notifyUser" style="margin-right: 10px; width:20px; height:20px;">
                     <label for="notifyUser">Notify user via email</label>
                 </div>
-                
+{{--                 
                 <div style="margin-top: 10px;">
                     <a href="#" style="color: #1da1f2; text-decoration: none;">See permission details <i class="fas fa-chevron-down"></i></a>
-                </div>
+                </div> --}}
             </div>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-secondary" id="cancelAccessBtn">Cancel</button>
-            <button class="btn btn-primary">Save Changes</button>
+            <button class="btn btn-secondary" id="cancelAccessBtn" style="font-size: 20px;">Cancel</button>
+            <button class="btn btn-primary" style="font-size: 20px;">Save Changes</button>
         </div>
     </div>
 </div>

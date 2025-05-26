@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="card" style="margin-bottom: 30px; width: 100%;">
+<div class="card" style="margin-bottom: 30px; width: 80%;">
 
     <div class="card-header" style="border-bottom: none; padding-bottom: 0;">
 
@@ -22,7 +22,7 @@
 
                class="tab-link {{ $activeTab == 'overview' ? 'active' : '' }}" 
 
-               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'overview' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
+               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none;  {{ $activeTab == 'overview' ? 'background-color: white; color: #333; font-weight: 800;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
 
                 Interaction Analytics Overview
 
@@ -32,7 +32,7 @@
 
                class="tab-link {{ $activeTab == 'comparison' ? 'active' : '' }}" 
 
-               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'comparison' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
+               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; font-weight: 800; {{ $activeTab == 'comparison' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
 
                 Interaction Analytics Comparison
 
@@ -42,7 +42,7 @@
 
                class="tab-link {{ $activeTab == 'granular' ? 'active' : '' }}" 
 
-               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'granular' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }}">
+               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; font-weight: 800; {{ $activeTab == 'granular' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }}">
 
                 Granular Analytics
 
@@ -733,6 +733,7 @@
                             data: dailyData.map(item => item.accept_all),
 
                             backgroundColor: '#0066cc',
+                            barThickness: 10,
 
                             order: 1
 
@@ -745,6 +746,7 @@
                             data: dailyData.map(item => item.deny_all),
 
                             backgroundColor: '#e57373',
+                            barThickness: 10,
 
                             order: 2
 
@@ -763,8 +765,8 @@
                     scales: {
 
                         x: {
-
-                            stacked: false
+                            stacked: false,
+                             grouped: false // 👈 Prevents auto-widening in grouped mode
 
                         },
 
@@ -991,7 +993,7 @@
                             data: dailyData.map(item => item.accept_all),
 
                             backgroundColor: '#0066cc',
-
+                            barThickness: 10,
                             order: 1
 
                         },
@@ -1003,6 +1005,7 @@
                             data: dailyData.map(item => item.custom_choice),
 
                             backgroundColor: '#ffcc00',
+                              barThickness: 10,
 
                             order: 2
 
@@ -1015,6 +1018,8 @@
                             data: dailyData.map(item => item.deny_all),
 
                             backgroundColor: '#e57373',
+                              barThickness: 10,
+
 
                             order: 3
 
@@ -1033,7 +1038,7 @@
                     scales: {
 
                         x: {
-
+                            grouped: false, // Prevents auto-widening in grouped mode
                             stacked: false
 
                         },

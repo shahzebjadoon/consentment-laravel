@@ -109,6 +109,37 @@ public function addDomain(Request $request, $companyId, $configId)
         ->with('success', 'Domain added successfully');
 }
 
+
+public function updateDomain(Request $request, $companyId, $configId)
+{
+    $validated = $request->validate([
+        'domain' => 'required|string|max:255',
+    ]);
+    
+    // Get the configuration
+    $configuration = Configuration::findOrFail($configId);
+    
+    // Get current domains or initialize an empty array
+ 
+    
+    // Save the updated domains array as JSON
+    $configuration->update([
+        'domain' => $validated['domain']
+    ]);
+    
+    if ($request->ajax()) {
+        return response()->json([
+            'success' => true,
+            'message' => 'Domain updated successfully',
+            'domain' => $validated['domain']
+        ]);
+    }
+    
+    return redirect()
+        ->route('frontend.configurations.edit', ['company_id' => $companyId, 'config_id' => $configId])
+        ->with('success', 'Domain updated successfully');
+}
+
 public function deleteDomain(Request $request, $companyId, $configId)
 {
     $validated = $request->validate([

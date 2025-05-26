@@ -7,7 +7,7 @@
         <p class="page-description">Below you will find an overview of all domains which are assigned to this company.</p>
     </div>
     <button class="btn btn-primary" id="addConfigBtn">
-        <i class="fas fa-plus mr-2"></i> Add Domain 
+        <i class="fas fa-plus mr-2"></i> &nbsp; Add Domain 
     </button>
 </div>
 
@@ -75,7 +75,7 @@
 
 <!-- Add Configuration Modal with multi-step form -->
 <div id="configurationModal" class="modal">
-    <div class="modal-content" style="max-width: 700px;">
+    <div class="modal-content" style="max-width: 700px; margin-top:-50px !important;">
         <div class="modal-header">
             <h3>Add New Domain</h3>
             <span class="close" id="closeModal">&times;</span>
@@ -97,8 +97,8 @@
         <button type="button" class="btn btn-primary" style="margin-left: auto;">Upgrade</button>
     </div>
     
-    <h4 style="margin-top: 0; margin-bottom: 5px; font-size: 18px;">Compliance Type</h4>
-    <p style="color: #666; margin-bottom: 20px;">Select the legal compliance your configuration should support. Depending on your choice, there will be a default setup prepared including all required features to be compliant with the selected framework.</p>
+    <h4 style="margin-top: 0; margin-bottom: 5px; font-size: 20px;">Compliance Type</h4>
+    <p style="color: #666; margin-bottom: 20px; font-size: 20px;">Select the legal compliance your configuration should support. Depending on your choice, there will be a default setup prepared including all required features to be compliant with the selected framework.</p>
     
     <div class="framework-options">
         @foreach($frameworks as $framework)
@@ -127,7 +127,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-height: 300px; /* Shows approximately 3 frameworks */
+    max-height: 250px; /* Shows approximately 3 frameworks */
     overflow-y: auto;
     padding-right: 5px; /* Ensures content doesn't touch scrollbar */
 }
@@ -201,19 +201,19 @@
                 <!-- Step 2: Add Domain -->
                 <div class="config-step" id="step2" style="display: none;">
                     <div class="form-group">
-                        <label class="form-label">Compliance Name</label>
-                        <input type="text" class="form-control" name="name" id="configuration_name" placeholder="Enter configuration name" required>
+                        <label class="form-label" style="font-size: 20px;">Compliance Name</label>
+                        <input type="text" class="form-control" name="name" id="configuration_name" style="font-size: 20px;" placeholder="Enter configuration name" required>
                     </div>
 
-                    <h4 style="margin-top: 20px; margin-bottom: 5px; font-size: 18px;">Add Domain</h4>
-                    <p style="color: #666; margin-bottom: 20px;">Select or add domains for this configuration. Domains added will be scanned for Data Processing Services. Once you integrated the consent banner script tag your consent banner will be displayed.</p>
+                    <h4 style="margin-top: 20px; margin-bottom: 5px; font-size: 20px;">Add Domain</h4>
+                    <p style="color: #666; margin-bottom: 20px; font-size:20px;">Select or add domains for this configuration. Domains added will be scanned for Data Processing Services. Once you integrated the consent banner script tag your consent banner will be displayed.</p>
                     
                     <div style="background-color: #f8f9fa; border-radius: 5px; padding: 20px; margin-bottom: 20px;">
-                        <div style="margin-bottom: 10px; font-weight: 500;">Domain</div>
+                        <div style="margin-bottom: 10px; font-weight: 500; font-size:20px;">Domain</div>
                         <div style="display: flex;">
-                            <div style="background-color: #e9ecef; padding: 12px 15px; border-radius: 8px 0 0 8px; border: 1px solid #ddd; border-right: none;">https://</div>
-                            <input type="text" class="form-control" id="domain_input" placeholder="www.example.com" style="border-radius: 0 8px 8px 0; flex-grow: 1;">
-                            <button type="button" class="btn btn-primary" id="add_domain_btn" style="margin-left: 10px;">Add</button>
+                            <div style="background-color: #e9ecef; padding: 12px 15px; border-radius: 8px 0 0 8px; border: 1px solid #ddd; font-size:20px; border-right: none;">https://</div>
+                            <input type="text" class="form-control" id="domain_input" placeholder="www.example.com" style="border-radius: 0 8px 8px 0; flex-grow: 1; font-size:20px;">
+                            <button type="button" class="btn btn-primary" id="add_domain_btn" style="margin-left: 10px; font-size:20px;">Add</button>
                         </div>
                     </div>
                     
@@ -229,10 +229,10 @@
             </div>
             
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" id="backBtn" style="display: none;">Back</button>
-                <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
-                <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
-                <button type="submit" class="btn btn-primary" id="saveBtn" style="display: none;">Save</button>
+                <button type="button" class="btn btn-secondary" id="backBtn" style="display: none; font-size:20px;">Back</button>
+                <button type="button" class="btn btn-secondary" id="cancelBtn" style="font-size: 20px;">Cancel</button>
+                <button type="button" class="btn btn-primary" id="nextBtn" style="font-size: 20px;">Next</button>
+                <button type="submit" class="btn btn-primary" id="saveBtn" style="display: none; font-size:20px">Save</button>
             </div>
         </form>
     </div>

@@ -11,11 +11,11 @@
             <!-- Tabs Navigation -->
             <div style="display: flex; margin-bottom: 20px;">
                 <a href="{{ route('frontend.companies.details', ['id' => $company->id]) }}" class="tab-link "
-                    style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; background-color: #f8f9fa; color: #666; font-weight: 500;   margin-right: 5px;">
+                    style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; background-color: #f8f9fa; color: #666; font-weight: 800;   margin-right: 5px;">
                     Details
                 </a>
                 <a href="{{ route('frontend.companies.billings', ['company_id' => $company->id]) }}" class="tab-link"
-                    style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'billing' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
+                    style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'billing' ? 'background-color: white; color: #333; font-weight: 800;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
                     Billings
                 </a>
             </div>

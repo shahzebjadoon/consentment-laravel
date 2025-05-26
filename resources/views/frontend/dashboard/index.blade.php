@@ -69,7 +69,7 @@
             background-color: rgba(29, 161, 242, 0.08);
             color: #1da1f2;
             border-left: 3px solid #1da1f2;
-            font-weight: 500;
+            font-weight: 800;
         }
         
         .nav-link:hover:not(.active) {
@@ -358,6 +358,10 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             transform: translateY(-20px);
             transition: transform 0.3s;
+            height: 80vh; /* or a fixed height like 600px */
+            max-height: 80vh; /* prevents modal from growing beyond viewport */
+            overflow: hidden; /* hides overflow of modal-content */
+          
         }
         
         .modal.show .modal-content {
@@ -377,6 +381,7 @@
         
         .modal-body {
             padding: 25px;
+             
         }
         
         .modal-footer {
@@ -630,7 +635,7 @@
     <div class="dashboard-container">
         <div class="sidebar">
             <div class="logo-container">
-                <img src="{{ asset('img/brand/logo.png') }}" alt="Consentment Logo" class="logo">
+                <img src="{{ asset('img/brand/logo.svg') }}" alt="Consentment Logo" class="logo">
             </div>
             
             <a href="#" class="nav-link active">
@@ -733,6 +738,10 @@
                 <h3>Create Company</h3>
                 <span class="close" id="closeModal">&times;</span>
             </div>
+
+            <div style="height: 80%; overflow-y:auto;">
+
+         
             
             <form id="companyForm" method="POST" action="{{ route('frontend.companies.store') }}">
                 @csrf
@@ -873,6 +882,7 @@
                     <button type="button" class="btn btn-primary" id="createCompanyBtn" style="display:none;">Create Company</button>
                 </div>
             </form>
+            </div>
         </div>
     </div>
     

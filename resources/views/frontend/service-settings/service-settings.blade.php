@@ -10,17 +10,17 @@
         <div style="display: flex; margin-bottom: 20px;">
             <a href="{{ route('frontend.service-settings.scanner', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'scanner' ? 'active' : '' }}" 
-               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'scanner' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
+               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; font-weight: 800;{{ $activeTab == 'scanner' ? 'background-color: white; color: #333; font-weight: 800;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
                Data Processing Service Scanner
             </a>
             <a href="{{ route('frontend.service-settings.services', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'services' ? 'active' : '' }}" 
-               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'services' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
+               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; font-weight: 800; {{ $activeTab == 'services' ? 'background-color: white; color: #333; font-weight: 800;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
                 Data Processing Services Detected
             </a>
             <a href="{{ route('frontend.service-settings.categories', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}" 
                class="tab-link {{ $activeTab == 'categories' ? 'active' : '' }}" 
-               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'categories' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }}">
+               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; font-weight: 800;{{ $activeTab == 'categories' ? 'background-color: white; color: #333; font-weight: 800;' : 'background-color: #f8f9fa; color: #666;' }}">
                 Categories
             </a>
         </div>
@@ -254,9 +254,9 @@
 
 <!-- Manual Scan Modal -->
 <div id="manualScanModal" class="modal">
-    <div class="modal-content" style="max-width: 500px;">
+    <div class="modal-content" style="max-width: 500px; font-size:20px;">
         <div class="modal-header" style="background-color: #0052cc;">
-            <div style="font-size: 18px; font-weight: 500;">Manual Scan</div>
+            <div style="font-size: 20px; font-weight: 500;">Manual Scan</div>
             <span class="close" id="closeManualScanModal">&times;</span>
         </div>
         <div class="modal-body">
@@ -271,9 +271,9 @@
 
 <!-- Scan Settings Modal -->
 <div id="scanSettingsModal" class="modal">
-    <div class="modal-content" style="max-width: 600px;">
+    <div class="modal-content" style="max-width: 700px;">
         <div class="modal-header" style="background-color: #0052cc;">
-            <div style="font-size: 18px; font-weight: 500;">Scan Settings</div>
+            <div style="font-size: 20px; font-weight: 500;">Scan Settings</div>
             <span class="close" id="closeScanSettingsModal">&times;</span>
         </div>
         <div class="modal-body">
@@ -281,9 +281,9 @@
             <p style="color: #666; margin-bottom: 20px;">Your settings are applied to all domains added to the configuration.</p>
             
             <div class="form-group">
-                <label for="scanFrequency" class="form-label">Scan Frequency</label>
+                <label for="scanFrequency" class="form-label" style="font-size: 20px;">Scan Frequency</label>
                 <div class="dropdown">
-                    <button class="form-control dropdown-toggle" type="button" style="display: flex; justify-content: space-between; align-items: center; text-align: left; background-color: white;">
+                    <button class="form-control dropdown-toggle" type="button" style="display: flex; justify-content: space-between; align-items: center; text-align: left; background-color: white; font-size:20px;">
                         <span>{{ ucfirst($scanFrequency) }} Scan</span>
                         <i class="fas fa-chevron-down" style="font-size: 12px;"></i>
                     </button>
@@ -291,20 +291,20 @@
             </div>
             
             <div class="form-group">
-                <label for="dpsManagement" class="form-label">DPS Management</label>
+                <label for="dpsManagement" class="form-label" style="font-size: 20px;">DPS Management</label>
                 <div class="dropdown">
-                    <button class="form-control dropdown-toggle" type="button" style="display: flex; justify-content: space-between; align-items: center; text-align: left; background-color: white;">
+                    <button class="form-control dropdown-toggle" type="button" style="display: flex; justify-content: space-between; align-items: center; text-align: left; background-color: white; font-size:20px;">
                         <span>Auto-populate (i.e. automatically add identified DPS)</span>
                         <i class="fas fa-chevron-down" style="font-size: 12px;"></i>
                     </button>
                 </div>
             </div>
-            <p style="color: #999; font-size: 13px; margin-bottom: 20px;">Auto-population will work from the next completed scan.</p>
+            <p style="color: #999; font-size: 13px; margin-bottom: 20px; font-size:20px">Auto-population will work from the next completed scan.</p>
             
             <div class="form-group">
                 <label class="form-label">Include trackers found when scanning</label>
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <p style="color: #666; margin: 0; font-size: 14px; width: 80%;">
+                    <p style="color: #666; margin: 0; font-size: 20px; width: 80%;">
                         The Storage Information section within the DPS template will display tracker data (e.g., HTTP cookies) detected via website scans. You can manage these trackers in the Tracker Management settings.
                     </p>
                     <div style="display: flex; align-items: center; gap: 10px;">
@@ -320,8 +320,8 @@
             </div>
         </div>
         <div class="modal-footer" style="justify-content: space-between; display: flex;">
-            <button id="cancelSettingsBtn" class="btn btn-light" style="background-color: #f8f9fa; border: 1px solid #dee2e6;">Cancel</button>
-            <button id="saveSettingsBtn" class="btn btn-light" style="background-color: #f8f9fa; border: 1px solid #dee2e6;">Save</button>
+            <button id="cancelSettingsBtn" class="btn btn-light" style="background-color: #f8f9fa; border: 1px solid #dee2e6; font-size:20px;">Cancel</button>
+            <button id="saveSettingsBtn" class="btn btn-light" style="background-color: #f8f9fa; border: 1px solid #dee2e6; font-size:20px;">Save</button>
         </div>
     </div>
 </div>
@@ -364,7 +364,7 @@
     
     .modal-content {
         background-color: #fff;
-        margin: 10% auto;
+        /* margin: 10% auto; */
         border-radius: 6px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         overflow: hidden;
@@ -372,6 +372,7 @@
     
     .modal-header {
         padding: 15px 20px;
+        font-size: 20px;
         color: white;
         display: flex;
         justify-content: space-between;
@@ -380,10 +381,12 @@
     
     .modal-body {
         padding: 20px;
+        font-size: 20px;
     }
     
     .modal-footer {
         padding: 15px 20px;
+        font-size: 20px;
         border-top: 1px solid #e9ecef;
         display: flex;
         justify-content: flex-end;

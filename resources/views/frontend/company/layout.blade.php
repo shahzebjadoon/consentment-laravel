@@ -66,13 +66,14 @@
             text-decoration: none;
             transition: all 0.3s;
             border-left: 3px solid transparent;
+            font-weight: 800;
         }
 
         .nav-link.active {
             background-color: rgba(29, 161, 242, 0.08);
             color: #1da1f2;
             border-left: 3px solid #1da1f2;
-            font-weight: 500;
+            font-weight: 900;
         }
 
         .nav-link:hover:not(.active) {
@@ -560,7 +561,7 @@
     <div class="dashboard-container">
         <div class="sidebar">
             <div class="logo-container">
-                <img src="{{ asset('img/brand/logo.png') }}" alt="Consentment Logo" class="logo">
+                <img src="{{ asset('img/brand/logo.svg') }}" alt="Consentment Logo" class="logo">
             </div>
 
             @if (request()->routeIs('frontend.configurations.edit') ||

@@ -223,6 +223,11 @@ Route::post('/companies/{company_id}/configurations/{config_id}/add-domain',
     [App\Http\Controllers\Frontend\ConfigurationController::class, 'addDomain'])
     ->name('frontend.configurations.add-domain')
     ->middleware('auth');
+
+Route::post('/companies/{company_id}/configurations/{config_id}/update-domain', 
+    [App\Http\Controllers\Frontend\ConfigurationController::class, 'updateDomain'])
+    ->name('frontend.configurations.update-domain')
+    ->middleware('auth');
     
 
 Route::delete('/companies/{company_id}/configurations/{config_id}/delete-domain', 

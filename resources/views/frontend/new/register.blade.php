@@ -181,7 +181,7 @@
 <body>
     <div class="login-container">
         <div class="login-left">
-            <img src="{{ asset('img/brand/logo.png') }}" alt="Consentment Logo" class="app-logo">
+            <img src="{{ asset('img/brand/logo.svg') }}" alt="Consentment Logo" class="app-logo">
             <h1 class="welcome-text">Get started</h1>
             <p class="welcome-subtext">Create your Consentment account to start managing consents for your websites.</p>
             

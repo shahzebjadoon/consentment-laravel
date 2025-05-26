@@ -24,7 +24,7 @@
             </div> --}}
             
             <button class="btn btn-primary">
-                <i class="fas fa-plus mr-2"></i> Create Ruleset
+                <i class="fas fa-plus mr-2"></i> &nbsp; Create Ruleset
             </button>
         </div>
     </div>

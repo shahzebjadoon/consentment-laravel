@@ -40,12 +40,12 @@
         <div style="display: flex; margin-bottom: 20px;">
             <a href="{{ route('frontend.configurations.edit', ['company_id' => $company->id, 'config_id' => $configuration->id, 'tab' => 'setup']) }}" 
                class="tab-link {{ $activeTab == 'setup' ? 'active' : '' }}" 
-               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'setup' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
+               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; font-weight: 800; {{ $activeTab == 'setup' ? 'background-color: white; color: #333; font-weight: 800;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
                 Setup
             </a>
             <a href="{{ route('frontend.configurations.edit', ['company_id' => $company->id, 'config_id' => $configuration->id, 'tab' => 'legal']) }}" 
                class="tab-link {{ $activeTab == 'legal' ? 'active' : '' }}" 
-               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; {{ $activeTab == 'legal' ? 'background-color: white; color: #333; font-weight: 500;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
+               style="padding: 12px 20px; border: 1px solid #dee2e6; border-bottom: none; border-radius: 4px 4px 0 0; text-decoration: none; font-weight: 800; {{ $activeTab == 'legal' ? 'background-color: white; color: #333; font-weight: 800;' : 'background-color: #f8f9fa; color: #666;' }} margin-right: 5px;">
                 Legal Specifications
             </a>
          
@@ -101,10 +101,11 @@
             <th>Status</th>
             <th>Date Added</th>
             <th>Created By</th>
-            <th>Actions</th>
+            {{-- <th>Actions</th> --}}
         </tr>
     </thead>
     <tbody>
+        
       @php
     $domains = [];
     if ($configuration->domain) {
@@ -124,13 +125,13 @@
         <td><span class="badge" style="background-color: #d4edda; color: #155724; padding: 5px 10px; border-radius: 4px;">Active</span></td>
         <td>{{ $configuration->created_at->format('d/m/Y') }}</td>
         <td>{{ auth()->user()->email }}</td>
-        <td>
+        {{-- <td>
           
             <button type="button" class="btn btn-link text-danger delete-domain" data-domain="{{ $domain }}">
-                <i class="fas fa-trash"></i>
+                <i class="fas fa-edit"></i>
 
             </button>
-        </td>
+        </td> --}}
     </tr>
     @endforeach
 @else
@@ -323,7 +324,7 @@
 <!-- Update Domain Modal -->
 
 <div id="addDomainModal" class="modal">
-    <div class="modal-content" style="max-width: 500px;">
+    <div class="modal-content" style="max-width: 600px;">
         <div class="modal-header">
             <h3>Update Domain</h3>
             <span class="close" id="closeDomainModal">&times;</span>
@@ -332,17 +333,18 @@
             <p>Select the domain you want to update to this configuration.</p>
             
             <div class="form-group">
-                <label class="form-label">Domain</label>
+                <br>
+                <label class="form-label" >Domain</label>
                 <div style="display: flex;">
                     <div style="background-color: #e9ecef; padding: 12px 15px; border-radius: 8px 0 0 8px; border: 1px solid #ddd; border-right: none;">https://www.</div>
-                    <input type="text" class="form-control" id="new_domain" placeholder="example.com" style="border-radius: 0 8px 8px 0;">
+                    <input type="text" class="form-control" id="new_domain" placeholder="example.com"  value={{$configuration->domain}} style="border-radius: 0 8px 8px 0; font-size:20px">
                 </div>
-                <small class="text-muted" style="display: block; margin-top: 5px;">Enter domain name without https://www. prefix</small>
+                <small class="text-muted" style="display: block; margin-top: 5px; font-size:20px">Enter domain name without https://www. prefix</small>
             </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" id="cancelDomainBtn">Cancel</button>
-            <button type="button" class="btn btn-primary" id="saveDomainBtn">Update</button>
+            <button type="button" class="btn btn-secondary" id="cancelDomainBtn" style="font-size: 20px">Cancel</button>
+            <button type="button" class="btn btn-primary" id="saveDomainBtn" style="font-size: 20px">Update</button>
         </div>
     </div>
 </div>
@@ -424,6 +426,8 @@
     margin-bottom: 8px;
     font-weight: 500;
     color: #333;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .form-info-icon {
@@ -529,14 +533,18 @@ input:checked + .slider:before {
     color: #1da1f2;
     padding: 0;
     cursor: pointer;
+    
 }
 
 .text-danger {
     color: #dc3545 !important;
+    font-size: 20px !important;
 }
 
 .text-primary {
     color: #1da1f2 !important;
+    font-size: 20px !important;
+
 }
 
 .modal {
@@ -567,6 +575,7 @@ input:checked + .slider:before {
     width: 80%;
     max-width: 500px;
     transform: translateY(-20px);
+    font-size: 20px;
     transition: transform 0.3s ease;
 }
 
@@ -597,7 +606,7 @@ input:checked + .slider:before {
 }
 
 .close {
-    color: #aaa;
+    color: #ffffff;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -605,8 +614,9 @@ input:checked + .slider:before {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    opacity: 1;
 }
 
 
@@ -718,7 +728,7 @@ if (saveDomainBtn) {
             formData.append('_token', '{{ csrf_token() }}');
             
             // Send AJAX request to add the domain
-            fetch('{{ route('frontend.configurations.add-domain', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}', {
+            fetch('{{ route('frontend.configurations.update-domain', ['company_id' => $company->id, 'config_id' => $configuration->id]) }}', {
                 method: 'POST',
                 body: formData,
                 headers: {
