@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PricePlanController;
 use App\Http\Controllers\Frontend\Auth\ForgotPasswordController;
 use App\Http\Controllers\Frontend\Auth\ResetPasswordController;
+use App\Http\Controllers\Frontend\CompanyInvitationController;
+use App\Http\Controllers\Frontend\Auth\RegisterController;
 
 // Home page redirect to new login
 Route::get('/', function() {
@@ -21,6 +23,7 @@ Route::get('/new/login', [NewLoginController::class, 'showLoginForm'])->name('fr
 
 // New register page
 Route::get('/new/register', [NewRegisterController::class, 'showRegistrationForm'])->name('frontend.new.register');
+Route::post('/new/register', [NewRegisterController::class, 'create'])->name('frontend.new.create');
 
 // Dashboard (protected by auth middleware)
 Route::get('/dashboard', [DashboardController::class, 'index'])
@@ -33,8 +36,8 @@ Route::group(['namespace' => 'App\Http\Controllers\Frontend\Auth', 'as' => 'fron
     Route::get('logout', 'LoginController@logout')->name('logout');
     
     // Registration routes
-    Route::get('register', 'RegisterController@showRegistrationForm')->name('register');
-    Route::post('register', 'RegisterController@register');
+    // Route::get('register', 'RegisterController@showRegistrationForm')->name('register');
+    // Route::post('register', 'RegisterController@create')->name('create');
 });
 
 // Language switcher
@@ -292,3 +295,18 @@ Route::middleware('guest')->group(function () {
             ->name('update');
     });
 });
+
+
+//user invitation to join company or assosiate with compay 
+
+Route::middleware('auth')->group(function () {
+    Route::post('/companies/{company}/invite', [CompanyInvitationController::class, 'invite'])
+        ->name('companies.invite');
+});
+
+Route::get('/invitations/accept/{token}', [CompanyInvitationController::class, 'accept'])
+    ->name('invitations.accept');
+
+Route::delete('companies/{company}/user/{user}', [CompanyInvitationController::class, 'removeUser'])
+    ->name('companies.removeUser')
+    ->middleware('auth');

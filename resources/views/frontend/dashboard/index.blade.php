@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     {{-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"> --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    
     <style>
         * {
             box-sizing: border-box;
@@ -1110,5 +1113,39 @@
             // Logic to show permission details would go here
         });
     </script>
+
+
+
+{{-- @if(session('success'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: @json(session('success')),
+                timer: 7000,
+                showConfirmButton: false
+            });
+        });
+    </script>
+@endif --}}
+
+{{-- @if(session('error'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: @json(session('error')),
+                timer: 7000,
+                showConfirmButton: false
+            });
+        });
+    </script>
+@endif --}}
+
+
+
+
 </body>
 </html>

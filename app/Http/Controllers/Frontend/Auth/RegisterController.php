@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\Auth\Http\Controllers\Frontend\Auth;
+namespace App\Http\Controllers\Frontend\Auth;
 
 use App\Domains\Auth\Services\UserService;
 use App\Rules\Captcha;
@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use LangleyFoxall\LaravelNISTPasswordRules\PasswordRules;
+use Illuminate\Http\Request;
+use App\Models\Invitation;
 
 /**
  * Class RegisterController.
@@ -57,11 +59,19 @@ class RegisterController
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function showRegistrationForm()
+    public function showRegistrationForm(Request $request)
     {
         abort_unless(config('boilerplate.access.user.registration'), 404);
 
-        return view('frontend.auth.register');
+        $invitation = "laiba";
+
+        if ($request->has('invitation')) {
+            $invitation = Invitation::where('token', $request->invitation)
+                ->where('expires_at', '>', now())
+                ->first();
+        }
+
+        return view('frontend.new.register', compact('invitation'));
     }
 
     /**
@@ -92,10 +102,49 @@ class RegisterController
      *
      * @throws \App\Domains\Auth\Exceptions\RegisterException
      */
-    protected function create(array $data)
-    {
-        abort_unless(config('boilerplate.access.user.registration'), 404);
+    // public function create(Request $request)
+    // {
+    //     abort_unless(config('boilerplate.access.user.registration'), 404);
 
-        return $this->userService->registerUser($data);
-    }
+    //     // Validate the request data
+    //     $data = $request->all();
+    //     $data['terms'] = $request->has('terms') ? 1 : 0;
+
+    //     // Validate the data using the validator method
+
+    //   $validator = $this->validator($request->all());
+
+    //     if ($validator->fails()) {
+    //         return redirect()->back()
+    //             ->withErrors($validator)
+    //             ->withInput();
+    //     }
+
+    //     // Register user using service
+    //     $user = $this->userService->registerUser($request->all());
+
+    //     echo "User registered successfully!";
+    //     // If user is already logged in, redirect to home
+      
+
+        
+        
+
+    //     // Handle invitation if exists
+    //     if (isset($data['invitation_token'])) {
+    //         $invitation = Invitation::where('token', $data['invitation_token'])
+    //             ->where('expires_at', '>', now())
+    //             ->first();
+
+    //         if ($invitation) {
+    //             $invitation->company->users()->attach($user->id, [
+    //                 'role' => $invitation->role
+    //             ]);
+    //             $invitation->delete();
+    //         }
+    //     }
+
+    //     dd($user);
+    //     return $user;
+    // }
 }

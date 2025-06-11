@@ -58,4 +58,24 @@ class EmailController extends Controller
         return true;
     }
 
+
+    public function sendInvitationEmail($invitation)
+{
+    $to = $invitation->email;
+    $subject = "Invitation to join " . $invitation->company->name;
+    $acceptUrl = route('invitations.accept', $invitation->token);
+
+    Mail::send([], [], function ($message) use ($to, $subject, $invitation, $acceptUrl) {
+        $message->to($to)
+                ->subject($subject)
+                ->setBody(
+                    "You have been invited to join {$invitation->company->name} as {$invitation->role}.\n\n" .
+                    "Accept your invitation here: {$acceptUrl}\n\n" .
+                    "This invitation will expire in 7 days.",
+                    'text/plain'
+                );
+    });
+
+    return true;
+}
 }

@@ -16,24 +16,28 @@
         <h3 class="card-title">Company Access</h3>
     </div>
     <div class="card-body">
-        <div class="user-item" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee;">
+        {{-- <div class="user-item" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee;">
             <div style="display: flex; align-items: center;">
                 <div style="width: 36px; height: 36px; border-radius: 50%; background-color: #1da1f2; color: white; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: 600;">
                     {{ substr(auth()->user()->email, 0, 1) }}
                 </div>
                 <span>{{ auth()->user()->email }}</span>
             </div>
+
+         
             <div>
-                <span class="company-badge admin">Admin</span>
+               
+                <span class="company-badge admin">Admin </span>
                 {{-- <button class="btn btn-secondary" style="width: 36px; height: 36px; padding: 0; display: flex; align-items: center; justify-content: center; margin-left: 10px;">
                     <i class="fas fa-ellipsis-v"></i>
-                </button> --}}
+                </button> 
             </div>
-        </div>
+        </div> --}}
         
         @if(isset($users) && count($users) > 0)
             @foreach($users as $user)
-                @if($user->id != auth()->id())
+                {{-- @if($user->id == auth()->id()) --}}
+               
                 <div class="user-item" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee;">
                     <div style="display: flex; align-items: center;">
                         <div style="width: 36px; height: 36px; border-radius: 50%; background-color: #1da1f2; color: white; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: 600;">
@@ -41,18 +45,30 @@
                         </div>
                         <span>{{ $user->email }}</span>
                     </div>
-                    <div>
-                        <span class="company-badge admin">{{ $user->pivot ? ucfirst($user->pivot->role) : 'User' }}</span>
-                        <button class="btn btn-secondary" style="width: 36px; height: 36px; padding: 0; display: flex; align-items: center; justify-content: center; margin-left: 10px;">
-                            <i class="fas fa-ellipsis-v"></i>
-                        </button>
+                    <div style="display: flex; align-items: center;">
+                        @if($user->id != auth()->id() &&  $user->pivot->role != 'admin')
+                            <form action="{{ route('companies.removeUser', ['company' => $company, 'user' => $user]) }}" method="POST" style="display: inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit"   style="background: #ffd2d6; border: none; color: #e23b3b; padding: 6px 10px; border-radius: 4px; display: flex; align-items: center; cursor: pointer;" title="Remove User">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </form>
+                        @endif
+
+                        <span class="company-badge admin">
+                            {{ $user->pivot ? ucfirst($user->pivot->role) : 'User' }}
+                        </span>
                     </div>
                 </div>
-                @endif
+                {{-- @endif --}}
             @endforeach
         @endif
     </div>
 </div>
+
+
+
 
 <!-- Manage Access Modal -->
 <div id="manageAccessModal" class="modal">
@@ -64,12 +80,14 @@
         <div class="modal-body" style="font-size: 20px !important;">
             <p>Add and manage users to grant access to all configurations within your company.</p>
             
+            <form action="{{ route('companies.invite', $company) }}" id="deleteForm-{{ $user->id }}" method="POST">
+            @csrf
             <div class="form-group" style="font-size: 20px !important;">
                 <div class="form-row">
                     <div class="form-column">
                         <br>
                         <label class="form-label" style="font-size: 20px; font-weight:700">Email</label>
-                        <input type="email" style="font-size: 20px;" class="form-control" placeholder="Email" >
+                        <input type="email" style="font-size: 20px;" class="form-control" placeholder="Email" required name="email" >
                     </div>
                     {{-- <div class="form-column">
                         <label class="form-label">Permission</label>
@@ -79,14 +97,14 @@
                             <option value="admin">Admin</option>
                         </select>
                     </div> --}}
-                    <div style="display: flex; align-items: flex-end; padding-bottom: 12px; margin-left: 10px;">
+                    {{-- <div style="display: flex; align-items: flex-end; padding-bottom: 12px; margin-left: 10px;">
                         <button class="btn btn-primary" style="font-size: 20px;">Add</button>
-                    </div>
+                    </div> --}}
                 </div>
                 
                 <div style="display: flex; align-items: center; margin-top: 10px; font-size: 20px;">
-                    <input type="checkbox" id="notifyUser" style="margin-right: 10px; width:20px; height:20px;">
-                    <label for="notifyUser">Notify user via email</label>
+                    <i class="fas fa-check-square"  style="margin-right: 10px; width:20px; height:20px; color:#1da1f2;"></i>
+                    <label for="notifyUser">User will be Notify via email</label>
                 </div>
 {{--                 
                 <div style="margin-top: 10px;">
@@ -98,11 +116,15 @@
             <button class="btn btn-secondary" id="cancelAccessBtn" style="font-size: 20px;">Cancel</button>
             <button class="btn btn-primary" style="font-size: 20px;">Save Changes</button>
         </div>
+            </form>
     </div>
 </div>
 @endsection
 
 @section('scripts')
+
+
+
 <script>
     // Modal functionality
     const accessModal = document.getElementById('manageAccessModal');

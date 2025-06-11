@@ -495,6 +495,31 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\CompanyUser
+ *
+ * @property int $id
+ * @property int $company_id
+ * @property int $user_id
+ * @property string|null $role
+ * @property \Illuminate\Support\Carbon $created_at
+ * @property \Illuminate\Support\Carbon $updated_at
+ * @property-read \App\Models\Company $company
+ * @property-read \App\Models\User $user
+ * @method static \Illuminate\Database\Eloquent\Builder|CompanyUser newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|CompanyUser newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|CompanyUser query()
+ * @method static \Illuminate\Database\Eloquent\Builder|CompanyUser whereCompanyId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CompanyUser whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CompanyUser whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CompanyUser whereRole($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CompanyUser whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CompanyUser whereUserId($value)
+ */
+	class CompanyUser extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Configuration
  *
  * @property int $id
@@ -952,6 +977,37 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|ImplementationSettings whereUpdatedAt($value)
  */
 	class ImplementationSettings extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Invitation
+ *
+ * @property int $id
+ * @property int $company_id
+ * @property int $inviter_id
+ * @property string $email
+ * @property string $token
+ * @property string|null $role
+ * @property \Illuminate\Support\Carbon $expires_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Company $company
+ * @property-read \App\Models\User $inviter
+ * @method static \Illuminate\Database\Eloquent\Builder|Invitation newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Invitation newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Invitation query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Invitation whereCompanyId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Invitation whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Invitation whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Invitation whereExpiresAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Invitation whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Invitation whereInviterId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Invitation whereRole($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Invitation whereToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Invitation whereUpdatedAt($value)
+ */
+	class Invitation extends \Eloquent {}
 }
 
 namespace App\Models{

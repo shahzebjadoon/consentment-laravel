@@ -39,7 +39,7 @@
 
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">@lang('Password Confirmation')</label>
-
+ 
                                 <div class="col-md-6">
                                     <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" placeholder="{{ __('Password Confirmation') }}" maxlength="100" required autocomplete="new-password" />
                                 </div>
@@ -55,6 +55,7 @@
                                     </div>
                                 </div>
                             </div><!--form-group-->
+                           
 
                             @if(config('boilerplate.access.captcha.registration'))
                                 <div class="row">
