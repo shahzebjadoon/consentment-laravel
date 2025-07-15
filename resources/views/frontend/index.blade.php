@@ -71,6 +71,8 @@
         @include('includes.partials.read-only')
         @include('includes.partials.logged-in-as')
         @include('includes.partials.announcements')
+        @include('frontend.alerts')
+
 
         <div id="app" class="flex-center position-ref full-height">
             <div class="top-right links">

@@ -16,7 +16,7 @@ class Subscription extends Model
     protected $fillable = [
         'status',
         'started_at',
-        'expired_at',
+        'expire_at',
         'price_paid',
         'is_life_time',
         'coupon',
@@ -26,7 +26,7 @@ class Subscription extends Model
 
     protected $casts = [
         'started_at'    => 'datetime',
-        'expired_at'    => 'datetime',
+        'expire_at'    => 'datetime',
         'is_life_time'  => 'boolean',
         'price_paid'    => 'float',
     ];

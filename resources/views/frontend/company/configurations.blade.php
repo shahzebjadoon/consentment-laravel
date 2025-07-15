@@ -1,6 +1,12 @@
 @extends('frontend.company.layout')
 
 @section('content')
+
+
+    
+
+
+
 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
     <div>
         <h1 class="page-title">Domain Settings</h1>

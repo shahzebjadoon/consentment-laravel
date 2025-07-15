@@ -1184,7 +1184,7 @@ namespace App\Models{
  * @property int $id
  * @property string|null $status
  * @property \Illuminate\Support\Carbon|null $started_at
- * @property string|null $expire_at
+ * @property \Illuminate\Support\Carbon|null $expire_at
  * @property float|null $price_paid
  * @property bool|null $is_life_time
  * @property string|null $coupon
@@ -1210,6 +1210,41 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Subscription whereUserId($value)
  */
 	class Subscription extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\SubscriptionHistory
+ *
+ * @property int $id
+ * @property int $user_id
+ * @property int $price_plan_id
+ * @property string $amount
+ * @property string $currency
+ * @property string|null $payment_method
+ * @property string|null $payment_reference
+ * @property string $status
+ * @property array|null $meta
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\PricePlan $pricePlan
+ * @property-read \App\Models\User $user
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory query()
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory whereAmount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory whereCurrency($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory whereMeta($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory wherePaymentMethod($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory wherePaymentReference($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory wherePricePlanId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SubscriptionHistory whereUserId($value)
+ */
+	class SubscriptionHistory extends \Eloquent {}
 }
 
 namespace App\Models{

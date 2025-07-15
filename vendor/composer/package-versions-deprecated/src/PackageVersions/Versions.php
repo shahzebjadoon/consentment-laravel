@@ -114,6 +114,7 @@ final class Versions
   'spatie/laravel-package-tools' => '1.11.0@fd75af77d0bbf221f33369186df16da704bebebd',
   'spatie/laravel-permission' => '3.18.0@1c51a5fa12131565fe3860705163e53d7a26258a',
   'spatie/temporary-directory' => '2.3.0@580eddfe9a0a41a902cac6eeb8f066b42e65a32b',
+  'stripe/stripe-php' => 'v17.3.0@cfe8244f7e5f910b7fdb5c2cf77428c0acbb9f7c',
   'swiftmailer/swiftmailer' => 'v6.3.0@8a5d5072dca8f48460fce2f4131fcc495eec654c',
   'symfony/console' => 'v5.4.2@a2c6b7ced2eb7799a35375fb9022519282b5405e',
   'symfony/css-selector' => 'v6.0.2@380f86c1a9830226f42a08b5926f18aed4195f25',
@@ -218,7 +219,7 @@ final class Versions
   'symfony/polyfill-php70' => 'v1.20.0@5f03a781d984aae42cebd18e7912fa80f02ee644',
   'symfony/stopwatch' => 'v5.4.0@208ef96122bfed82a8f3a61458a07113a08bdcfe',
   'theseer/tokenizer' => '1.2.1@34a41e998c2183e22995f158c581e7b5e755ab9e',
-  'rappasoft/laravel-boilerplate' => 'dev-main@45033a9264c2b4d7bac615f5d71ae455ef3f86e8',
+  'rappasoft/laravel-boilerplate' => 'dev-main@d7b27c910ef85364581660bfd81f38cf9b10c0e7',
 );
 
     private function __construct()

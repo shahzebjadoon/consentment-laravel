@@ -42,7 +42,7 @@
     <div class="container">
         <!-- Header with back button -->
         <header>
-            <a href="#" class="back-button">← BACK</a>
+            <a href="/dashboard" class="back-button">← BACK</a>
             <div class="header-icons">
                 {{-- <p  style="padding: 5px; color:#888; margin-top:4px; hover:var(--background-light); margin-right:-25px">{{ $user->name ?? 'Guest' }}</p> --}}
                 <p  class="animated-pill">{{ $user->name ?? 'Guest' }}</p>
@@ -67,7 +67,8 @@
                                 <span class="trial-expired-badge">Trial Expired</span>
                                 @else 
                                 <span class="plan-badge">Paid</span>
-                                <span class="trial-expired-badge">Subscription Expired</span>
+                                
+                                <span class="trial-expired-badge">Subscription will Expire on {{$subscription->expire_at->format('d-m-Y')}} </span>
 
                                 @endif
                             </div>
@@ -137,12 +138,14 @@
                                 <div class="plans-grid">
                                     <!-- Essential Web Plan -->
 
-                                    @foreach ($plans as $plan )
+                                    
+                                    @foreach ($plans  as $plan )
                                         
-                                    <div class="plan-card">
+                                     @if($plan->is_custom == 0)
+                                    <div class="plan-card" id="plan-{{$plan->id}}" data-plan-id="{{ $plan->id }}">
                                         <h3>{{$plan->membership}}</h3>
                                         <p class="plan-description">{{$plan->description}}</p>
-                                        @if($plan->is_custom == 0)
+                                       
                                         <div class="price"> £ {{ $plan->price_month }} <span>per month</span></div>
                                         <ul class="features">
                                             <li class="feature-item">{{$plan->domain_allowed}} domain</li>
@@ -153,6 +156,9 @@
                                             <li class="feature-item">{{$plan->max_languages}} banner languages</li>
                                         </ul>
                                         @else
+                                        <div class="plan-card" id="plan-{{$plan->id}}" data-plan-id="0">
+                                        <h3>{{$plan->membership}}</h3>
+                                        <p class="plan-description">{{$plan->description}}</p>
                                         <div class="price"> Custom Price <span></span></div>
                                         <ul class="features">
                                             <li class="feature-item">{{$plan->domain_allowed?? "custom"}} domain</li>
@@ -164,6 +170,7 @@
                                         </ul>
                                         @endif
                                         <button class="view-details">View plan details</button>
+
                                     </div>
 
                                     @endforeach
@@ -230,17 +237,59 @@
                     <!-- New bottom footer bar -->
                     <div class="bottom-footer">
                         <div class="price-note">
-                            Shown prices are in Euro (EUR) excl. VAT
+                            Shown prices are in Bristish Pound (GBP) excl. VAT
                         </div>
-                        <button class="continue-button">
+                        {{-- <button class="continue-button">
                             Continue to Payment
-                        </button>
+                        </button> --}}
+
+                        <form action="{{ route('continue.payment') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="plan_id" id="selected-plan-id">
+                                <button type="submit" class="continue-button" >
+                                Continue to Payment
+                                </button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
+
+<script src="{{ mix('js/manifest.js') }}"></script>
+<script src="{{ mix('js/vendor.js') }}"></script>
+<script src="{{ mix('js/frontend.js') }}"></script>
+
+<script>
+
+$(document).ready(function() {
+
+
+    $('.plan-card').on('click', function() {
+        // Remove active class from all cards
+        $('.plan-card').removeClass('plan-card-active');
+
+        // Add active class to the clicked card
+        $(this).addClass('plan-card-active');
+
+        // Get the selected plan ID from the clicked card
+        var planId = $(this).data('plan-id');
+
+        // Set the value in the hidden input of the payment form
+        $('#selected-plan-id').val(planId);
+
+        // Enable the payment button
+        $('.continue-button').prop('disabled', false);
+    });
+});
+
+    </script>
+
+
+
+
 
 <style>
 :root {
@@ -263,7 +312,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 2200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -329,6 +378,17 @@ header {
     transform: translateY(-2px); /* Slight lift effect */
 }
 
+.plan-card-active {
+    border-color: #1da1f2; /* Dark blue border */
+    box-shadow: 0 4px 12px rgba(20, 75, 140, 0.15); /* Subtle blue shadow */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+
+
+
+
+
 /* Make the plan title transition smoothly */
 .plan-card h3 {
     color: #333;
@@ -336,9 +396,7 @@ header {
     transition: color 0.3s ease;
 }
 
-.plan-card:hover h3 {
-    color: #0797f1; /* Dark blue on hover */
-}
+
 
 /* Optional: Make the "View plan details" link more prominent on hover */
 .view-details {
@@ -347,10 +405,7 @@ header {
     transition: color 0.3s ease;
 }
 
-.plan-card:hover .view-details {
-    color: #0797f1;
-    text-decoration: underline;
-}
+
 
 .plan-header {
     
@@ -702,7 +757,7 @@ header {
     display: block;
     width: 200px;
     margin: 5px;
-    padding: 12px 24px;
+    /* padding: 12px 24px; */
     /* background-color: #000;
     color: white; */
     background-color: #1da1f2; 
@@ -715,7 +770,7 @@ header {
 
 
 .continue-button:hover {
-    background-color: #169cf0;
+    background-color: #0c7cc1;
 }
 
 

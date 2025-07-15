@@ -11,7 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
+   
+   
+   <style>
         * {
             box-sizing: border-box;
             margin: 0;
@@ -555,9 +557,12 @@
             font-size: 12px;
         }
     </style>
+
 </head>
 
 <body >
+        @include('frontend.alerts')
+
     <div class="dashboard-container">
         <div class="sidebar">
             <div class="logo-container">

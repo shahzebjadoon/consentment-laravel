@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Configuration;
 use App\Models\Company;
+use App\Models\PricePlan;
+use App\Models\Subscription;
+use App\Models\CompanyUser;
+use Auth;
 
 class ConfigurationController extends Controller
 {
@@ -17,6 +21,16 @@ class ConfigurationController extends Controller
         'framework_region' => 'required|string|max:50',
         'domain' => 'nullable|string'
     ]);
+
+    // logic as per payment plan
+  
+    $status_to_create_domain = $this->pricePlanCheck(Auth::user()->id);
+    if ($status_to_create_domain == false) {
+        return redirect()
+            ->route('frontend.companies.configurations', $companyId)
+            ->with('error', 'You need to upgrade your plan to create a new configuration with a domain.');
+    }
+
     
     // Create the configuration with the user-provided name
     $configuration = Configuration::create([
@@ -181,5 +195,42 @@ public function deleteDomain(Request $request, $companyId, $configId)
         ->route('frontend.configurations.edit', ['company_id' => $companyId, 'config_id' => $configId])
         ->with('success', 'Domain deleted successfully');
 }
+
+
+
+public function pricePlanCheck($user_id){
+
+    // Get the user's subscription
+    $subscription = Subscription::where('user_id', $user_id)
+    ->where('status', 'active')
+    ->first();
+    
+    
+
+    if (!$subscription) {
+        return false; // No subscription found
+    }
+    
+    // Get the price plan associated with the subscription
+    $pricePlan = PricePlan::find($subscription->price_plan_id);
+    
+    if (!$pricePlan) {
+        return false; // No price plan found
+    }
+    
+    // Check if the price plan allows creating a new configuration with a domain
+    $max_domain=$pricePlan->max_domain;
+
+    $totalConfigurations = CompanyUser::where('user_id', $user_id)
+    ->join('configurations', 'company_user.company_id', '=', 'configurations.company_id')
+    ->count('configurations.id');
+
+    if ($totalConfigurations < $max_domain) {
+        return true; // User can create a new configuration with a domain
+    } else {
+        return false; // User has reached the limit for configurations with domains
+    }
+}
+
 
 }

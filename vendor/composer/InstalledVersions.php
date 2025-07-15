@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'fe5376dad7223987ac536df0e76ad0f22db78fb5',
+    'reference' => 'd7b27c910ef85364581660bfd81f38cf9b10c0e7',
     'name' => 'rappasoft/laravel-boilerplate',
   ),
   'versions' => 
@@ -1383,7 +1383,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'fe5376dad7223987ac536df0e76ad0f22db78fb5',
+      'reference' => 'd7b27c910ef85364581660bfd81f38cf9b10c0e7',
     ),
     'rappasoft/laravel-livewire-tables' => 
     array (
@@ -1652,6 +1652,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '580eddfe9a0a41a902cac6eeb8f066b42e65a32b',
+    ),
+    'stripe/stripe-php' => 
+    array (
+      'pretty_version' => 'v17.3.0',
+      'version' => '17.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'cfe8244f7e5f910b7fdb5c2cf77428c0acbb9f7c',
     ),
     'swiftmailer/swiftmailer' => 
     array (

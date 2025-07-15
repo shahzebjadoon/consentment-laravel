@@ -11,6 +11,9 @@ use App\Http\Controllers\Frontend\Auth\ForgotPasswordController;
 use App\Http\Controllers\Frontend\Auth\ResetPasswordController;
 use App\Http\Controllers\Frontend\CompanyInvitationController;
 use App\Http\Controllers\Frontend\Auth\RegisterController;
+use App\Http\Controllers\StripeController;
+use App\Http\Controllers\ContinuePaymentController;
+
 
 // Home page redirect to new login
 Route::get('/', function() {
@@ -310,3 +313,20 @@ Route::get('/invitations/accept/{token}', [CompanyInvitationController::class, '
 Route::delete('companies/{company}/user/{user}', [CompanyInvitationController::class, 'removeUser'])
     ->name('companies.removeUser')
     ->middleware('auth');
+
+
+
+
+// payment continuation route
+
+Route::post('/continue-payment', [ContinuePaymentController::class, 'handle'])->name('continue.payment')
+    ->middleware('auth');
+
+
+
+Route::get('/payment/success', [ContinuePaymentController::class, 'success'])->name('payment.success')
+    ->middleware('auth');
+
+Route::get('/payment-cancel', function() {
+    return 'Payment Canceled';
+})->name('payment.cancel');
