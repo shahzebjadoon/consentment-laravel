@@ -224,7 +224,7 @@ function loadResponsiveCSS() {
 
   .consentment-left-section a img {
 
-    content: url("https://app.consentment.com/consentment-n.png");
+    content: url("https://app.consentment.com/poweredbyconsentment-v1.svg");
 
    width: 122px !important;
 
@@ -650,7 +650,7 @@ logoLink.style.cssText = 'display: block; text-decoration: none;';
 
 const logo = document.createElement('img');
 
-logo.src = 'https://app.consentment.com/consentment-n.png';
+logo.src = 'https://app.consentment.com/poweredbyconsentment-v1.svg';
 
 logo.alt = 'ConsentMent Logo';
 
