@@ -633,8 +633,11 @@
             font-size: 12px;
         }
     </style>
+     @include('frontend.alerts')
+
 </head>
 <body>
+     
     <div class="dashboard-container">
         <div class="sidebar">
             <div class="logo-container">

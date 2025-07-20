@@ -19,7 +19,10 @@ class StripePaymentService
      * @return \Stripe\Checkout\Session
      */
     public function createCheckoutSession(array $params)
+
     {
+
+       
         return StripeSession::create([
             'payment_method_types' => ['card'],
             'line_items' => [[

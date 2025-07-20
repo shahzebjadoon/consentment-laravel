@@ -32,6 +32,14 @@ class ContinuePaymentController extends Controller
             return redirect()->back()->withErrors(['error' => 'Invalid plan selected.']);
         }
 
+        // check plan is expire or not
+        if ($plan->is_life_time) {
+            return redirect()->route('frontend.dashboard')->with('info', 'This plan is a lifetime plan and does not require payment.');
+        }
+        if ($plan->expire_at < now()) {
+            return redirect()->route('frontend.dashboard')->with('info', 'This plan has not expired you cannot be re-subscribe or change subscription plan.');
+        }
+
         $session = $this->stripeService->createCheckoutSession([
             'product_name' => $plan->membership,
             'amount' => $plan->price_month * 100, // £25.00 becomes 2500 pence

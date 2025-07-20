@@ -17,8 +17,10 @@
 
     <livewire:styles />
     @stack('after-styles')
+     @include('frontend.alerts')
 </head>
 <body>
+   
     {{-- <h2>Welcome, {{ $user->name ?? 'Guest' }}</h2> --}}
 
 

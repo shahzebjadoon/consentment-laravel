@@ -8,7 +8,7 @@
             "debug": false,
             "newestOnTop": false,
             "progressBar": false,
-            "positionClass": "toast-bottom-full-width",
+            "positionClass": "toast-top-left",
             "preventDuplicates": false,
             "onclick": null,
             "showDuration": "300",
@@ -31,6 +31,10 @@
 
         @if(session('warning'))
             toastr.warning("{{ session('warning') }}");
+        @endif
+
+         @if(session('info'))
+            toastr.info("{{ session('info') }}");
         @endif
 
         @if($errors->any())
