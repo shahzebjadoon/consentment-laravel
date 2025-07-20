@@ -779,16 +779,15 @@
                 left: 20px;
                 width: 50px;
                 height: 50px;
-                background-color:#1da1f2;
                 color: white;
-                border-radius: 50%;
+                border-radius: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
                 z-index: 2147483647; /* Ensure it is above other content */
             `;
-            icon.innerHTML ="<img src='" + options.baseUrl + "../../img/fingerprint.png' alt='Details' style='width: 24px; height: 24px; color:white;'>"; // Use an icon image
+            icon.innerHTML ="<img src='" + options.baseUrl + "../../img/fingerprint.png' alt='Details' style='width: 50px; height: 50px; color:white;'>"; // Use an icon image
 
 
                 this.options = options || this.options; // Use provided options or default
